@@ -4,7 +4,7 @@ if (!Detector.webgl) {
 }
 
 // All of these variables will be needed later, just ignore them for now.
-var container;
+var container, stats;
 var camera, controls, scene, renderer;
 var lighting, ambient, keyLight, fillLight, backLight;
 var windowHalfX = window.innerWidth / 2;
@@ -19,7 +19,7 @@ function init() {
 
     // Camera
     camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
-    camera.position.z = 3;
+    camera.position.z = 250;
 
 	// Scene
 	scene = new THREE.Scene();
@@ -41,29 +41,28 @@ function init() {
 	scene.add(backLight);
 
 	// Model
-
+	var onProgress = function ( xhr ) {
+		if ( xhr.lengthComputable ) {
+			var percentComplete = xhr.loaded / xhr.total * 100;
+			console.log( Math.round(percentComplete, 2) + '% downloaded' );
+		}
+	};
+	var onError = function ( xhr ) { };
+	THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
 	var mtlLoader = new THREE.MTLLoader();
-	mtlLoader.setBaseUrl('assets/');
-	mtlLoader.setPath('assets/');
-	mtlLoader.load('chest.mtl', function (materials) {
-
-		//materials.preload();
-
-		//materials.materials.default.map.magFilter = THREE.NearestFilter;
-		//materials.materials.default.map.minFilter = THREE.LinearFilter;
-
+	mtlLoader.setPath( 'assets/' );
+	mtlLoader.load( 'male02_dds.mtl', function( materials ) {
+		materials.preload();
 		var objLoader = new THREE.OBJLoader();
-		//objLoader.setMaterials(materials);
-		objLoader.setPath('assets/');
-		objLoader.load('chest.obj', function (object) {
-
-			scene.add(object);
-
-
-
-		});
-
+		objLoader.setMaterials( materials );
+		objLoader.setPath( 'assets/' );
+		objLoader.load( 'male02.obj', function ( object ) {
+			object.position.y = - 95;
+			scene.add( object );
+		}, onProgress, onError );
 	});
+
+
 
 	// Render
 	renderer = new THREE.WebGLRenderer();
@@ -85,34 +84,34 @@ function init() {
 }
 
 
- function onWindowResize() {
-            windowHalfX = window.innerWidth / 2;
-            windowHalfY = window.innerHeight / 2;
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        }
-        function onKeyboardEvent(e) {
-            if (e.code === 'KeyL') {
-                lighting = !lighting;
-                if (lighting) {
-                    ambient.intensity = 0.25;
-                    scene.add(keyLight);
-                    scene.add(fillLight);
-                    scene.add(backLight);
-                } else {
-                    ambient.intensity = 1.0;
-                    scene.remove(keyLight);
-                    scene.remove(fillLight);
-                    scene.remove(backLight);
-                }
-            }
-        }
-        function animate() {
-            requestAnimationFrame(animate);
-            controls.update();
-            render();
-        }
-        function render() {
-            renderer.render(scene, camera);
-        }
+function onWindowResize() {
+	windowHalfX = window.innerWidth / 2;
+	windowHalfY = window.innerHeight / 2;
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+	renderer.setSize(window.innerWidth, window.innerHeight);
+}
+function onKeyboardEvent(e) {
+	if (e.code === 'KeyL') {
+		lighting = !lighting;
+		if (lighting) {
+			ambient.intensity = 0.25;
+			scene.add(keyLight);
+			scene.add(fillLight);
+			scene.add(backLight);
+		} else {
+			ambient.intensity = 1.0;
+			scene.remove(keyLight);
+			scene.remove(fillLight);
+			scene.remove(backLight);
+		}
+	}
+}
+function animate() {
+	requestAnimationFrame(animate);
+	controls.update();
+	render();
+}
+function render() {
+	renderer.render(scene, camera);
+}
