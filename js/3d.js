@@ -55,7 +55,7 @@ function init() {
 		materials.preload();
 		var objLoader = new THREE.OBJLoader();
 		objLoader.setMaterials( materials );
-		objLoader.setPath( 'assets/male02' );
+		objLoader.setPath( 'assets/male02/' );
 		objLoader.load( 'male02.obj', function ( object ) {
 			object.position.y = - 95;
 			scene.add( object );
