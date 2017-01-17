@@ -47,13 +47,13 @@ function init() {
 	mtlLoader.setPath('assets/');
 	mtlLoader.load('chest.mtl', function (materials) {
 
-		materials.preload();
+		//materials.preload();
 
-		materials.materials.default.map.magFilter = THREE.NearestFilter;
-		materials.materials.default.map.minFilter = THREE.LinearFilter;
+		//materials.materials.default.map.magFilter = THREE.NearestFilter;
+		//materials.materials.default.map.minFilter = THREE.LinearFilter;
 
 		var objLoader = new THREE.OBJLoader();
-		objLoader.setMaterials(materials);
+		//objLoader.setMaterials(materials);
 		objLoader.setPath('assets/');
 		objLoader.load('chest.obj', function (object) {
 
