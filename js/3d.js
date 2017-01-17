@@ -16,7 +16,7 @@ animate();
 function init() {
 	//container = document.createElement('div');
 	container = document.getElementById('scene');
-	document.body.appendChild(container);
+	//document.body.appendChild(container);
 
 	windowHalfX = container.offsetWidth / 2;
 	windowHalfY = container.offsetHeight / 2;
@@ -73,7 +73,7 @@ function init() {
 	// Render
 	renderer = new THREE.WebGLRenderer({ alpha: true });
 	renderer.setPixelRatio(container.devicePixelRatio);
-	renderer.setSize(container.innerWidth, container.innerHeight);
+	renderer.setSize(container.offsetWidth, container.offsetHeight);
 	renderer.setClearColor( 0x000000, 0);
 
 	container.appendChild(renderer.domElement);
