@@ -7,18 +7,20 @@ if (!Detector.webgl) {
 var container, stats;
 var camera, controls, scene, renderer;
 var lighting, ambient, keyLight, fillLight, backLight;
-var windowHalfX = window.innerWidth / 2;
-var windowHalfY = window.innerHeight / 2;
+var windowHalfX;
+var windowHalfY;
 
 init();
 animate();
 
 function init() {
-	container = document.createElement('div');
-	document.body.appendChild(container);
-
+	//container = document.createElement('div');
+	container = document.getElementById('scene');
+	//document.body.appendChild(container);
+	windowHalfX = container.innerWidth / 2;
+	windowHalfY = container.innerHeight / 2;
     // Camera
-    camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 2000);
+    camera = new THREE.PerspectiveCamera(45, container.innerWidth / container.innerHeight, 1, 2000);
     camera.position.z = 250;
 
 	// Scene
@@ -66,8 +68,8 @@ function init() {
 
 	// Render
 	renderer = new THREE.WebGLRenderer();
-	renderer.setPixelRatio(window.devicePixelRatio);
-	renderer.setSize(window.innerWidth, window.innerHeight);
+	renderer.setPixelRatio(container.devicePixelRatio);
+	renderer.setSize(container.innerWidth, container.innerHeight);
 	renderer.setClearColor(new THREE.Color("hsl(0, 0%, 10%)"));
 
 	container.appendChild(renderer.domElement);
@@ -76,7 +78,7 @@ function init() {
 	controls = new THREE.OrbitControls(camera, renderer.domElement);
 	controls.enableDamping = true;
 	controls.dampingFactor = 0.25;
-	controls.enableZoom = false;
+	controls.enableZoom = true;
 
     // Events 
     window.addEventListener('resize', onWindowResize, false);
@@ -85,11 +87,11 @@ function init() {
 
 
 function onWindowResize() {
-	windowHalfX = window.innerWidth / 2;
-	windowHalfY = window.innerHeight / 2;
-	camera.aspect = window.innerWidth / window.innerHeight;
+	windowHalfX = container.innerWidth / 2;
+	windowHalfY = container.innerHeight / 2;
+	camera.aspect = container.innerWidth / container.innerHeight;
 	camera.updateProjectionMatrix();
-	renderer.setSize(window.innerWidth, window.innerHeight);
+	renderer.setSize(container.innerWidth, container.innerHeight);
 }
 function onKeyboardEvent(e) {
 	if (e.code === 'KeyL') {
