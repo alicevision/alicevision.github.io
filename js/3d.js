@@ -21,8 +21,6 @@ function init() {
 	windowHalfX = container.offsetWidth / 2;
 	windowHalfY = container.offsetHeight / 2;
 
-
-
     // Camera
     camera = new THREE.PerspectiveCamera(45, container.offsetWidth / container.offsetHeight, 1, 2000);
     camera.position.z = 250;
