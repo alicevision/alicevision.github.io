@@ -131,8 +131,8 @@ function onKeyboardEvent(e) {
 			scene.remove(keyLight);
 			scene.remove(fillLight);
 			scene.remove(backLight);
-		}*/
-	}
+		}
+	}*/
 }
 function animate() {
 	requestAnimationFrame(animate);
