@@ -131,10 +131,10 @@ function init() {
    // window.addEventListener('keydown', onKeyboardEvent, false);
 
     //objMaterials[0] = child.material;	
-	/*objMaterials[1] = new THREE.MeshLambertMaterial( { color: 0xdddddd, shading: THREE.SmoothShading }  ); 
+	objMaterials[1] = new THREE.MeshLambertMaterial( { color: 0xdddddd, shading: THREE.SmoothShading }  ); 
 	objMaterials[2] = new THREE.MeshPhongMaterial( { color: 0xFF0000, specular: 0x009900, shininess: 30, shading: THREE.FlatShading }   ); 
 	objMaterials[3] = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, blending: THREE.AdditiveBlending }  );
-	objMaterials[4] = new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe : true  }  );*/
+	objMaterials[4] = new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe : true  }  );
 
 
 }
@@ -148,7 +148,7 @@ function onWindowResize() {
 	renderer.setSize(container.offsetWidth, container.offsetHeight);
 }
 function onKeyboardEvent(e) {
-	/*if (e.code === 'KeyL') {
+	if (e.code === 'KeyL') {
 		lighting = !lighting;
 		if (lighting) {
 			ambient.intensity = 0.25;
@@ -156,15 +156,13 @@ function onKeyboardEvent(e) {
 			scene.add(fillLight);
 			scene.add(backLight);
 		}
-		else if(e.code === 'KeyT'){
-			if(id==0)
-				objMaterials[0] = child.material;	
+		else if(e.code === 'KeyT'){				
 			if(id < 4){
 				id++;
 				changeMaterial(id);				
 			}
 			else if(id == 4)
-				id = 0;
+				id = 1;
 				changeMaterial(id);
 		} else {
 			ambient.intensity = 1.0;
@@ -172,7 +170,7 @@ function onKeyboardEvent(e) {
 			scene.remove(fillLight);
 			scene.remove(backLight);
 		}
-	}*/
+	}
 }
 function animate() {
 	requestAnimationFrame(animate);
