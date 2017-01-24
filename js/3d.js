@@ -33,7 +33,7 @@ function init() {
 	scene.add(ambient);
 
 	// Lights
-	keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
+	/*keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
 	keyLight.position.set(-100, 0, 100);
 
 	fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.75);
@@ -44,15 +44,55 @@ function init() {
 
 	scene.add(keyLight);
 	scene.add(fillLight);
-	scene.add(backLight);
+	scene.add(backLight);*/
 
 	// Model
+
+
+	//texture
+
+	var manager = new THREE.LoadingManager();
+	manager.onProgress = function(item, loaded, total){
+		console.log(item,loaded,total);
+	};
+
+	var texture = new THREE.Texture();
+
 	var onProgress = function ( xhr ) {
 		if ( xhr.lengthComputable ) {
 			var percentComplete = xhr.loaded / xhr.total * 100;
 			console.log( Math.round(percentComplete, 2) + '% downloaded' );
 		}
 	};
+	var onError = function ( xhr ) {
+	};
+	var loader = new THREE.ImageLoader( manager );
+	loader.load( 'assets/male02/male-02-1noCulling.jpg', function ( image ) {
+		texture.image = image;
+		texture.needsUpdate = true;
+	} );
+
+	// model
+	var loader = new THREE.OBJLoader( manager );
+	loader.load( 'assets/male02/male02.obj', function ( object ) {
+		object.traverse( function ( child ) {
+			if ( child instanceof THREE.Mesh ) {
+					child.material.map = texture;
+				}
+			} );
+			object.position.y = - 95;
+			scene.add( object );
+	}, onProgress, onError );
+
+	/*
+	var onProgress = function ( xhr ) {
+		if ( xhr.lengthComputable ) {
+			var percentComplete = xhr.loaded / xhr.total * 100;
+			console.log( Math.round(percentComplete, 2) + '% downloaded' );
+		}
+	};
+
+	
 	var onError = function ( xhr ) { };
 	THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
 	var mtlLoader = new THREE.MTLLoader();
@@ -66,7 +106,7 @@ function init() {
 			object.position.y = - 95;
 			scene.add( object );
 		}, onProgress, onError );
-	});
+	});*/
 
 
 
@@ -145,5 +185,5 @@ function render() {
 
 
 function changeMaterial(id){
-    child.material = materials[id];
+	child.material = materials[id];
 }
