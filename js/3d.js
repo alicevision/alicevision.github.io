@@ -67,7 +67,7 @@ function init() {
 	var onError = function ( xhr ) {
 	};
 	var loader = new THREE.ImageLoader( manager );
-	loader.load( 'assets/male02/male-02-1noCulling.jpg', function ( image ) {
+	loader.load( 'assets/lincoln.jpg', function ( image ) {
 		texture.image = image;
 		texture.needsUpdate = true;
 	} );
