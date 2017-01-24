@@ -58,7 +58,7 @@ function init() {
 
 	var texture = new THREE.Texture();
 
-	/*var onProgress = function ( xhr ) {
+	var onProgress = function ( xhr ) {
 		if ( xhr.lengthComputable ) {
 			var percentComplete = xhr.loaded / xhr.total * 100;
 			console.log( Math.round(percentComplete, 2) + '% downloaded' );
@@ -66,6 +66,7 @@ function init() {
 	};
 	var onError = function ( xhr ) {
 	};
+	/*
 	var loader = new THREE.ImageLoader( manager );
 	loader.load( 'assets/lincoln.jpg', function ( image ) {
 		texture.image = image;
