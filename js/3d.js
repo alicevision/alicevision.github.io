@@ -74,7 +74,7 @@ function init() {
 
 	// model
 	var loader = new THREE.OBJLoader( manager );
-	loader.load( 'assets/male02/male02.obj', function ( object ) {
+	loader.load( 'assets/lincoln.obj', function ( object ) {
 		object.traverse( function ( child ) {
 			if ( child instanceof THREE.Mesh ) {
 					child.material.map = texture;
