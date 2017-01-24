@@ -58,7 +58,7 @@ function init() {
 
 	var texture = new THREE.Texture();
 
-	var onProgress = function ( xhr ) {
+	/*var onProgress = function ( xhr ) {
 		if ( xhr.lengthComputable ) {
 			var percentComplete = xhr.loaded / xhr.total * 100;
 			console.log( Math.round(percentComplete, 2) + '% downloaded' );
@@ -70,14 +70,14 @@ function init() {
 	loader.load( 'assets/lincoln.jpg', function ( image ) {
 		texture.image = image;
 		texture.needsUpdate = true;
-	} );
+	} );*/
 
 	// model
 	var loader = new THREE.OBJLoader( manager );
 	loader.load( 'assets/lincoln.obj', function ( object ) {
 		object.traverse( function ( child ) {
 			if ( child instanceof THREE.Mesh ) {
-					child.material.map = texture;
+					//child.material.map = texture;
 				}
 			} );
 			object.position.y = - 95;
