@@ -158,17 +158,14 @@ function onKeyboardEvent(e) {
 				id++;
 				changeMaterial(id);				
 			}
-			else if(id == 4)
+		}
+		else if(id == 4){
 				id = 1;
 				changeMaterial(id);
-		} else {
-			ambient.intensity = 1.0;
-			scene.remove(keyLight);
-			scene.remove(fillLight);
-			scene.remove(backLight);
 		}
-	}
+		
 }
+
 function animate() {
 	requestAnimationFrame(animate);
 	controls.update();
