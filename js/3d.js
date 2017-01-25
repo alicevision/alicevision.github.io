@@ -33,7 +33,7 @@ function init() {
 	scene.add(ambient);
 
 	// Lights
-	/*keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
+	keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
 	keyLight.position.set(-100, 0, 100);
 
 	fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.75);
@@ -44,7 +44,7 @@ function init() {
 
 	scene.add(keyLight);
 	scene.add(fillLight);
-	scene.add(backLight);*/
+	scene.add(backLight);
 
 	// Model
 
@@ -153,15 +153,7 @@ function onWindowResize() {
 	renderer.setSize(container.offsetWidth, container.offsetHeight);
 }
 function onKeyboardEvent(e) {
-	if (e.code === 'KeyL') {
-		lighting = !lighting;
-		if (lighting) {
-			ambient.intensity = 0.25;
-			scene.add(keyLight);
-			scene.add(fillLight);
-			scene.add(backLight);
-		}
-		else if(e.code === 'KeyT'){				
+	 if(e.code === 'KeyT'){				
 			if(id < 4){
 				id++;
 				changeMaterial(id);				
