@@ -81,12 +81,12 @@ function init() {
 	objMaterials[3] = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, blending: THREE.AdditiveBlending }  );
 	objMaterials[4] = new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe : true  }  );
 
-	
+
 	var loader = new THREE.OBJLoader( manager );
 	loader.load( 'assets/lincoln.obj', function ( object ) {
 		object.traverse( function ( child ) {
 			if ( child instanceof THREE.Mesh ) {
-					child.material.map = objMaterials[1];
+					child.material = objMaterials[1];
 				}
 			} );
 			object.position.y = - 95;
