@@ -56,7 +56,7 @@ function init() {
 		console.log(item,loaded,total);
 	};
 
-	var texture = new THREE.Texture();
+	//var texture = new THREE.Texture();
 
 	var onProgress = function ( xhr ) {
 		if ( xhr.lengthComputable ) {
@@ -74,11 +74,19 @@ function init() {
 	} );*/
 
 	// model
+
+	  //objMaterials[0] = child.material;	
+	objMaterials[1] = new THREE.MeshLambertMaterial( { color: 0xdddddd, shading: THREE.SmoothShading }  ); 
+	objMaterials[2] = new THREE.MeshPhongMaterial( { color: 0xFF0000, specular: 0x009900, shininess: 30, shading: THREE.FlatShading }   ); 
+	objMaterials[3] = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, blending: THREE.AdditiveBlending }  );
+	objMaterials[4] = new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe : true  }  );
+
+	
 	var loader = new THREE.OBJLoader( manager );
 	loader.load( 'assets/lincoln.obj', function ( object ) {
 		object.traverse( function ( child ) {
 			if ( child instanceof THREE.Mesh ) {
-					//child.material.map = texture;
+					child.material.map = objMaterials[1];
 				}
 			} );
 			object.position.y = - 95;
@@ -131,11 +139,7 @@ function init() {
     window.addEventListener('resize', onWindowResize, false);
    // window.addEventListener('keydown', onKeyboardEvent, false);
 
-    //objMaterials[0] = child.material;	
-	objMaterials[1] = new THREE.MeshLambertMaterial( { color: 0xdddddd, shading: THREE.SmoothShading }  ); 
-	objMaterials[2] = new THREE.MeshPhongMaterial( { color: 0xFF0000, specular: 0x009900, shininess: 30, shading: THREE.FlatShading }   ); 
-	objMaterials[3] = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, blending: THREE.AdditiveBlending }  );
-	objMaterials[4] = new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe : true  }  );
+  
 
 
 }
