@@ -56,12 +56,12 @@ function init() {
 	var onError = function ( xhr ) { };
 	THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
 	var mtlLoader = new THREE.MTLLoader();
-	mtlLoader.setPath( 'assets/male02/' );
+	mtlLoader.setPath( '../assets/male02/' );
 	mtlLoader.load( 'male02_dds.mtl', function( materials ) {
 		materials.preload();
 		var objLoader = new THREE.OBJLoader();
 		objLoader.setMaterials( materials );
-		objLoader.setPath( 'assets/male02/' );
+		objLoader.setPath( '../assets/male02/' );
 		objLoader.load( 'male02.obj', function ( object ) {
 			object.position.y = - 95;
 			scene.add( object );
