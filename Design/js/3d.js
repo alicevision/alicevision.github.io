@@ -35,13 +35,13 @@ function init() {
 	scene.add(ambient);
 
 	// Lights
-	keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 125%)'), 0.80);
+	keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 125%)'), 0.60);
 	keyLight.position.set(-400, 0, 100);
 
-	fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(100, 100%, 125%)'), 0.65);
+	fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(100, 100%, 125%)'), 0.45);
 	fillLight.position.set(200, 0, 200);
 
-	backLight = new THREE.DirectionalLight(0xffffff, 1.0);
+	backLight = new THREE.DirectionalLight(0xffffff, 0.80);
 	backLight.position.set(200, 0, -200).normalize();
 
 	scene.add(keyLight);
