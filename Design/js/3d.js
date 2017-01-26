@@ -12,6 +12,8 @@ var windowHalfY;
 var objMaterials = {};
 var id = 0;
 
+
+
 init();
 animate();
 
@@ -140,7 +142,7 @@ function animate() {
 	render();
 }
 function render() {
-	cube.rotation.z+=0.01;
+	scene.Group.Mesh.rotation.z+=0.01;
 	renderer.render(scene, camera);
 }
 
