@@ -140,6 +140,7 @@ function animate() {
 	render();
 }
 function render() {
+	cube.rotation.z+=0.01;
 	renderer.render(scene, camera);
 }
 
