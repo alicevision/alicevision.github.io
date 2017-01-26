@@ -142,7 +142,7 @@ function animate() {
 	render();
 }
 function render() {
-	scene.Group.Mesh.rotation.z+=0.01;
+	//scene.Group.Mesh.rotation.z+=0.01;
 	renderer.render(scene, camera);
 }
 
