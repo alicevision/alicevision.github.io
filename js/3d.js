@@ -47,75 +47,26 @@ function init() {
 	scene.add(backLight);
 
 	// Model
-
-
-	//texture
-
-	var manager = new THREE.LoadingManager();
-	manager.onProgress = function(item, loaded, total){
-		console.log(item,loaded,total);
-	};
-
-	//var texture = new THREE.Texture();
-
 	var onProgress = function ( xhr ) {
 		if ( xhr.lengthComputable ) {
 			var percentComplete = xhr.loaded / xhr.total * 100;
 			console.log( Math.round(percentComplete, 2) + '% downloaded' );
 		}
 	};
-	var onError = function ( xhr ) {
-	};
-	/*
-	var loader = new THREE.ImageLoader( manager );
-	loader.load( 'assets/lincoln.jpg', function ( image ) {
-		texture.image = image;
-		texture.needsUpdate = true;
-	} );*/
-
-	// model
-
-	  //objMaterials[0] = child.material;	
-	objMaterials[1] = new THREE.MeshLambertMaterial( { color: 0xdddddd, shading: THREE.SmoothShading }  ); 
-	objMaterials[2] = new THREE.MeshPhongMaterial( { color: 0xFF0000, specular: 0x009900, shininess: 30, shading: THREE.FlatShading }   ); 
-	objMaterials[3] = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, blending: THREE.AdditiveBlending }  );
-	objMaterials[4] = new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe : true  }  );
-
-
-	var loader = new THREE.OBJLoader( manager );
-	loader.load( 'assets/lincoln.obj', function ( object ) {
-		object.traverse( function ( child ) {
-			if ( child instanceof THREE.Mesh ) {
-					child.material = objMaterials[1];
-				}
-			} );
-			object.position.y = - 95;
-			scene.add( object );
-	}, onProgress, onError );
-
-	/*
-	var onProgress = function ( xhr ) {
-		if ( xhr.lengthComputable ) {
-			var percentComplete = xhr.loaded / xhr.total * 100;
-			console.log( Math.round(percentComplete, 2) + '% downloaded' );
-		}
-	};
-
-	
 	var onError = function ( xhr ) { };
 	THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
 	var mtlLoader = new THREE.MTLLoader();
-	mtlLoader.setPath( 'assets/' );
-	mtlLoader.load( 'lincoln.mtl', function( materials ) {
+	mtlLoader.setPath( 'assets/male02/' );
+	mtlLoader.load( 'male02_dds.mtl', function( materials ) {
 		materials.preload();
 		var objLoader = new THREE.OBJLoader();
 		objLoader.setMaterials( materials );
-		objLoader.setPath( 'assets/' );
-		objLoader.load( 'lincoln.obj', function ( object ) {
+		objLoader.setPath( 'assets/male02/' );
+		objLoader.load( 'male02.obj', function ( object ) {
 			object.position.y = - 95;
 			scene.add( object );
 		}, onProgress, onError );
-	});*/
+	});
 
 
 
@@ -139,7 +90,11 @@ function init() {
     window.addEventListener('resize', onWindowResize, false);
    // window.addEventListener('keydown', onKeyboardEvent, false);
 
-  
+    //objMaterials[0] = child.material;	
+	/*objMaterials[1] = new THREE.MeshLambertMaterial( { color: 0xdddddd, shading: THREE.SmoothShading }  ); 
+	objMaterials[2] = new THREE.MeshPhongMaterial( { color: 0xFF0000, specular: 0x009900, shininess: 30, shading: THREE.FlatShading }   ); 
+	objMaterials[3] = new THREE.MeshBasicMaterial( { color: 0xffaa00, transparent: true, blending: THREE.AdditiveBlending }  );
+	objMaterials[4] = new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe : true  }  );*/
 
 
 }
@@ -153,19 +108,32 @@ function onWindowResize() {
 	renderer.setSize(container.offsetWidth, container.offsetHeight);
 }
 function onKeyboardEvent(e) {
-	 if(e.code === 'KeyT'){				
+	/*if (e.code === 'KeyL') {
+		lighting = !lighting;
+		if (lighting) {
+			ambient.intensity = 0.25;
+			scene.add(keyLight);
+			scene.add(fillLight);
+			scene.add(backLight);
+		}
+		else if(e.code === 'KeyT'){
+			if(id==0)
+				objMaterials[0] = child.material;	
 			if(id < 4){
 				id++;
 				changeMaterial(id);				
 			}
-		}
-		else if(id == 4){
-				id = 1;
+			else if(id == 4)
+				id = 0;
 				changeMaterial(id);
+		} else {
+			ambient.intensity = 1.0;
+			scene.remove(keyLight);
+			scene.remove(fillLight);
+			scene.remove(backLight);
 		}
-		
+	}*/
 }
-
 function animate() {
 	requestAnimationFrame(animate);
 	controls.update();
@@ -177,5 +145,5 @@ function render() {
 
 
 function changeMaterial(id){
-	child.material = materials[id];
+    child.material = materials[id];
 }
