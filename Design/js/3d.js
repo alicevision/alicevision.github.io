@@ -34,7 +34,7 @@ function init() {
 
 	// Lights
 	keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
-	keyLight.position.set(-100, 0, 100);
+	keyLight.position.set(-300, 0, 100);
 
 	fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.75);
 	fillLight.position.set(100, 0, 100);
