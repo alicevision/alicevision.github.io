@@ -211,7 +211,7 @@ $(function() {
         $('.generalStep div:nth-child(2)').html('<h4>Inputs  :</h4><p> ' + donnees.entry + '</p>');
         $('.generalStep div:nth-child(2)').append('<h4>Outputs  :</h4><p> ' + donnees.exit + '</p>');
 
-        $('.videoPresentation div').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/O-IZz1n4F4g" frameborder="0" allowfullscreen></iframe>');
+        $('.videoPresentation div').html('iframe width="560" height="315" src="https://www.youtube.com/embed/O-IZz1n4F4g" frameborder="0" allowfullscreen></iframe>');
         
         $('.gp1').html("<img/>");
         $('.gp1 img').attr("src",'../Design/img/step_img/' + donnees.generalPrincipeIMG);
@@ -356,7 +356,7 @@ $('#c8b , #c8a, #c8aTop,#c8bTop, #stepForMobile div:nth-child(8)').click(functio
         $('.generalStep div:nth-child(2)').html('<h4>Inputs  :</h4><p> ' + donnees.entry + '</p>');
         $('.generalStep div:nth-child(2)').append('<h4>Outputs  :</h4><p> ' + donnees.exit + '</p>');
 
-        $('.videoPresentation div').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/O-IZz1n4F4g" frameborder="0" allowfullscreen></iframe>');
+        $('.videoPresentation div').html('iframe width="560" height="315" src="https://www.youtube.com/embed/O-IZz1n4F4g" frameborder="0" allowfullscreen></iframe>');
         
         $('.gp1').html("<img/>");
         $('.gp1 img').attr("src",'../Design/img/step_img/' + donnees.generalPrincipeIMG);
