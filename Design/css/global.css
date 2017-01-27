@@ -58,7 +58,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 }
 #borderBottom{
   width:auto;
-  height: 20px;
+  height: 10px;
   vertical-align: top
   margin: 0;
   padding: 0;
@@ -122,6 +122,8 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   font-weight: 300;
   font-size: 28px;
   text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+
 }
 
 #objectif{
@@ -351,7 +353,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   font-weight: 400;
   text-transform: uppercase;
   font-style: normal;
-  font-size: 30px;
+  font-size: 35px;
   text-align: center;
   color:white;
   padding: 20px 0px 20px 0px;
@@ -472,7 +474,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 
 
 #mikrosDiv div:nth-child(2){
-  width: 50.001%;
+  width: 50%;
   min-height: 350px;
   float: right;
   background: grey;
@@ -1247,12 +1249,12 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 
 
 .gp1 img{
-  width: 30%;
+  width: 43%;
   height: auto;
   min-width: 200px;
   min-height: 200px;
   margin-left: 50px;
-  margin-top: 65px;
+  margin-top: 10px;
   margin-right: 5%;
   float: right;
 
@@ -1392,7 +1394,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 #projectPresentation{
   width: 100%;
   height: 500px;
-  background: url(../img/viedoMikros.png) no-repeat;
+  background: url(../img/vfx.jpg) no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
@@ -1401,7 +1403,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   width: 40%;
   float: right;
   margin-right: 70px;
-  color: white;
+  color: black;
 }
 
 #projectTextPromo h1{
@@ -1897,6 +1899,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   }
   #avTextPromo h2{
     font-size: 20px;
+
   }
   #objectif div:nth-child(1){
     width:100%;
@@ -1906,6 +1909,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   }
 #objectif :nth-child(1) p{
   margin-bottom: 30px;
+
 }
 
   #objectif div:nth-child(2){
@@ -2301,12 +2305,20 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   }
 
   #stepsTop{
-    margin-left: 8%;
+    margin-left: 8% !important;
+     transform: scale(0.3) !important;
   }
 
 #hamburgerMenu div:nth-child(2){
   width: 40% !important;
+
 }
+
+  .implementedAlgo, .existantAlgo{
+    width: 80%;
+    margin:auto;
+  }
+
 
 
 
@@ -2502,10 +2514,10 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1500px) {
   #steps{
-    margin-left: 27.5%;
+    margin-left: 21%;
   }
   #stepsTop{
-    margin-left: 25%;
+    margin-left: 21%;
   }
 
 

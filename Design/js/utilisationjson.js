@@ -36,7 +36,7 @@ $(function() {
     
     /* first test*/
 
-    $('#c1b , #c1a').click(function() {
+ /*   $('#c1b , #c1a').click(function() {
         $.getJSON(js + 'json/step1.json', function(donnees) {
          $(".generalStep div:nth-child(1)").css("background-color","#044EBD");
          $('.generalStep div:nth-child(1) ').html('<h1> ' + donnees.nameStep + '</h1>');
@@ -47,18 +47,15 @@ $(function() {
 
          $('.videoPresentation div').html(' <iframe width="560" height="315" src="https://www.youtube.com/embed/2Lh0dSRqH4E" frameborder="0" allowfullscreen></iframe>');
         
-        $('.gp1 img').attr("src","../Design/img/step_img/img_step1.jpg");
+        $('.gp1 img').attr("src", donnees.generalPrincipeIMG);
 
         });
 
-    });
+    });*/
 
-    $('#c4b , #c4a').click(function() {
+ $('#c1b , #c1a, #c1aTop, #c1bTop, #stepForMobile div:nth-child(1)').click(function() {
 
-
-
-
-        $.getJSON(js + 'json/step4.json', function(donnees) {
+        $.getJSON(js + 'json/step1.json', function(donnees) {
         $(".generalStep div:nth-child(1)").css("background-color","#2173EF");
         $('.generalStep div:nth-child(1) ').html('<h1> ' + donnees.nameSecond + '</h1>');
         /*$('.generalStep div:nth-child(1)').append('<h2> ' + donnees.nameSecond + '</h2><br/>');*/
@@ -68,10 +65,10 @@ $(function() {
         $('.generalStep div:nth-child(2)').html('<h4>Inputs  :</h4><p> ' + donnees.entry + '</p>');
         $('.generalStep div:nth-child(2)').append('<h4>Outputs  :</h4><p> ' + donnees.exit + '</p>');
 
-        $('.videoPresentation div').html(' <iframe width="560" height="315" src="https://www.youtube.com/embed/2Lh0dSRqH4E" frameborder="0" allowfullscreen></iframe>');
+        $('.videoPresentation div').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/O-IZz1n4F4g" frameborder="0" allowfullscreen></iframe>');
         
         $('.gp1').html("<img/>");
-        $('.gp1 img').attr("src","../Design/img/step_img/img_step1.jpg");
+        $('.gp1 img').attr("src",'../Design/img/step_img/' + donnees.generalPrincipeIMG);
         $('.gp1').append('<h4> ' + donnees.step1Name + '</h4>');
         $('.gp1').append('<p> ' + donnees.step1Content + '</p>');
         $('.gp1').append('<h4> ' + donnees.step2Name + '</h4>');
@@ -100,9 +97,7 @@ $(function() {
         $(' #algoImplemented1').append("<h4>" + donnees.algo1DTitle + "<h4>");
         $(' #algoImplemented1').append("<p>" + donnees.algo1Dp + "<p>");
         $(' #algoImplemented1').append("<p><a href=" + donnees.linkAlgo1 + ">For more informations</a><p>");
-        $('.implementedAlgo').append("<p class='seeMore' id='seeMore1'><a>See more</a></p>");
-
-        
+        $('.implementedAlgo').append("<p class='seeMore' id='seeMore1'><a>See more</a></p>");   
 
         $('.implementedAlgo').append("<div id='algoImplemented2'></div>");
         $('#algoImplemented2').html("<h3>" + donnees.algo2 + "<h3>");
@@ -121,11 +116,6 @@ $(function() {
         $(' #algoImplemented2').append("<p>" + donnees.algo2Cp2 + "<p>");
         $(' #algoImplemented2').append("<p><a href=" + donnees.linkAlgo1 + ">For more informations</a><p>");
         $('.implementedAlgo').append("<p class='seeMore' id='seeMore2'><a>See more</a></p>");
-
-
-
-
-
 
         $('.seeMore a').css("color", "#2173EF");
         $('.seeMore a').css("font-style", "bold");
@@ -203,11 +193,299 @@ $(function() {
             + donnees.oFB6 + "</li><li>"
             + donnees.oFB7 + "</li></ul>");
 
+        });/*fin partie json*/
+
+
+    });
+
+
+    $('#c4b , #c4a, #c4aTop,#c4bTop, #stepForMobile div:nth-child(4)').click(function() {
+
+        $.getJSON(js + 'json/step4.json', function(donnees) {
+        $(".generalStep div:nth-child(1)").css("background-color","#2173EF");
+        $('.generalStep div:nth-child(1) ').html('<h1> ' + donnees.nameSecond + '</h1>');
+        /*$('.generalStep div:nth-child(1)').append('<h2> ' + donnees.nameSecond + '</h2><br/>');*/
+        $('.generalStep div:nth-child(1)').append('<h3> ' + donnees.objectives + '</h3>');
+        $('.generalStep div:nth-child(1)').append('<p> ' + donnees.objectivesP + '</p>');
+
+        $('.generalStep div:nth-child(2)').html('<h4>Inputs  :</h4><p> ' + donnees.entry + '</p>');
+        $('.generalStep div:nth-child(2)').append('<h4>Outputs  :</h4><p> ' + donnees.exit + '</p>');
+
+        $('.videoPresentation div').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/O-IZz1n4F4g" frameborder="0" allowfullscreen></iframe>');
+        
+        $('.gp1').html("<img/>");
+        $('.gp1 img').attr("src",'../Design/img/step_img/' + donnees.generalPrincipeIMG);
+        $('.gp1').append('<h4> ' + donnees.step1Name + '</h4>');
+        $('.gp1').append('<p> ' + donnees.step1Content + '</p>');
+        $('.gp1').append('<h4> ' + donnees.step2Name + '</h4>');
+        $('.gp1').append('<p> ' + donnees.step2Content + '</p>');
+        $('.gp1').append('<h4> ' + donnees.step3Name + '</h4>');
+        $('.gp1').append('<p> ' + donnees.step3Content + '</p>');
+        $('.gp1').append('<h4> ' + donnees.step4Name + '</h4>');
+        $('.gp1').append('<p> ' + donnees.step4Content + '</p>');
+
+        $('.implementedAlgo').html("<h1>The algorithm</h1>");
+        $('.implementedAlgo').append("<h2>" + donnees.algo1H2 + "</h2>");
+
+        $('.implementedAlgo').append("<div id='algoImplemented1'></div>");
+        $('#algoImplemented1').html("<h3>" + donnees.algo1 + "<h3>");
+        $(' #algoImplemented1').append("<h4>" + donnees.algo1ATitle + "<h4>");
+        $(' #algoImplemented1').append("<p>" + donnees.algo1Ap1 + "<p>");
+        $(' #algoImplemented1').append("<p>" + donnees.algo1Ap2 + "<p>");
+
+        $(' #algoImplemented1').append("<img src = '../Design/img/step_img/" + donnees.nameIMG1 + "'/>");
+        $(' #algoImplemented1').append("<p>" + donnees.algo1Ap3 + "<p>");
+        $(' #algoImplemented1').append("<img src = '../Design/img/step_img/" + donnees.nameIMG2 + "'/>");
+        $(' #algoImplemented1').append("<h4>" + donnees.algo1BTitle + "<h4>");
+        $(' #algoImplemented1').append("<p>" + donnees.algo1Bp + "<p>");
+        $(' #algoImplemented1').append("<h4>" + donnees.algo1CTitle + "<h4>");
+        $(' #algoImplemented1').append("<p>" + donnees.algo1Cp + "<p>");
+        $(' #algoImplemented1').append("<h4>" + donnees.algo1DTitle + "<h4>");
+        $(' #algoImplemented1').append("<p>" + donnees.algo1Dp + "<p>");
+        $(' #algoImplemented1').append("<p><a href=" + donnees.linkAlgo1 + ">For more informations</a><p>");
+        $('.implementedAlgo').append("<p class='seeMore' id='seeMore1'><a>See more</a></p>");   
+
+        $('.implementedAlgo').append("<div id='algoImplemented2'></div>");
+        $('#algoImplemented2').html("<h3>" + donnees.algo2 + "<h3>");
+        $(' #algoImplemented2').append("<h4>" + donnees.algo2ATitle + "<h4>");
+        $(' #algoImplemented2').append("<p>" + donnees.algo2Ap1 + "<p>");
+        $(' #algoImplemented2').append("<img src = '../Design/img/step_img/" + donnees.nameIMG1Algo2 + "'/>");
+        $(' #algoImplemented2').append("<p>" + donnees.algo2Ap2 + "<p>");
+        $(' #algoImplemented2').append("<p>" + donnees.algo2Ap3 + "<p>");
+        $(' #algoImplemented2').append("<h4>" + donnees.algo2BTitle + "<h4>");
+        $(' #algoImplemented2').append("<p>" + donnees.algo2Bp1 + "<p>");
+        $(' #algoImplemented2').append("<p>" + donnees.algo2Bp2 + "<p>");
+        $(' #algoImplemented2').append("<h4>" + donnees.algo2CTitle + "<h4>");
+        $(' #algoImplemented2').append("<p><strong>" + donnees.algo2Csub1 + "</strong><p>");
+        $(' #algoImplemented2').append("<p>" + donnees.algo2Cp1 + "<p>");
+        $(' #algoImplemented2').append("<p><strong>" + donnees.algo2Csub2 + "</strong><p>");
+        $(' #algoImplemented2').append("<p>" + donnees.algo2Cp2 + "<p>");
+        $(' #algoImplemented2').append("<p><a href=" + donnees.linkAlgo1 + ">For more informations</a><p>");
+        $('.implementedAlgo').append("<p class='seeMore' id='seeMore2'><a>See more</a></p>");
+
+        $('.seeMore a').css("color", "#2173EF");
+        $('.seeMore a').css("font-style", "bold");
+        $('.seeMore a').css("font-size", "20px");
+        $('.seeMore').css("cursor", "pointer");
+        $('.seeMore').css("margin-top", "0px");
+
+         $(' #algoImplemented1').css("height", "470px");
+         $(' #algoImplemented1').css("overflow", "hidden");
+         $(' #algoImplemented2').css("height", "455px");
+         $(' #algoImplemented2').css("overflow", "hidden");
+
+
+         $('#seeMore1').click(function() {
+            if($( "#algoImplemented1" ).height() > 480 ){
+                $('#seeMore1').html("<a>See more</a>");
+                 $('.seeMore a').css("color", "#2173EF");
+                $('.seeMore a').css("font-style", "bold");
+                $('.seeMore a').css("font-size", "20px");
+                $( "#algoImplemented1" ).animate({
+                height: "470px"
+              }, 1500 );
+            }else{
+                $('#seeMore1').html("<a>See less</a>");
+                $('.seeMore a').css("color", "#2173EF");
+                $('.seeMore a').css("font-style", "bold");
+                $('.seeMore a').css("font-size", "20px");
+                $( "#algoImplemented1" ).animate({
+                height: "100%"
+              }, 1500 );
+            }
+            });
+         $('#seeMore2').click(function() {
+            if($( "#algoImplemented2" ).height() > 480 ){
+                $('#seeMore2').html("<a>See more</a>");
+                 $('.seeMore a').css("color", "#2173EF");
+                $('.seeMore a').css("font-style", "bold");
+                $('.seeMore a').css("font-size", "20px");
+                $( "#algoImplemented2" ).animate({
+                height: "455px"
+              }, 1500 );
+            }else{
+                $('#seeMore2').html("<a>See less</a>");
+                $('.seeMore a').css("color", "#2173EF");
+                $('.seeMore a').css("font-style", "bold");
+                $('.seeMore a').css("font-size", "20px");
+                $( "#algoImplemented2" ).animate({
+                height: "100%"
+              }, 1500 );
+            }
+            });
+
+         /*end algo implemented */
+
+        $('.existantAlgo').html("<h2>" + donnees.otherTitle + "</h2>");
+        $('.existantAlgo').append("<div id='algoExisted1'></div>");
+        $('#algoExisted1').html("<h3>" + donnees.otherFeature1 + "</h3>");
+        $(' #algoExisted1').append("<ul><li>" + donnees.oFA1 + "</li><li>"
+            + donnees.oFA2 + "</li><li>"
+            + donnees.oFA3 + "</li><li>"
+            + donnees.oFA4 + "</li><li>"
+            + donnees.oFA5 + "</li><li>"
+            + donnees.oFA6 + "</li><li>"
+            + donnees.oFA7 + "</li><li>"
+            + donnees.oFA8 + "</li><li>"
+            + donnees.oFA9 + "</li></ul>");
+
+        $('.existantAlgo').append("<div id='algoExisted2'></div>");
+        $('#algoExisted2').html("<h3>" + donnees.otherFeature2 + "</h3>");
+        $(' #algoExisted2').append("<ul><li>" + donnees.oFB2 + "</li><li>"
+            + donnees.oFB2 + "</li><li>"
+            + donnees.oFB3 + "</li><li>"
+            + donnees.oFB4 + "</li><li>"
+            + donnees.oFB5 + "</li><li>"
+            + donnees.oFB6 + "</li><li>"
+            + donnees.oFB7 + "</li></ul>");
 
         });/*fin partie json*/
 
 
+    });
+
+$('#c8b , #c8a, #c8aTop,#c8bTop, #stepForMobile div:nth-child(8)').click(function() {
+
+        $.getJSON(js + 'json/step8.json', function(donnees) {
+        $(".generalStep div:nth-child(1)").css("background-color","#2173EF");
+        $('.generalStep div:nth-child(1) ').html('<h1> ' + donnees.nameSecond + '</h1>');
+        /*$('.generalStep div:nth-child(1)').append('<h2> ' + donnees.nameSecond + '</h2><br/>');*/
+        $('.generalStep div:nth-child(1)').append('<h3> ' + donnees.objectives + '</h3>');
+        $('.generalStep div:nth-child(1)').append('<p> ' + donnees.objectivesP + '</p>');
+
+        $('.generalStep div:nth-child(2)').html('<h4>Inputs  :</h4><p> ' + donnees.entry + '</p>');
+        $('.generalStep div:nth-child(2)').append('<h4>Outputs  :</h4><p> ' + donnees.exit + '</p>');
+
+        $('.videoPresentation div').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/O-IZz1n4F4g" frameborder="0" allowfullscreen></iframe>');
         
+        $('.gp1').html("<img/>");
+        $('.gp1 img').attr("src",'../Design/img/step_img/' + donnees.generalPrincipeIMG);
+        $('.gp1').append('<h4> ' + donnees.step1Name + '</h4>');
+        $('.gp1').append('<p> ' + donnees.step1Content + '</p>');
+        $('.gp1').append('<h4> ' + donnees.step2Name + '</h4>');
+        $('.gp1').append('<p> ' + donnees.step2Content + '</p>');
+        $('.gp1').append('<h4> ' + donnees.step3Name + '</h4>');
+        $('.gp1').append('<p> ' + donnees.step3Content + '</p>');
+        $('.gp1').append('<h4> ' + donnees.step4Name + '</h4>');
+        $('.gp1').append('<p> ' + donnees.step4Content + '</p>');
+
+        $('.implementedAlgo').html("<h1>The algorithm</h1>");
+        $('.implementedAlgo').append("<h2>" + donnees.algo1H2 + "</h2>");
+
+        $('.implementedAlgo').append("<div id='algoImplemented1'></div>");
+        $('#algoImplemented1').html("<h3>" + donnees.algo1 + "<h3>");
+        $(' #algoImplemented1').append("<h4>" + donnees.algo1ATitle + "<h4>");
+        $(' #algoImplemented1').append("<p>" + donnees.algo1Ap1 + "<p>");
+        $(' #algoImplemented1').append("<p>" + donnees.algo1Ap2 + "<p>");
+
+        $(' #algoImplemented1').append("<img src = '../Design/img/step_img/" + donnees.nameIMG1 + "'/>");
+        $(' #algoImplemented1').append("<p>" + donnees.algo1Ap3 + "<p>");
+        $(' #algoImplemented1').append("<img src = '../Design/img/step_img/" + donnees.nameIMG2 + "'/>");
+        $(' #algoImplemented1').append("<h4>" + donnees.algo1BTitle + "<h4>");
+        $(' #algoImplemented1').append("<p>" + donnees.algo1Bp + "<p>");
+        $(' #algoImplemented1').append("<h4>" + donnees.algo1CTitle + "<h4>");
+        $(' #algoImplemented1').append("<p>" + donnees.algo1Cp + "<p>");
+        $(' #algoImplemented1').append("<h4>" + donnees.algo1DTitle + "<h4>");
+        $(' #algoImplemented1').append("<p>" + donnees.algo1Dp + "<p>");
+        $(' #algoImplemented1').append("<p><a href=" + donnees.linkAlgo1 + ">For more informations</a><p>");
+        $('.implementedAlgo').append("<p class='seeMore' id='seeMore1'><a>See more</a></p>");   
+
+        $('.implementedAlgo').append("<div id='algoImplemented2'></div>");
+        $('#algoImplemented2').html("<h3>" + donnees.algo2 + "<h3>");
+        $(' #algoImplemented2').append("<h4>" + donnees.algo2ATitle + "<h4>");
+        $(' #algoImplemented2').append("<p>" + donnees.algo2Ap1 + "<p>");
+        $(' #algoImplemented2').append("<img src = '../Design/img/step_img/" + donnees.nameIMG1Algo2 + "'/>");
+        $(' #algoImplemented2').append("<p>" + donnees.algo2Ap2 + "<p>");
+        $(' #algoImplemented2').append("<p>" + donnees.algo2Ap3 + "<p>");
+        $(' #algoImplemented2').append("<h4>" + donnees.algo2BTitle + "<h4>");
+        $(' #algoImplemented2').append("<p>" + donnees.algo2Bp1 + "<p>");
+        $(' #algoImplemented2').append("<p>" + donnees.algo2Bp2 + "<p>");
+        $(' #algoImplemented2').append("<h4>" + donnees.algo2CTitle + "<h4>");
+        $(' #algoImplemented2').append("<p><strong>" + donnees.algo2Csub1 + "</strong><p>");
+        $(' #algoImplemented2').append("<p>" + donnees.algo2Cp1 + "<p>");
+        $(' #algoImplemented2').append("<p><strong>" + donnees.algo2Csub2 + "</strong><p>");
+        $(' #algoImplemented2').append("<p>" + donnees.algo2Cp2 + "<p>");
+        $(' #algoImplemented2').append("<p><a href=" + donnees.linkAlgo1 + ">For more informations</a><p>");
+        $('.implementedAlgo').append("<p class='seeMore' id='seeMore2'><a>See more</a></p>");
+
+        $('.seeMore a').css("color", "#2173EF");
+        $('.seeMore a').css("font-style", "bold");
+        $('.seeMore a').css("font-size", "20px");
+        $('.seeMore').css("cursor", "pointer");
+        $('.seeMore').css("margin-top", "0px");
+
+         $(' #algoImplemented1').css("height", "470px");
+         $(' #algoImplemented1').css("overflow", "hidden");
+         $(' #algoImplemented2').css("height", "455px");
+         $(' #algoImplemented2').css("overflow", "hidden");
+
+
+         $('#seeMore1').click(function() {
+            if($( "#algoImplemented1" ).height() > 480 ){
+                $('#seeMore1').html("<a>See more</a>");
+                 $('.seeMore a').css("color", "#2173EF");
+                $('.seeMore a').css("font-style", "bold");
+                $('.seeMore a').css("font-size", "20px");
+                $( "#algoImplemented1" ).animate({
+                height: "470px"
+              }, 1500 );
+            }else{
+                $('#seeMore1').html("<a>See less</a>");
+                $('.seeMore a').css("color", "#2173EF");
+                $('.seeMore a').css("font-style", "bold");
+                $('.seeMore a').css("font-size", "20px");
+                $( "#algoImplemented1" ).animate({
+                height: "100%"
+              }, 1500 );
+            }
+            });
+         $('#seeMore2').click(function() {
+            if($( "#algoImplemented2" ).height() > 480 ){
+                $('#seeMore2').html("<a>See more</a>");
+                 $('.seeMore a').css("color", "#2173EF");
+                $('.seeMore a').css("font-style", "bold");
+                $('.seeMore a').css("font-size", "20px");
+                $( "#algoImplemented2" ).animate({
+                height: "455px"
+              }, 1500 );
+            }else{
+                $('#seeMore2').html("<a>See less</a>");
+                $('.seeMore a').css("color", "#2173EF");
+                $('.seeMore a').css("font-style", "bold");
+                $('.seeMore a').css("font-size", "20px");
+                $( "#algoImplemented2" ).animate({
+                height: "100%"
+              }, 1500 );
+            }
+            });
+
+         /*end algo implemented */
+
+        $('.existantAlgo').html("<h2>" + donnees.otherTitle + "</h2>");
+        $('.existantAlgo').append("<div id='algoExisted1'></div>");
+        $('#algoExisted1').html("<h3>" + donnees.otherFeature1 + "</h3>");
+        $(' #algoExisted1').append("<ul><li>" + donnees.oFA1 + "</li><li>"
+            + donnees.oFA2 + "</li><li>"
+            + donnees.oFA3 + "</li><li>"
+            + donnees.oFA4 + "</li><li>"
+            + donnees.oFA5 + "</li><li>"
+            + donnees.oFA6 + "</li><li>"
+            + donnees.oFA7 + "</li><li>"
+            + donnees.oFA8 + "</li><li>"
+            + donnees.oFA9 + "</li></ul>");
+
+        $('.existantAlgo').append("<div id='algoExisted2'></div>");
+        $('#algoExisted2').html("<h3>" + donnees.otherFeature2 + "</h3>");
+        $(' #algoExisted2').append("<ul><li>" + donnees.oFB2 + "</li><li>"
+            + donnees.oFB2 + "</li><li>"
+            + donnees.oFB3 + "</li><li>"
+            + donnees.oFB4 + "</li><li>"
+            + donnees.oFB5 + "</li><li>"
+            + donnees.oFB6 + "</li><li>"
+            + donnees.oFB7 + "</li></ul>");
+
+        });/*fin partie json*/
+
 
     });
 
