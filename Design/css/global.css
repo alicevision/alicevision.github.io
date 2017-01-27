@@ -32,7 +32,7 @@ src: url(../fonts/BEBAS.ttf);
 #logoTop{
   width:85px;
   height: auto;
-  margin-top: -20px;
+  margin-left:  20px;
   display: inline-block;
 }
 
@@ -52,8 +52,8 @@ vertical-align: top
 margin: 0;
 padding: 0;
 margin-top: -8px;
-background-image:linear-gradient(to right,white, #156bec, white);
-background-image:-moz-linear-gradient(left, white,#156bec, white);
+background-image:linear-gradient(to right,#156bec, #156bec, white);
+background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 
 }
 #borderBottom{
@@ -63,8 +63,8 @@ background-image:-moz-linear-gradient(left, white,#156bec, white);
   margin: 0;
   padding: 0;
   margin-bottom: -8px;
-  background-image:linear-gradient(to right,white, #156bec, white);
-  background-image:-moz-linear-gradient(left, white,#156bec, white);
+  background-image:linear-gradient(to right,#156bec, #156bec, white);
+  background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 
 }
 
@@ -94,16 +94,15 @@ background-image:-moz-linear-gradient(left, white,#156bec, white);
   width: 100%;
   height: 500px;
   /*margin-top: -95px;*/
-  background: url(../img/imgHome.jpg) no-repeat;
+  background: url(../img/pattern.jpg) repeat;
   background-attachment: fixed;
-  background-size: cover;
 }
 
 #avTextPromo{
   width: 40%;
   float: right;
   margin-right: 70px;
-  color: white;
+  color: black;
 }
 
 #avTextPromo h1{
@@ -1395,6 +1394,7 @@ background-image:-moz-linear-gradient(left, white,#156bec, white);
   height: 500px;
   background: url(../img/viedoMikros.png) no-repeat;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 #projectTextPromo{
@@ -1580,15 +1580,312 @@ background-image:-moz-linear-gradient(left, white,#156bec, white);
   background-size: cover;
 }
 
+#menuMobile{
+  display: none;
+  z-index: 1;
+}
+
+
+#linkAlgoForMobile{
+  width: 70%;
+  height: auto;
+  margin: auto;
+  display: none;
+  border:1px solid #1569E8 ;
+  margin-top: -15px;
+}
+#linkAlgoForMobile p{
+  width: 100%;
+  text-align: center;
+}
+
+#linkAlgoForMobile p a{
+  color: black;
+  font-family: 'Ubuntu';
+  text-transform: uppercase;
+}
+#linkAlgoForMobile p a:hover{
+  color:#1569E8;
+}
+
+#stepForMobile{
+  display: none;
+     width: 90%;
+    font-family: 'Ubuntu';
+    font-size: 20px;
+    font-weight: 600;
+    margin:auto;
+  }
+
+#stepForMobile div{
+  margin-bottom: 10px;
+}
+
+#stepForMobile div:nth-child(1){
+  width:20vw;
+  height: 20vw;
+  margin-right: 1vw;
+  background: url(../img/menu/B1.png);
+  background-size: cover;
+  display: inline-block;
+}
+#stepForMobile div:nth-child(1) p{
+  width: 100%;
+  text-align: center;
+}
+#stepForMobile div:nth-child(1) p a{
+  color:#1569E8;
+}
+#stepForMobile div:nth-child(2){
+  width:20vw;
+  height: 20vw;
+  margin-right: 1vw;
+  background: url(../img/menu/B2.png);
+  background-size: cover;
+  display: inline-block;
+}
+#stepForMobile div:nth-child(2) p{
+  width: 100%;
+  text-align: center;
+}
+#stepForMobile div:nth-child(2) p a{
+  color:#1569E8;
+}
+#stepForMobile div:nth-child(3){
+  width:20vw;
+  height: 20vw;
+  margin-right: 1vw;
+  background: url(../img/menu/B3.png);
+  background-size: cover;
+  display: inline-block;
+}
+#stepForMobile div:nth-child(3) p{
+  width: 100%;
+  text-align: center;
+}
+#stepForMobile div:nth-child(3) p a{
+  color:#1569E8;
+}
+#stepForMobile div:nth-child(4){
+  width:20vw;
+  height: 20vw;
+  margin-right: 1vw;
+  background: url(../img/menu/B4.png);
+  background-size: cover;
+  display: inline-block;
+}
+#stepForMobile div:nth-child(4) p{
+  width: 100%;
+  text-align: center;
+}
+#stepForMobile div:nth-child(4) p a{
+  color:#1569E8;
+}
+
+#stepForMobile div:nth-child(5){
+  width:20vw;
+  height: 20vw;
+  margin-right: 1vw;
+  background: url(../img/menu/B5.png);
+  background-size: cover;
+  display: inline-block;
+}
+#stepForMobile div:nth-child(5) p{
+  width: 100%;
+  text-align: center;
+}
+#stepForMobile div:nth-child(5) p a{
+  color:#1569E8;
+}
+
+#stepForMobile div:nth-child(6){
+  width:20vw;
+  height: 20vw;
+  margin-right: 1vw;
+  background: url(../img/menu/B6.png);
+  background-size: cover;
+  display: inline-block;
+}
+#stepForMobile div:nth-child(6) p{
+  width: 100%;
+  text-align: center;
+}
+#stepForMobile div:nth-child(6) p a{
+  color:#1569E8;
+}
+
+#stepForMobile div:nth-child(7){
+  width:20vw;
+  height: 20vw;
+  margin-right: 1vw;
+  background: url(../img/menu/B7.png);
+  background-size: cover;
+  display: inline-block;
+}
+#stepForMobile div:nth-child(7) p{
+  width: 100%;
+  text-align: center;
+}
+#stepForMobile div:nth-child(7) p a{
+  color:#1569E8;
+}
+#stepForMobile div:nth-child(8){
+  width:20vw;
+  height: 20vw;
+  margin-right: 1vw;
+  background: url(../img/menu/B8.png);
+  background-size: cover;
+  display: inline-block;
+}
+#stepForMobile div:nth-child(8) p{
+  width: 100%;
+  text-align: center;
+}
+#stepForMobile div:nth-child(8) p a{
+  color:#1569E8;
+}
+
+
+
 
 
 /* MEDIA QUERIES */
 
 @media (max-width: 480px) { 
+
+  #stepForMobile{
+    display: block;
+ }
+ #steps{display: none;}
+
+  #hamburgerMenu{display: none;}
+  #stepDiv h1{
+    width: 90%;
+    margin:auto;
+    margin-top: 90px;
+    margin-bottom: 30px;
+  }
+
+  #promoAlgo{
+    height: auto !important;
+  }
+  #linkAlgoForMobile{
+    display: block;
+  }
+
+#scene{display: none;}
+
+#aliceVisionFirstPromo{margin-top: 65px;height: 400px;}
+
+  /* menu*/
+
+  #borderTop{
+    display: none;
+  }
+
+#header{
+  background: white;
+}
+
+#menu{
+  display: none;
+}
+
+#menuMobile{
+  display: block;
+  position: fixed;
+  top:0;
+  right: 0;
+  background: white;
+  width: 100%;
+  border-top: 10px solid #1569E8;
+}
+
+#menuMobile div:nth-child(1){
+  width: 40px;
+  height: 40px;
+  background: url(../img/hamburgerMenu.png);
+  background-size: cover;
+  margin-top: 6px;
+  margin-right:15px;
+  margin-bottom: 8px;
+  float: right;
+   -webkit-transition: background 1s -webkit-transform 2s;
+  transition: background 1s, transform 2s;
+  cursor: pointer;
+  
+}
+#menuMobile div:nth-child(1):hover{
+  background: url(../img/hamburgerMenuHover.png);
+  background-size: cover;
+}
+#menuMobile div:nth-child(2){
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  background: white;
+  position: fixed;
+  top:60px;
+  right: 0;
+  overflow: hidden;
+   -webkit-transition: height 2s -webkit-transform 2s;
+  transition: height 2s, transform 2s;
+  box-shadow: -7px 6px 5px 1px rgba(0, 0, 0, 0.2), 15px 2px 20px rgba(255, 255, 255, 0.6) inset;
+
+}
+#menuMobile div:nth-child(2) ul{
+  margin:0;
+  padding:0;
+}
+#menuMobile div:nth-child(2) li{
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #DBDBDB;
+}
+#menuMobile div:nth-child(2) li a{
+  padding: 20px;
+  color: black;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+}/*
+#hamburgerMenu div:nth-child(2) li a:hover{
+  color:#156BEC;
+}*/
+
+
+#menuMobile div:nth-child(2) ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 27px;
+  display: block;
+  padding: 0 15px;
+  /*transition for smooth hover animation*/
+  transition: all 0.15s;
+}
+/*hover effect on links*/
+#menuMobile div:nth-child(2) ul li a:hover {
+  background: #DBDBDB;
+  border-left: 5px solid #156BEC;
+}
+/*Lets hide the non active LIs by default*/
+#menuMobile ul ul {
+  display: none;
+}
+#menuMobile li.active ul {
+  display: block;
+}
+
+
+
   #logoTop{
     width:42px;
     top:20px;
     position: absolute;
+    z-index: 2;
   }
   #avTextPromo{
     width: 87%;
@@ -1796,12 +2093,108 @@ background-image:-moz-linear-gradient(left, white,#156bec, white);
     min-height: 250px;
   }
 
+  .generalStep div:nth-child(1){width: 100%;}
 
+
+   .generalStep div:nth-child(1) h1{
+    margin-bottom: 15px;
+   }
+  .generalStep div:nth-child(1) h1, .generalStep div:nth-child(1) p {
+    width: 80%;
+    margin:auto;
+  }
+  .generalStep div:nth-child(2){width: 100%;padding-top: 55px;}
+
+
+  .generalStep div:nth-child(2) h4, .generalStep div:nth-child(2) p{
+    width: 80%;
+    margin:auto;
+  }
+  .videoPresentation div{
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .videoPresentation iframe{
+    width: 100%;
+  }
+  .generalPrincipe div h1{
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+.generalStep div:nth-child(1) h3{
+  width: 80%;
+  margin: auto;
+  padding-bottom: 15px;
+}
+
+.generalPrincipe div{
+  width: 100%;
+}
+  .gp1 img{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .gp1 h4{
+    
+  }
+  .gp1 h4, .gp1 p{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px !important;
+  }
+  .implementedAlgo{
+    width: 100%;
+    margin:auto;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  .implementedAlgo h1,.implementedAlgo h2{
+    margin-bottom: 15px !important;
+  }
+
+  .implementedAlgo h3{
+    margin-top: 10px;
+  }
+
+  .implementedAlgo h1,.implementedAlgo h2,.implementedAlgo h3,.implementedAlgo h4, .implementedAlgo p{
+    width: 80%;
+    margin:auto;
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+
+  .existantAlgo{
+    width: 100%;
+    margin:auto;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+.existantAlgo h1,.existantAlgo h2, .existantAlgo p{
+    width: 80%;
+    margin:auto;
+  }
+
+  #algoExisted1,#algoExisted2{
+    width: 80%;
+    margin: auto;
+  }
+
+  #biblio h1, #biblio h6, #biblio p{
+    width: 80%;
+  }
 
 }
 
 /* Extra small devices (portrait phones, less than 576px)*//*768*1024  */
 @media (min-width: 481px) and (max-width: 589px) { 
+
+
   #logoTop{
     width:42px;
     top:20px;
@@ -1911,7 +2304,9 @@ background-image:-moz-linear-gradient(left, white,#156bec, white);
     margin-left: 8%;
   }
 
-
+#hamburgerMenu div:nth-child(2){
+  width: 40% !important;
+}
 
 
 
@@ -1924,8 +2319,10 @@ background-image:-moz-linear-gradient(left, white,#156bec, white);
 #stepsTop{
   margin-left: 8% !important;
 }
-#hamburgerMenu{
 
+
+#hamburgerMenu div:nth-child(2){
+  width:35% !important;
 }
 
  /* Home */
@@ -2013,13 +2410,16 @@ background-image:-moz-linear-gradient(left, white,#156bec, white);
 
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 979px) {
+  #hamburgerMenu div:nth-child(2){
+    width: 30% !important;
+  }
   #stepsTop{
-    margin-left: 17% !important;
+    margin-left: 9% !important;
   }
 
   #steps{
       transform: scale(0.5);
-      margin-left: 4%;
+      margin-left: 2%;
   }
 
   #objectif :nth-child(1) h1{
@@ -2047,6 +2447,16 @@ background-image:-moz-linear-gradient(left, white,#156bec, white);
     font-size: 30px;
   }
 
+    #openSource p:nth-child(2){
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 60px;
+    -moz-column-gap: 60px;
+    column-gap: 60px;
+  }
+    
+
 }
 
 /* Large devices (desktops, 992px and up)*/
@@ -2067,6 +2477,16 @@ background-image:-moz-linear-gradient(left, white,#156bec, white);
   .implementedAlgo h1{
     font-size: 30px;
   }
+
+  #openSource p:nth-child(2){
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 60px;
+    -moz-column-gap: 60px;
+    column-gap: 60px;
+  }
+    
 
 }
 @media (min-width: 1200px) and (max-width: 1499px) {
@@ -2737,7 +3157,6 @@ background-image:-moz-linear-gradient(left, white,#156bec, white);
   float: left;
   width: 50%;
   height: 500px;
-  background: whitesmoke;
 }
 
 

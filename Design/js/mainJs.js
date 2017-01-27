@@ -781,6 +781,27 @@ $("#heraIcone").mouseout(function(){
 /*
 
 });*/
+var menuMobile = document.querySelector('#menuMobile div:nth-child(1)');
+var menuMobileLink = document.querySelector('#menuMobile div:nth-child(2)');
+
+
+
+menuMobile.addEventListener('click', function() {
+  if(menuMobileLink.style.opacity == 0){
+    menuMobileLink.classList.remove( 'displayNone' );
+    menuMobileLink.classList.add( 'fading-in' );
+    menuMobileLink.classList.remove( 'fading-out' );
+    menuMobileLink.style.opacity = 1;
+  }else{
+    menuMobileLink.classList.add( 'displayNone' );
+    menuMobileLink.classList.add( 'fading-out' );
+    menuMobileLink.classList.remove( 'fading-in' );
+    menuMobileLink.style.opacity = 0;
+  }
+        
+
+});
+
 
 
 
@@ -849,6 +870,9 @@ hamburgerMenuFloat.addEventListener('click', function() {
 });
 
 
+
+
+
 function menuFloatable(last_known_scroll_position) {
   // do something with the scroll position
   if(last_known_scroll_position > 230){ 
@@ -881,6 +905,9 @@ function menuFloatable(last_known_scroll_position) {
 
 }
 
+
+
+
     
 
 window.addEventListener('scroll', function(e) {
@@ -894,6 +921,7 @@ window.addEventListener('scroll', function(e) {
   }
   ticking = true;
 })
+
 
 
 
@@ -938,8 +966,6 @@ $( "#c1a" ).mouseout(function() {
 
 
 */
-
-
 
 
 
