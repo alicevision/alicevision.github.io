@@ -3172,7 +3172,13 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 }
 
 
-
+#comingSoon{
+  width: 100%;
+  height: auto;
+  font-family: 'Ubuntu';
+  text-align: center;
+  margin-top: 30vh;
+}
 
 
 
