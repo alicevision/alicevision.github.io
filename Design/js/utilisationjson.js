@@ -1,26 +1,4 @@
-/*function resizeDiv() {
-    var heightAlgoImplemented = document.getElementById("implementedAlgo").offsetHeight;
-    var heightAlgoExistant = document.getElementById("existantAlgo").offsetHeight;
 
-    if(heightAlgoImplemented > heightAlgoExistant ){
-      document.getElementById("existantAlgo").style.height=heightAlgoImplemented+"px";
-    }
-    else if(heightAlgoImplemented < heightAlgoExistant){
-      document.getElementById("implementedAlgo").style.height=heightAlgoExistant+"px";
-    }
-}
-
-var c4a = document.getElementById('c4a'),
-        c4b = document.getElementById('c4b');
-  
-    c4a.addEventListener('click', function() {
-       resizeDiv();
-    });
-    c4b.addEventListener('click', function() {
-       resizeDiv();
-    });
-
-*/
 $(function() {
     var images  = "design/images/";
     var js      = "../Design/js/";

@@ -790,7 +790,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 
 }
 
-#c1a:hover, #c1b:hover, #c2a:hover,#c2b:hover, #c3a:hover,#c3b:hover, #c4a:hover,#c4b:hover, #c5a:hover,#c5b:hover, #c6a:hover,#c6b:hover, #c7a:hover,#c7b:hover, #c8a:hover,#c8b:hover{
+#c1b:hover, #c2b:hover,#c3b:hover,#c4b:hover, #c5b:hover,#c6b:hover, #c7b:hover, #c8b:hover{
   /*border:5px solid #044ebc;*/
   background-color: #DBDBDB;
 }
