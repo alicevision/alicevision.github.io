@@ -203,6 +203,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   font-family: 'Ubuntu';
   font-weight: 800;
   color:#09abc6;
+  background: none;
   text-transform: uppercase;
   margin-top: 10px;
   -webkit-transition: background 1s ease-out, color 1s -webkit-transform 1s;
@@ -368,7 +369,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   padding-bottom: 5px;
   margin:10px;
   border:1px solid black;
-  background: #F5F5F5CC;
+  background: rgba(255,255,255,0.6);
   -webkit-transition: background 1s ease, color 1s -webkit-transform 1s;
   transition: background 1s ease, color 1s, transform 1s;
 }
@@ -491,7 +492,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   padding-bottom: 5px;
   margin:10px;
   border:1px solid black;
-  background: #F5F5F5CC;
+  background: rgba(255,255,255,0.6);
   -webkit-transition: background 1s ease, color 1s -webkit-transform 1s;
   transition: background 1s ease, color 1s, transform 1s;
 }
@@ -2735,6 +2736,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
  display: inline-block;
   width: 50%;
   min-height: 300px;
+  margin-top: 6vw;
 }
 
 
