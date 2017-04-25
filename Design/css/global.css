@@ -18,7 +18,8 @@ src: url(../fonts/BEBAS.ttf);
 {
 	width : 100%;
   height : auto;
-  position: absolute;
+  position: fixed;
+  background: whitesmoke;
    /* background: #89bad1;*/
 }
 #header h1{
@@ -30,10 +31,11 @@ src: url(../fonts/BEBAS.ttf);
   font-size:1.5em;
 }
 #logoTop{
-  width:85px;
+  width:190px;
   height: auto;
   margin-left:  20px;
   display: inline-block;
+  margin-top: 11px;
 }
 
 #content
@@ -47,7 +49,7 @@ src: url(../fonts/BEBAS.ttf);
 
 #borderTop{
 width:auto;
-height: 20px;
+height: 0px;
 vertical-align: top
 margin: 0;
 padding: 0;
@@ -65,7 +67,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   margin-bottom: -8px;
   background-image:linear-gradient(to right,#156bec, #156bec, white);
   background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
-
+  display: none;
 }
 
 
@@ -74,35 +76,65 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   vertical-align: top;
   float: right;
   margin-right: 50px;
+  opacity: 1;
+  -webkit-transition: background 1s ease-out, color 1s, margin-right 1s -webkit-transform 1s;
+  transition: background 1s ease-out, color 1s, margin-right 1s transform 1s;
+}
+
+#menu ul{
+  padding:0;
+  margin: 0;
 }
 
 #menu ul li{
   display: inline-block;
-  padding: 18px 20px 0 20px;
+  padding: 20px 20px 14px 20px;
   font-family: 'Ubuntu';
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 14px;
 
 }
 
 #menu li a{
   color: black;
+  -webkit-transition: color 0.6s -webkit-transform 0.6s;
+  transition: color 0.6s, transform 0.6s;
+}
+#menu li:hover a{
+  color: #09ABC6;
 }
 
 #aliceVisionFirstPromo{
   width: 100%;
-  height: 500px;
+  height: auto;
   /*margin-top: -95px;*/
-  background: url(../img/pattern.jpg) repeat;
+  background: url(../img/sky3.jpg) no-repeat;
+  /*background: #359DE9;*/
+  background-size: cover;
   background-attachment: fixed;
+}
+
+
+#scrollDiv{
+  width: 100%;
+  height: 80px;
+}
+#scrollDiv img{
+  width: 60px;
+  height: 60px;
+  margin-left:46%;
+
 }
 
 #avTextPromo{
   width: 40%;
-  float: right;
+  display: inline-block;
   margin-right: 70px;
-  color: black;
+  color: white;
+  margin-top: 160px;
+  min-height: 300px;
+  vertical-align: top;
 }
 
 #avTextPromo h1{
@@ -111,7 +143,6 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   font-family: 'Ubuntu';
   font-size: 35px;
   text-align: center;
-  padding-top: 100px;
   text-transform: uppercase;
 }
 
@@ -120,40 +151,38 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   height: auto;
   font-family: 'Ubuntu';
   font-weight: 300;
-  font-size: 28px;
+  font-size: 24px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.7);
+ /* background: rgba(255, 255, 255, 0.7);*/
 
 }
 
 #objectif{
   width: 100%;
   height: auto;
-  background: #1569E8;
+  background: whitesmoke;
+  color:#2FC0D5;
+  padding-bottom: 50px;
 }
 
 #objectif :nth-child(1){
-  width: 50%;
-  float: left;
-  background: #1569E8;
+  width: 80%;
+  background: whitesmoke;
+  color: #09abc6;
   text-align: center;
+  margin: auto;
 }
 #objectif :nth-child(1) h1{
-  width: 80%;
+  width: 66%;
   height: auto;
-  margin-top: 130px;
-  margin-left: 10%;
-  color: white;
+  margin-top: 65px;
+  margin-left: 17%;
   font-family: 'Ubuntu';
   font-weight: 400;
-  font-size: 25px;
+  font-size: 30px;
   text-transform: uppercase;
    -webkit-transition: color 1s -webkit-transform 2s;
   transition: color 1s, transform 2s;
-}
-
-#objectif :nth-child(1) h1:hover{
-  color: black;
 }
 
 #objectif :nth-child(1) p{
@@ -161,21 +190,38 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   height: auto;
   margin-top: 20px;
   margin-left: 10%;
-  color: white;
   font-family: 'Ubuntu';
-  font-weight: 400;
+  font-weight: 200;
   font-size: 20px;
    -webkit-transition: color 1s -webkit-transform 2s;
   transition: color 1s, transform 2s;
 }
 
+#objectif button{
+  border: 2px solid #09abc6;
+  padding: 10px 30px;
+  font-family: 'Ubuntu';
+  font-weight: 800;
+  color:#09abc6;
+  text-transform: uppercase;
+  margin-top: 10px;
+  -webkit-transition: background 1s ease-out, color 1s -webkit-transform 1s;
+  transition: background 1s ease-out, color 1s, transform 1s;
+  cursor: pointer;
+}
 
+#objectif button:hover{
+  background: #09abc6;
+  color: whitesmoke;
+}
 
 #objectif div:nth-child(2){
-  width: 50%;
+  width: 80%;
   min-height:397px;
-  float: right;
-  background: white;
+  background: whitesmoke;
+  margin: auto;
+  margin-bottom: 20px;
+  display: none;
 }
 
 #objectif :nth-child(2) iframe{
@@ -188,8 +234,11 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   width: 100%;
   height: auto;
   margin:auto;
-  color: black
-  background:whitesmoke;
+  color: black;
+  /*background: url(../img/homePage.jpg) no-repeat;*/
+  background: url(../img/sky2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 #libsDiv svg{
@@ -246,29 +295,46 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   font-style: normal;
   font-size: 35px;
   text-align: center;
-  margin-bottom: 0;
+  margin: 0;
+  padding-top: 65px;
+  padding-bottom: 20px;
+  color: black;
+ 
 }
 
 #libContent{
   width:100%;
   height: auto;
   margin: auto;
+  background:none;
+  padding-bottom: 70px;
+}
+/*
+#libContent div{
+  width: 21vw;
+  min-height: 21vw;
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 5px;
+  margin:10px;
+  border:1px solid black;
+  background: #F5F5F5CC;
+  -webkit-transition: background 2s ease, color 2s -webkit-transform 2s;
+  transition: background 2s ease, color 2s, transform 2s;
 }
 
-#libContent div{
-  width: 32.45vw;
-  height: auto;
-  float: left;
-  vertical-align: top;
-  padding-bottom: 55px;
-
+#libContent div:hover{
+  background: #359DE9;
+  color: white;
 }
 
 #libContent div:nth-child(1){
   /*background: linear-gradient(to bottom, black 30%, #054FBE);
   
   background: url(../img/fontaine1.png);
-  background-size: cover;*/
+  background-size: cover;
+  margin-left: 16%;
+  
 }
 
 
@@ -278,6 +344,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
    *
    background: url(../img/fontaine2.png);
    background-size: cover;*/
+  /* background: #F5F5F5CC;
 
 }
 
@@ -287,24 +354,38 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   
   background: url(../img/fontaine2.png);
   background-size: cover;*/
-
+ /* background: #F5F5F5CC;
 }
 
+*/
 
 
-#libContent div div{
-  width:200px;
-  height: 200px;
-  margin: auto;
-  padding: 5%;
-  border-radius: 100%;
-  margin-left: 20%;
-  display: none;
-
+#divSFM, #divMS, #divCT{
+  width: 270px;
+  min-height: 270px;
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 5px;
+  margin:10px;
+  border:1px solid black;
+  background: #F5F5F5CC;
+  -webkit-transition: background 1s ease, color 1s -webkit-transform 1s;
+  transition: background 1s ease, color 1s, transform 1s;
 }
+
+#divSFM div, #divMS div, #divCT div{
+  width: 270px;
+  height: 196px;
+}
+
+#divSFM{
+  margin-left: 17%;
+}
+
 
 #libContent div h3{
-  width:100%;
+  width:90%;
+  margin: auto;
   height: auto;
   font-family: 'Ubuntu';
   font-size: 25px;
@@ -339,12 +420,13 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 #softDiv{
   width: 100%;
   height: auto;
-  background: black;
+   background:  url(../img/sky2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
   margin:auto;
-  color: white;
-  padding-bottom: 30px;
-  margin-top: -20px;
-
+  color: black;
+  padding-bottom: 40px;
+  margin: 0;
 }
 
 #softDiv h1{
@@ -355,45 +437,82 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   font-style: normal;
   font-size: 35px;
   text-align: center;
-  color:white;
-  padding: 20px 0px 20px 0px;
+  padding-top: 65px;
+  padding-bottom: 20px;
+  margin: 0;
+  color:black;
+}
+
+.btnForCube {
+  width:25px;
+  height: 25px;
+  margin-left: 120px;
+  cursor: pointer;
 }
 
 #softContent{
-  width:85%;
+  width:100%;
   height: auto;
   margin: auto;
-  margin-right: 8%;
+  overflow: hidden;
+  margin-bottom: 70px;
 }
 
-#softContent div{
-   width: 32%;
-  height: auto;
-  display: inline-block;
-  vertical-align: top;
-
-}
-
+/*
 #softContent div div{
-  width:100%;
+  width:50%;
   height: 200px;
   margin: auto;
   border-top: 5px solid #1569E8;
   border-bottom: 5px solid #1569E8;
 
-}
+}*/
 
-#softContent div div:nth-child(1){
+/*
+#divMayaMVG div:nth-child(1){
   background: url(../img/img_project/mayaMVG.png);
   background-size:cover;
 }
-#softContent div:nth-child(2) div{
+#divMeshroom div:nth-child(2){
   background: url(../img/img_project/ofxMVG.png);
   background-size:cover;
 }
-#softContent div:nth-child(3) div{
+#divOFX div:nth-child(1){
   background: url(../img/img_project/sift_keypoints.jpg);
   background-size:cover;
+}
+*/
+
+#divMayaMVG, #divMeshroom, #divOFX{
+  width: 270px;
+  min-height: 270px;
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 5px;
+  margin:10px;
+  border:1px solid black;
+  background: #F5F5F5CC;
+  -webkit-transition: background 1s ease, color 1s -webkit-transform 1s;
+  transition: background 1s ease, color 1s, transform 1s;
+}
+
+#divMayaMVG div, #divMeshroom div, #divOFX div{
+  width: 270px;
+  height: 196px;
+}
+
+#divMayaMVG{
+  margin-left: 17%;
+}
+
+
+
+#softContent div:nth-child(1){
+  /*background: linear-gradient(to bottom, black 30%, #054FBE);
+  
+  background: url(../img/fontaine1.png);
+  background-size: cover;*/
+  
 }
 
 #softContent div h3{
@@ -410,10 +529,11 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   margin:auto;
   font-family: 'Ubuntu';
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
-  padding-bottom: 10px;
-  color: #1569E8;
+  padding-bottom: 15px;
+  text-align: center;
+  
 }
 
 #softContent div p{
@@ -428,7 +548,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 #mikrosDiv{
   width: 100%;
   min-height: 200px;
-  background: #1569E8;
+  background: whitesmoke;
 
 
 }
@@ -437,8 +557,8 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   width: 50%;
   min-height: 203px;
   float: left;
-  background: #1569E8;
-  color:white;
+  background: whitesmoke;
+  color:#09abc6;
   font-size: 20px;
   text-align: center;
 }
@@ -446,27 +566,20 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 #mikrosDiv :nth-child(1) h1{
   width: 80%;
   height: auto;
-  margin-top: 130px;
+  margin-top: 12vw;
   margin-left: 10%;
-  color: white;
   font-family: 'Ubuntu';
   font-weight: 400;
-  font-size: 25px;
+  font-size: 24px;
    -webkit-transition: color 1s -webkit-transform 2s;
   transition: color 1s, transform 2s;
 }
-
-#mikrosDiv :nth-child(1) h1:hover{
-  color: black;
-}
-
 #mikrosDiv :nth-child(1) p{
   width: 80%;
   height: auto;
   margin-left: 10%;
-  color: white;
   font-family: 'Ubuntu';
-  font-weight: 400;
+  font-weight: 200;
   font-size:20px;
    -webkit-transition: color 1s -webkit-transform 2s;
   transition: color 1s, transform 2s;
@@ -478,52 +591,63 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   min-height: 350px;
   float: right;
   background: grey;
+  height: 30vw;
 }
 
 #mikrosDiv :nth-child(2) iframe{
   width: 100%;
-  min-height: 350px;
-  height: auto;
+  height: 100%;
 }
 
 
 #openSource{
   width: 100%;
   min-height: 200px;
-  background: #1569E8;
+  background: #09abc6;
   color: white;
   font-family: 'Ubuntu';
   padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+#openSource div{
+  width:450px;
+  height: 450px;
+  margin: auto;
+  border:2px solid whitesmoke;
+  padding: 30px;
 }
 
 #openSource h1{
   width: 100%;
   text-align: center;
-  padding-top: 20px;
+  padding-bottom:  20px;
   font-family: 'Ubuntu';
   font-weight: 400;
   text-transform: uppercase;
+  margin:0;
 }
 
 #openSource p:nth-child(2) {
-  width: 55%;
-  margin:auto;
+  width: 100%;
+  text-align: justify;
+  margin:auto;/*
   text-align: left;
   -webkit-column-count: 3; /* Chrome, Safari, Opera */
-    -moz-column-count: 3; /* Firefox */
-    column-count: 3;
+   /* -moz-column-count: 3; /* Firefox */
+  /*  column-count: 3;
 
     -webkit-column-gap: 60px; /* Chrome, Safari, Opera */
-    -moz-column-gap: 60px; /* Firefox */
-    column-gap: 60px;
+ /*   -moz-column-gap: 60px; /* Firefox */
+  /*  column-gap: 60px;*/
 }
 
 #openSource p:nth-child(3) {
-  width: 55%;
+  width: 100%;
   margin:auto;
   margin-top: 20px;
   text-align: justify;
-  
+
 }
 
 
@@ -531,61 +655,57 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   width: 100%;
   background: whitesmoke;
   min-height: 200px;
+  padding-bottom: 60px;
 }
 
 
 #promoAlgo h1{
-  width:90%;
-  margin:auto;
-  padding: 20px 0px 20px 0px;
-  color: black;
   font-family: 'Ubuntu';
   font-weight: 400;
   text-transform: uppercase;
-  font-style:normal;
-  font-size: 25px;
+  font-style: normal;
+  font-size: 35px;
   text-align: center;
+  margin: 0;
+  padding-top: 65px;
+  padding-bottom: 20px;
+  color: black;
 
 }
 
+#promoAlgo h3{
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Ubuntu';
+  margin-top: 0;
+}
 
 #footer{
   width: 100%;
   min-height: 100px;
-  background: black;
-  color: white;
+  background: whitesmoke;
+  color: black;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-/*#footer div:nth-child(1){
-  width: 16%;
-  margin-left: 20px;
-  float: left;
-
-}
-
-#footer div:nth-child(1) img{
-  width: 120px;
-  height: auto;
-  margin-left: 25%;
-  margin-bottom: -20px;
-}
-#footer div:nth-child(1) p{
-  width: 100%;
-  text-align: justify;
-  vertical-align: top;
-}*/
-
 #informations{
-  width: 80%;
+  width: 90%;
   height: auto;
   margin:auto;
-  /*float: right;*/
 }
+
+#informations div a{
+   -webkit-transition: background 0.6s, color 0.6s -webkit-transform 0.6s;
+  transition: background 0.6s, color 0.6s, transform 0.6s;
+}
+
 
 #informations div a:hover{
-  color: white;
+  color: #09ABC6;
 }
 
-#informations div:nth-child(1){
+#informations div{
   width:14%;
   height: auto;
   display: inline-block;
@@ -595,98 +715,46 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   margin-left: 5%;
 }
 
-#informations div:nth-child(1) h2{
-  font-size: 16px;
+#informations div h2{
+  font-size: 17px;
   font-family: 'Ubuntu';
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 22px;
 
 }
-#informations div:nth-child(1) a{
+#informations div a{
   display: block;
   font-size: 15px;
   margin-bottom: 10px;
+  color: black;
+  font-family: 'Ubuntu';
+  font-weight: 200;
 
 }
 
-#informations div:nth-child(2){
-  width:12%;
-  height: auto;
+#informations div img{
+  width: 20%;
   display: inline-block;
-  font-family: 'Ubuntu';
-  font-weight: normal;
-  vertical-align: top;
-  margin-left: 3%;
 }
 
-#informations div:nth-child(2) h2{
-  font-size: 16px;
-  font-family: 'Ubuntu';
-  font-weight: 400;
-  text-transform: uppercase;
-
-
+#partenaire{
+  width: 30% !important;
 }
-#informations div:nth-child(2) a{
-  display: block;
-  font-size: 15px;
-  margin-bottom: 10px;
-
-}
-
-#informations div:nth-child(4){
-  width:auto;
-  height: auto;
-  display: inline-block;
-  font-family: 'ubuntu';
-  font-weight: normal;
-  vertical-align: top;
-  margin-left: 0%;
-}
-
-#informations div:nth-child(4) h2{
-  font-size: 16px;
-  font-family: 'Ubuntu';
-  font-weight: 400;
-  text-transform: uppercase;
-}
-#informations div:nth-child(4) img{
-  width:70px;
-
-}
-
-
-#informations div:nth-child(3){
-  width:20%;
-  height: auto;
-  display: inline-block;
-  font-family: 'ubuntu';
-  font-weight: normal;
-  vertical-align: top;
-  margin-left: 5%;
-}
-
-#informations div:nth-child(3) h2{
-  font-size: 16px;
-  font-family: 'Ubuntu';
-  font-weight: 400;
-  text-transform: uppercase;
-
-}
-#informations div:nth-child(3) a{
-  display: block;
-  font-size: 15px;
-  margin-bottom: 10px;
-
-}
-
-
 #copyRight{
-  font-size: 15px;
-  color: grey;
-  text-align: right;
-}
+  font-size: 12px;
+  color: whitesmoke;
+  margin:0;
+  padding: 5px 0 5px 0;
+  text-align: center;
 
+}
+#copyRight p{
+  margin: 0;
+  padding: 0;
+  margin-right: 30px;
+}
 
 /* Step by step page */
 
@@ -728,7 +796,10 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 #stepDiv{
   width: 100%;
   height: auto;
-  margin-bottom: 25px;
+  background: url('../img/fond3.jpg');
+  vertical-align: top;
+  background-attachment: fixed;
+  min-height: 290px;
 }
 
 #stepDiv h1{
@@ -738,469 +809,111 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   font-weight: normal;
   vertical-align: top;
   text-align: center;
-  padding-top: 10px;
+  padding-bottom: 35px;
   color: black;
-
-  margin-top: 90px;
-}
-
-#steps{
-  width:1500px;
-  height: auto;
-  transform-origin: left;
-  transform: scale(0.6);
-  margin-left: 8%;
-  margin-top: 40px;
-}
-
-#c1a{
-  width:60px;
-  height: 60px;
-  transition: background-color 0.5s ease;
-  /*background: #044ebc;*/
-  background: none;
-  float: left;
-  transform: rotate(30deg);
-  z-index: -1;
-
-
-}
-
-#c1b{
-  width:80px;
-  height: 80px;
-  transition: background-color 0.5s ease;
-  /*background: #044ebc;
-  /*background: url(../img/pattern2F.jpg) repeat;*/
-  background: url(../img/menu/B1.png);
-  background-size: cover;
-  float: left;
-  margin-left: -60px;
-
-}
-
-#c1b p{
-  width: 100%;
-  text-align: center;
-  font-family: 'Ubuntu';
-  color:#044ebc;
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 18px;
-
-}
-
-#c1b:hover, #c2b:hover,#c3b:hover,#c4b:hover, #c5b:hover,#c6b:hover, #c7b:hover, #c8b:hover{
-  /*border:5px solid #044ebc;*/
-  background-color: #DBDBDB;
-}
-
-#line1{
-  width: 120px;
-  height: 77px;
-  transform: scaleY(0.10);
-  float: left;
-  z-index: 1;
-  /*background-image:linear-gradient(to right, #044ebc, #0c53ca);
-  background-image:-moz-linear-gradient(left, #044ebc, #0c53ca);*/
-  background: #4D4D4D;
-
-}
-
-#c2a{
-  width:60px;
-  height: 60px;
-  /*background: #0c53ca;*/
-  background: none;
-  float: left;
-  z-index: -1;
-  transition: background-color 0.5s ease;
- transform: rotate(30deg);
-
-}
-#c2b{
-  width:80px;
-  height: 80px;
-  /*background: #0c53ca;*/
-  background: url(../img/menu/B2.png);
-  background-size: cover;
-  float: left;
-  margin-left: -60px;
-  transition: background-color 0.5s ease;
-
-}
-#c2b p{
-  width: 100%;
-  text-align: center;
-  font-family: 'Ubuntu';
-  color:#0c53ca;
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 18px;
-
-}
-
-#line2{
-  width: 120px;
-  height: 77px;
-  transform: scaleY(0.10);
-  float: left;
-  z-index: 1;
-  /*background-image:linear-gradient(to right, #0c53ca, #0c5ee3);
-  background-image:-moz-linear-gradient(left, #0c53ca, #0c5ee3 );*/
-  background: #4D4D4D;
-
-}
-
-#c3a{
-  width:60px;
-  height: 60px;
-  /*background: #0c5ee3;*/
-  background:none;
-  float: left;
-  z-index: -1;
-  transition: background-color 0.5s ease;
-  transform: rotate(30deg);
-
-}
-#c3b{
-  width:80px;
-  height: 80px;
-  /*background: #0c5ee3;*/
-  background: url(../img/menu/B3.png);
-  background-size: cover;
-  float: left;
-  margin-left: -60px;
-  transition: background-color 0.5s ease;
-}
-#c3b p{
-  width: 100%;
-  text-align: center;
-  font-family: 'Ubuntu';
-  color:#0c5ee3;
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 18px;
-
-}
-
-#line3{
-  width: 120px;
-  height: 77px;
-  transform: scaleY(0.10);
-  float: left;
-  z-index: 1;
-  /*background-image:linear-gradient(to right, #0c5ee3, #2173ef);
-  background-image:-moz-linear-gradient(left, #0c5ee3, #2173ef );*/
-  background: #4D4D4D;
-
-}
-#c4a{
-  width:60px;
-  height: 60px;
-  /*background: #2173ef;*/
-  background: none;
-  float: left;
-  z-index: -1;
-  transition: background-color 0.5s ease;
-  transform: rotate(30deg);
-
-}
-#c4b{
-  width:80px;
-  height: 80px;
-  /*background: #2173ef;*/
-  background: url(../img/menu/B4.png);
-  background-size: cover;
-  float: left;
-  margin-left: -60px;
-  transition: background-color 0.5s ease;
-}
-#c4b p{
-  width: 100%;
-  text-align: center;
-  font-family: 'Ubuntu';
-  color:#2173ef;
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 18px;
-
-}
-
-#line4{
-  width: 120px;
-  height: 77px;
-  transform: scaleY(0.10);
-  float: left;
-  z-index: 1;
-  /*background-image:linear-gradient(to right, #2173ef, #5193f5);
-  background-image:-moz-linear-gradient(left, #2173ef, #5193f5 );*/
-  background: #1569E8;
-}
-#c5a{
-  width:60px;
-  height: 60px;
-  /*background: #5193f5;*/
-  background: none;
-  float: left;
-  z-index: -1;
-  transition: background-color 0.5s ease;
-  transform: rotate(30deg);
-
-}
-#c5b{
-  width:80px;
-  height: 80px;
-  /*background: #5193f5;*/
-  background: url(../img/menu/B5.png);
-  background-size: cover;
-  float: left;
-  margin-left: -60px;
-  transition: background-color 0.5s ease;
-}
-#c5b p{
-  width: 100%;
-  text-align: center;
-  font-family: ubuntu;
-  color:#5193f5;
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 18px;
-
-}
-#line5{
-  width: 120px;
-  height: 77px;
-  transform: scaleY(0.10);
-  float: left;
-  z-index: 1;
-  /*background-image:linear-gradient(to right, #5193f5, #90baf9);
-  background-image:-moz-linear-gradient(left, #5193f5, #90baf9 );*/
-  background: #1569E8;
-}
-
-#c6a{
-  width:60px;
-  height: 60px;
-  /*background: #90baf9;*/
-  background: none;
-  float: left;
-  z-index: -1;
-  transition: background-color 0.5s ease;
-  transform: rotate(30deg);
-
-}
-#c6b{
-  width:80px;
-  height: 80px;
-  /*background: #90baf9;*/
-  background: url(../img/menu/B6.png);
-  background-size: cover;
-  float: left;
-  margin-left: -60px;
-  transition: background-color 0.5s ease;
-}
-#c6b p{
-  width: 100%;
-  text-align: center;
-  font-family: 'Ubuntu';
-  color:#90baf9;
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 18px;
-
-}
-#line6{
-  width: 120px;
-  height: 77px;
-  transform: scaleY(0.10);
-  float: left;
-  z-index: 1;
-  /*background-image:linear-gradient(to right, #90baf9, #bcd5fb);
-  background-image:-moz-linear-gradient(left, #90baf9, #bcd5fb );*/
-  background: #1569E8;
-}
-#c7a{
-  width:60px;
-  height: 60px;
-  /*background: #bcd5fb;*/
-  background: none;
-  float: left;
-  z-index: -1;
-  transition: background-color 0.5s ease;
-  transform: rotate(30deg);
-
-}
-#c7b{
-  width:80px;
-  height: 80px;
-  /*background: #bcd5fb;*/
-  background: url(../img/menu/B7.png);
-  background-size: cover;
-  float: left;
-  margin-left: -60px;
-  transition: background-color 0.5s ease;
-}
-#c7b p{
-  width: 100%;
-  text-align: center;
-  font-family: 'Ubuntu';
-  color:#bcd5fb;
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 18px;
-
-}
-#line7{
-  width: 120px;
-  height: 77px;
-  transform: scaleY(0.10);
-  float: left;
-  z-index: 1;
- /* background-image:linear-gradient(to right, #bcd5fb, #e8f1fe);
-  background-image:-moz-linear-gradient(left, #bcd5fb, #e8f1fe );*/
-  background: #1569E8;
-
-}
-
-#c8a{
-  width:60px;
-  height: 60px;
- /*background: #e8f1fe;*/
-  background: none;
-  float: left;
-  z-index: -1;
-  transition: background-color 0.5s ease;
-  transform: rotate(30deg);
-
-}
-#c8b{
-  width:80px;
-  height: 80px;
-  /*background: #e8f1fe;*/
-  background: url(../img/menu/B8.png);
-  background-size: cover;
-  float: left;
-  margin-left: -60px;
-  transition: background-color 0.5s ease;
-}
-
-#c8b p{
-  width: 100%;
-  text-align: center;
-  font-family: 'Ubuntu';
-  color:#e8f1fe;
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 18px;
-
-
-}
-
-#c1b p a,#c2b p a,#c3b p a,#c4b p a,#c5b p a,#c6b p a,#c7b p a,#c8b p a{
-  color:#4D4D4D;
-}
-#c1b ,#c2b ,#c3b ,#c4b ,#c5b ,#c6b ,#c7b ,#c8b {
-  cursor: pointer;
+  text-transform: uppercase;
+  padding-top: 90px;
+  font-weight: 500;
 }
 
  .generalStep{
   width: 100%;
   height: auto;
-  background: #dbdbdb;
   /*max-width: 1200px;
   margin: auto;*/
+  font-family: 'Ubuntu';
 
  }
 
 .generalStep div:nth-child(1){
-  width: 70%;
-  background: #156bec;
+  width: 100%;
+  /*background: #09ABC6;*/
+  background: none;
   padding-top: 15px;
-  padding-bottom: 30px;  
-  float: left;
-
+  padding-bottom: 10px; 
 
 }
 
-.generalStep div:nth-child(1) h1{
-  width: 75%;
-  margin-left: 20%;
-  text-align:left;
-  font-family: 'Ubuntu';
+.generalStep div h1{
+  width: 80%;
+  margin:auto;
+  text-align:center;
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 35px;
-  color: white;
+  font-size: 30px;
+  color: black;
+  margin-top: 40px;
 }
-.generalStep div:nth-child(1) h2{
-  width: 75%;
-  margin-left: 20%;
-  text-align:left;
-  font-family: ubuntu;
-  font-size: 25px;
-  margin-bottom: 0; 
-  color: white;
+.generalStep div h2{
+  width: 80%;
+  margin:auto;
+  text-align:center;
+  font-weight: 400;
+  color: #09ABC6;
+  padding-bottom: 20px;
+  margin-top:5px;
 }
-.generalStep div:nth-child(1) h3{
-  width: 75%;
-  margin-left: 20%;
-  margin-top: 0;
+.generalStep div h3{
+  width: 60%;
+  margin: auto;
   text-align:left;
-  font-family: ubuntu;
-  font-size: 18px;
-  font-size: bold;
-  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  color: #09ABC6;
+  padding-bottom: 10px;
 }
 
-.generalStep div:nth-child(1) p{
-  width: 75%;
-  margin-left: 20%;
+.generalStep div h4{
+  width: 60%;
+  margin: auto;
   text-align:left;
-  font-family: 'Ubuntu';
-  font-weight: 300;
-  font-style: normal;
+  font-weight: 500;
   font-size: 16px;
-  color: white;
+  color: black;
 }
+.generalStep div h5{
+  width: 60%;
+  margin: auto;
+  text-align:center;
+  font-weight: 500;
+  font-size: 16px;
+  color: black;
+}
+
+.generalStep div p{
+  width: 60%;
+  margin: auto;
+  text-align:left;
+  font-weight: 200;
+  font-size: 16px;
+  color: black;
+}
+
 
 .generalStep div:nth-child(2){
-  width: 24%;  
-  padding-top: 25px;
+  width: 100%; 
+  margin: auto; 
   padding-bottom: 30px;  
-  padding-left: 5%;
-  float: right;
   font-family: 'Ubuntu';
   font-weight: 300;
+  color: white;
 }
 
-.generalStep div:nth-child(2) h4,.generalStep div:nth-child(2) p{
-  width: 100%;   
-  vertical-align: top;
-  margin-bottom: 0;
-  margin-top: 15px;
-}
 
 .videoPresentation{
   width: 100%;
   height: auto;
   min-height: 100px;
   color: black;
+  font-family: 'Ubuntu';
+  padding-bottom: 50px;
+  line-height: 18px;
  /* max-width: 1200px;
   margin: auto;*/
 }
 
-.videoPresentation h1{
-  width: 100%;
-  text-align: center;
-  font-family: 'Ubuntu';
-  font-size: 30px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
 .videoPresentation div{
-  width: 560px;
+  width: 60%;
   min-height: 350px;
   background: none;
   margin: auto;
@@ -1208,18 +921,33 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 }
 
 .videoPresentation iframe{
-  width : 560px;
-  height: 315px;
+  width : 100%;
+  height: 100%;
+  min-height: 350px;
   margin: auto;
 }
+
+
+  .videoPresentation h3{
+    width:60%;
+    margin: auto;
+    font-weight: 500;
+    padding-bottom: 10px;
+    font-size: 17px;
+  } 
+  .videoPresentation p{
+    width:60%;
+    text-align: left;
+    font-weight: 200;
+    margin: auto;
+  }
 
 .generalPrincipe{
   width: 100%;
   height: auto;
-  background: #156cee;
+  background: black; /*#09ABC6;*/
   color: white;
   font-family: 'Ubuntu';
-  padding-bottom: 30px;
  /* max-width: 1200px;
   margin: auto;*/
 
@@ -1239,7 +967,121 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   font-family: 'Ubuntu';
   font-weight: 400;
   text-transform: uppercase;
+  font-size: 30px;
 }
+
+
+
+#mikrosDiv div:nth-child(1){
+  width: 50%;
+  min-height: 203px;
+  float: left;
+  background: whitesmoke;
+  color:#09abc6;
+  font-size: 20px;
+  text-align: center;
+}
+
+#mikrosDiv :nth-child(1) h1{
+  width: 80%;
+  height: auto;
+  margin-top: 12vw;
+  margin-left: 10%;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 24px;
+   -webkit-transition: color 1s -webkit-transform 2s;
+  transition: color 1s, transform 2s;
+}
+#mikrosDiv :nth-child(1) p{
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+  font-family: 'Ubuntu';
+  font-weight: 200;
+  font-size:20px;
+   -webkit-transition: color 1s -webkit-transform 2s;
+  transition: color 1s, transform 2s;
+}
+
+
+#mikrosDiv div:nth-child(2){
+  width: 50%;
+  min-height: 350px;
+  float: right;
+  background: grey;
+  height: 30vw;
+}
+
+#mikrosDiv :nth-child(2) iframe{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+#gp1{
+  width:60%;
+  min-height: 30vw;
+  margin:0;
+  padding: 0;
+  display: inline-block;
+  background: #09ABC6;
+  margin-right: -4px;
+  padding-bottom: 20px;
+  font-family: 'Ubuntu';
+}
+
+#gp1 h4, #gp1 p{
+  margin:0;
+  padding: 0;
+  width: 80%;
+  margin-left: 10%;
+}
+
+#gp1 h4{
+  font-weight: 500;
+}
+
+#gp1 p{
+  padding-top: 5px;
+  padding-bottom: 15px;
+  font-weight: 100;
+}
+
+#gp2{
+  width: 40%;
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: top;
+  height: 31.4vw;
+  overflow: hidden;
+  background: url('../img/sky3.jpg');
+  background-size: cover;
+}
+#gp2 img{
+  width: 0%;
+  height:auto;
+  vertical-align: top;
+  display: none;
+}
+
+/*
+#gp2{
+  width:50%;
+  min-height: 100px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  background: url('../img/step_img/img_step1.png');
+  background-size: cover;
+  margin-right: -5px;
+  vertical-align: top;
+}
+
+*/
+
 
 .gp1{
   width: auto;
@@ -1308,72 +1150,155 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 #algo{
   width: 100%;
   height: auto;
-  background: white;
+  background: whitesmoke;
 }
 
 
 
 .implementedAlgo{
-  width: 30%;
+  width: 100%;
   min-height: 100px;
   height: auto;
-  float: left;
-  background: white;
   color: black;
-  padding-left: 15%;
-  padding-right: 5%;
   font-family: 'Ubuntu';
   font-style: normal;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .implementedAlgo h1{
-  font-size: 35px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
   font-weight: 400;
   text-transform: uppercase;
+
 }
 
 .implementedAlgo h2{
-  color: #156CEE;
+  width: 80%;
+  margin: auto;
+  color: #09ABC6;
   font-weight: 400;
+  text-align: center;
+  padding-bottom: 30px;
 }
 
 .implementedAlgo img{
-  width:auto;
-  max-width: 300px;
+  width:30vw;
+  margin-left: 10vw;
+  border: 2px solid #09ABC6;
   height: auto;
-  margin:auto;
+  margin-bottom: 15px;
 }
 
+.implementedAlgo div{
+  width: 50%;
+  margin: auto;
+}
+
+.implementedAlgo div h4{
+  color: #09ABC6;
+  font-weight: 400;
+  font-size: 17px;
+  margin: 0;
+}
+
+.implementedAlgo div p{
+  font-weight: 200;
+  text-align: justify;
+}
+
+.implementedAlgo div p a{
+  color: grey;
+  -webkit-transition: color 0.6s -webkit-transform 0.6s;
+  transition: color 0.6s, transform 0.6s;
+}
+.implementedAlgo div p a:hover{
+  color: #09ABC6;
+}
+
+
 .existantAlgo{
-  width: 30%;
+  width: 100%;
   min-height: 100px;
   height: auto;
-  padding-left: 5%;
-  padding-right: 15%;
   padding-top: 60px;
-  float: right;
   background:#E3E3E3;
   color: black;
   font-family: 'Ubuntu';
   padding-bottom: 30px;
 }
-.existantAlgo h2{
-  color: #156CEE;
+
+.existantAlgo h1{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
   font-weight: 400;
+  text-transform: uppercase;
+
+}
+
+.existantAlgo h2{
+  width: 80%;
+  margin: auto;
+  color: #09ABC6;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.existantAlgo div{
+  width: 25%;
+  margin-left: 8%;
+  display: inline-block;
+  vertical-align: top;
+
+}
+
+.existantAlgo div h3{
+  /*color: #09ABC6;*/
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0;
+}
+
+.existantAlgo div li{
+  font-weight: 200;
+  text-align: left;
+  list-style: square;
+  padding-bottom: 5px;
+}
+
+.existantAlgo div ul{
+  margin-left: -25px;
+}
+
+#algoExisted1{
+  margin-left: 26%;
 }
 
 #biblio{
   width:100%;
   min-height: 100px;
   height: auto;
-  background: grey;
+  background: #09ABC6;
   color: white;
   font-family: 'Ubuntu';
   font-weight: 400;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
+}
+
+#biblio div{
+  width: 60%;
+  height: auto;
+  margin:auto;
+  margin-top: 10px;
 }
 
 #biblio h1, #biblio h6,#biblio p{
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
 
@@ -1384,32 +1309,46 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   font-weight: 400;
   margin-bottom: 20px;
   text-transform: uppercase;
+  text-align: center;
+}
+
+#biblio h6{
+  font-size: 16px;
+  font-weight: 500;
 }
 
 #biblio p{
   padding-bottom: 10px;
+  font-weight: 200;
+  font-size: 16px;
+  text-align: justify;
 }
 
+.backgroundProject{
+  background: url('../img/sky4.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 50px;
+  font-family: 'Ubuntu';
+}
 
 #projectPresentation{
   width: 100%;
-  height: 500px;
-  background: url(../img/vfx.jpg) no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  height: auto;
+  background:none;
 }
 
 #projectTextPromo{
-  width: 40%;
-  float: right;
-  margin-right: 70px;
-  color: black;
+  width: 90%;
+  margin: auto;
+  color: whitesmoke;
+  padding-bottom: 30px;
+  font-family: 'Ubuntu';
 }
 
 #projectTextPromo h1{
   width: 100%;
   height: auto;
-  font-family: 'Ubuntu';
   font-weight: 600;
   font-size: 35px;
   text-align: center;
@@ -1420,7 +1359,6 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 #projectTextPromo h2{
   width: 100%;
   height: auto;
-  font-family: 'Ubuntu';
   font-weight: 300;
   font-size: 28px;
   text-align: center;
@@ -1428,158 +1366,176 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 
 
 #project1{
-  width: 100%;
+  width: auto;
   height: auto;
+  margin:auto;
+  margin-left: 18vw;
+  font-family: 'Ubuntu';
+  margin-bottom: -5px;
 }
 
 #project1 div:nth-child(1){
-  width: 50%;
-  min-height: 350px;
-  float: left;
-  background: whitesmoke;
+  width: 32vw;
+  min-height: 32vw;
+  display: inline-block;
+  /*background: whitesmoke;*/
+  vertical-align: top;
   -webkit-transition: background 2s, color 2s -webkit-transform 2s;
   transition: background 2s, color 2s, transform 2s;
 }
 #project1 :nth-child(1) h1{
-  width: 60%;
-  height: auto;
-  margin-top: 100px;
-  margin-left: 20%;
-  color: #1569E8;
-  font-family: arial;
-  font-size: 26px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 4vw;
+  color: white;
 }
 
 #project1 :nth-child(1) h2{
-  width: 60%;
-  height: auto;
-  margin-left: 20%;
-  color: #1569E8;
-  font-family: arial;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  font-weight: 400;
+ /* color: #09ABC6;*/
+ color: white;
   font-size: 20px;
-  margin-bottom: 0;
+  margin-top: 10px;
 }
 
 #project1 :nth-child(1) p{
-  width: 60%;
+  width: 70%;
   height: auto;
-  margin-top: 0;
+  margin-top: 12px;
   margin-bottom: 10px;
-  margin-left: 20%;
-  color: black;
-  font-family: arial;
+  margin-left: 15%;
+  /*color: black;*/
+  color: white;
   font-size: 15px;
+  text-align: justify;
 }
 
 
 #project1 div:nth-child(2){
-  width: 50%;
-  min-height:350px;
-  float: right;
-  background: url(../img/img_project/mayaMVG.png) ;
+  width: 31.5vw;
+  min-height:31.5vw;
+  margin-left: -5px;
+  display: inline-block;
+  background: url(../img/img_project/mayaMVG2.png) ;
   background-size: cover;
+  border: 2px solid white;
 }
 
 #project2{
   width: 100%;
   height: auto;
-  background: #1569E8;
+  margin-left: 18vw;
 }
 
 #project2 div:nth-child(1){
-  width: 50%;
-  min-height:350px;
-  float: left;
-  background: url(../img/img_project/ofxMVG.png) ;
+  width: 31.5vw;
+  min-height: 31.5vw;
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/img_project/ofxMVG2.png) ;
   background-size: cover;
+  border:2px solid white;
 }
 
 #project2 div:nth-child(2){
-  width: 50%;
-  min-height: 350px;
-  float: right;
-  background: #1569E8;
+   width: 32vw;
+  min-height: 32vw;
+  display: inline-block;
+  vertical-align: top;
+ /* background: #09ABC6;*/
+  margin-left: -5px;
 }
 #project2 :nth-child(2) h1{
-  width: 60%;
-  height: auto;
-  margin-top: 80px;
-  margin-left: 20%;
-  color: white;
-  font-family: arial;
-  font-size: 26px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 4vw;
+  color: whitesmoke;
 }
 
 #project2 :nth-child(2) h2{
-  width: 60%;
-  height: auto;
-  margin-left: 20%;
+ width: 80%;
+  margin: auto;
+  text-align: center;
+  font-weight: 400;
   color: white;
-  font-family: arial;
   font-size: 20px;
-  margin-bottom: 0;
+  margin-top: 10px;
 }
 
 #project2 :nth-child(2) p{
-  width: 60%;
+  width: 70%;
   height: auto;
-  margin-top: 0;
+  margin-top: 12px;
   margin-bottom: 10px;
-  margin-left: 20%;
+  margin-left: 15%;
   color: white;
-  font-family: arial;
   font-size: 15px;
+  text-align: justify;
 }
 
 #project3{
   width: 100%;
   height: auto;
+  margin-left: 18vw;
+  color:white;
 }
 
 #project3 div:nth-child(1){
-  width: 50%;
-  min-height: 350px;
-  float: left;
-  background: white;
+   width: 32vw;
+  min-height: 32vw;
+  display: inline-block;
+  vertical-align: top;
+ /* background: white;*/
 }
 #project3 :nth-child(1) h1{
-  width: 60%;
-  height: auto;
-  margin-top: 100px;
-  margin-left: 20%;
-  color: #1569E8;
-  font-family: arial;
-  font-size: 26px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 4vw;
 }
 
 #project3 :nth-child(1) h2{
-  width: 60%;
-  height: auto;
-  margin-left: 20%;
-  color: #1569E8;
-  font-family: arial;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-weight: 400;
+  /*color: #09ABC6;*/
   font-size: 20px;
-  margin-bottom: 0;
+  margin-top: 10px;
 }
 
 #project3 :nth-child(1) p{
-  width: 60%;
+  width: 70%;
   height: auto;
-  margin-top: 0;
+  margin-top: 12px;
   margin-bottom: 10px;
-  margin-left: 20%;
-  color: black;
-  font-family: arial;
+  margin-left: 15%;
+  /*color: black;*/
   font-size: 15px;
+  text-align: justify;
 }
 
 
 #project3 div:nth-child(2){
-  width: 50%;
-  min-height:350px;
-  float: right;
+   width: 31.5vw;
+  min-height: 31.5vw;
+  display: inline-block;
+  vertical-align: top;
   background: url(../img/img_project/sift_keypoints.jpg) ;
   background-size: cover;
+  margin-left: -5px;
+  border: 2px solid white;
 }
 
 #menuMobile{
@@ -1749,6 +1705,11 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 
 
 
+#hamburgerMenu{display: none;}
+
+/*  step on top  */
+
+
 
 
 /* MEDIA QUERIES */
@@ -1758,7 +1719,6 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   #stepForMobile{
     display: block;
  }
- #steps{display: none;}
 
   #hamburgerMenu{display: none;}
   #stepDiv h1{
@@ -1803,6 +1763,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   border-top: 10px solid #1569E8;
 }
 
+
 #menuMobile div:nth-child(1){
   width: 40px;
   height: 40px;
@@ -1825,7 +1786,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   opacity: 0;
   width: 100%;
   height: auto;
-  background: white;
+  background: whitesmoke;
   position: fixed;
   top:60px;
   right: 0;
@@ -1884,7 +1845,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 
 
   #logoTop{
-    width:42px;
+    width:37px;
     top:20px;
     position: absolute;
     z-index: 2;
@@ -1963,11 +1924,6 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   }
   #promoAlgo h1{
     font-size: 18px;
-  }
-  #steps{
-    margin:0;
-    transform: scale(0.19);
-    margin-left: 3%;
   }
   #openSource p:nth-child(2){
     width: 75%;
@@ -2097,22 +2053,8 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
     min-height: 250px;
   }
 
-  .generalStep div:nth-child(1){width: 100%;}
-
-
-   .generalStep div:nth-child(1) h1{
-    margin-bottom: 15px;
-   }
-  .generalStep div:nth-child(1) h1, .generalStep div:nth-child(1) p {
-    width: 80%;
-    margin:auto;
-  }
-  .generalStep div:nth-child(2){width: 100%;padding-top: 55px;}
-
-
-  .generalStep div:nth-child(2) h4, .generalStep div:nth-child(2) p{
-    width: 80%;
-    margin:auto;
+  .videoPresentation{
+      font-family: 'Ubuntu';
   }
   .videoPresentation div{
     width: 100%;
@@ -2122,19 +2064,25 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   .videoPresentation iframe{
     width: 100%;
   }
+
+  .videoPresentation h3{
+    width:60%;
+    margin: auto;
+    text-align: center;
+    font-weight: 500;
+  } 
+  .videoPresentation p{
+    width:60%;
+    text-align: center;
+    font-weight: 200;
+    margin: auto;
+  }
+
   .generalPrincipe div h1{
     font-size: 28px;
     margin-bottom: 20px;
   }
-.generalStep div:nth-child(1) h3{
-  width: 80%;
-  margin: auto;
-  padding-bottom: 15px;
-}
 
-.generalPrincipe div{
-  width: 100%;
-}
   .gp1 img{
     width: 100%;
     margin: 0;
@@ -2200,7 +2148,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 
 
   #logoTop{
-    width:42px;
+    width:37px;
     top:20px;
     position: absolute;
   }
@@ -2272,11 +2220,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   #promoAlgo h1{
     font-size: 18px;
   }
-  #steps{
-    margin:0;
-    transform: scale(0.3);
-    margin-left: 9%;
-  }
+
   #openSource p:nth-child(2){
     width: 75%;
     -webkit-column-count : 2;
@@ -2354,7 +2298,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
  #avTextPromo h1{font-size: 30px;}
   #avTextPromo h2{font-size:22px;}
   #objectif :nth-child(1) h1{
-    margin-top: 88px;
+    margin-top: 50px;
     font-size: 24px;
   }
   #mikrosDiv :nth-child(1) h1{
@@ -2366,13 +2310,13 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   width: 70%;
   margin:auto;
   text-align: left;
-  -webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
+  /*-webkit-column-count: 2; /* Chrome, Safari, Opera */
+ /*   -moz-column-count: 2; /* Firefox */
+ /*   column-count: 2;
 
     -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-    -moz-column-gap: 40px; /* Firefox */
-    column-gap: 40px;
+ /*   -moz-column-gap: 40px; /* Firefox */
+   /* column-gap: 40px;*/
 }
 #openSource p:nth-child(3){
   width: 70%;
@@ -2380,28 +2324,15 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 
 
 /* step*/
-  #steps{
-      transform: scale(0.45);
-      margin-left: 4%;
-    }
     #menu ul li {
     font-size: 13px;
     padding: 18px 16px 0px 16px;
   }
-  .generalStep div:nth-child(1) h1, .generalStep div:nth-child(1) p{
-    margin-left: 13%;
-  
-  }
-  .generalPrincipe div{
-    width:89%;
-  }
+ 
   .gp1 img{
     margin-top: 8px
   }
-  .generalStep div:nth-child(2){
-    width:22%;
-    margin-right: 15px;
-  }
+ 
   #informations{
     width:100%;
   }
@@ -2429,13 +2360,8 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
     margin-left: 9% !important;
   }
 
-  #steps{
-      transform: scale(0.5);
-      margin-left: 2%;
-  }
-
   #objectif :nth-child(1) h1{
-    margin-top: 85px;
+    margin-top: 80px;
   }
   #menu ul li {
     font-size: 13px;
@@ -2460,12 +2386,12 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   }
 
     #openSource p:nth-child(2){
-    -webkit-column-count: 2;
+    /*-webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
     -webkit-column-gap: 60px;
     -moz-column-gap: 60px;
-    column-gap: 60px;
+    column-gap: 60px;*/
   }
     
 
@@ -2474,13 +2400,8 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 980px) and (max-width: 1199px) {
  
-  #steps{
-      transform: scale(0.6);
-      margin-left: 12%;
-    }
-
   #objectif :nth-child(1) h1{
-    margin-top: 100px;
+    margin-top: 80px;
   }
   #stepsTop{
     margin-left: 18%;
@@ -2491,42 +2412,38 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   }
 
   #openSource p:nth-child(2){
-    -webkit-column-count: 2;
+    /*-webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
     -webkit-column-gap: 60px;
     -moz-column-gap: 60px;
-    column-gap: 60px;
+    column-gap: 60px;*/
   }
     
 
 }
 @media (min-width: 1200px) and (max-width: 1499px) {
-  #stepsTop{
-    margin-left: 25% !important;
-  }
-  #steps{
-      margin-left: 17%;
-    }
-    
+
 }
 
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1500px) {
-  #steps{
-    margin-left: 21%;
-  }
-  #stepsTop{
-    margin-left: 21%;
-  }
-
 
 }
 
 
 
 
-
+.opacity0{
+  opacity: 0;
+  -webkit-transition: opacity 1s ease -webkit-transform 1s;
+  transition: opacity 1s ease transform 1s;
+}
+.opacity1{
+  opacity: 1;
+  -webkit-transition: opacity 1s ease -webkit-transform 1s;
+  transition: opacity 1s ease transform 1s;
+}
 
 
 
@@ -2536,6 +2453,8 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   top:0;
   right: 0;
   z-index: 2;
+  -webkit-transition: opacity 1s ease -webkit-transform 1s;
+  transition: opacity 1s ease transform 1s;
 }
 
 #hamburgerMenu div:nth-child(1){
@@ -2555,16 +2474,19 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   background-size: cover;
 }
 #hamburgerMenu div:nth-child(2){
+  opacity: 0;
   width: 17%;
   height: auto;
-  background: white;
+  background: whitesmoke;
   position: fixed;
-  top:40px;
+  top:42px;
   right: 0;
   overflow: hidden;
-   -webkit-transition: height 2s -webkit-transform 2s;
+  -webkit-transition: height 2s -webkit-transform 2s;
   transition: height 2s, transform 2s;
   box-shadow: -7px 6px 5px 1px rgba(0, 0, 0, 0.2), 15px 2px 20px rgba(255, 255, 255, 0.6) inset;
+  -webkit-transition: opacity 1s ease -webkit-transform 1s;
+  transition: opacity 1s ease transform 1s;
 }
 #hamburgerMenu div:nth-child(2) ul{
   margin:0;
@@ -2601,7 +2523,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 /*hover effect on links*/
 #hamburgerMenu div:nth-child(2) ul li a:hover {
   background: #DBDBDB;
-  border-left: 5px solid #156BEC;
+  border-left: 5px solid #09ABC6;
 }
 /*Lets hide the non active LIs by default*/
 #hamburgerMenu ul ul {
@@ -2643,6 +2565,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   background: white;
   -webkit-transition: opacity 1s -webkit-transform 2s;
   transition: opacity 1s, transform 2s;
+  display: none;
 }
 
 #stepDivTop h1{
@@ -2657,367 +2580,6 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 
   margin-top: 90px;
 }
-
-#stepsTop{
-  width:1500px;
-  height: auto;
-  transform-origin: left;
-  transform: scale(0.4);
-  margin-left: 26%;
-  margin-top: 5px;
-}
-
-#c1aTop{
-  width:60px;
-  height: 60px;
-  transition: background-color 0.5s ease;
-  /*background: #044ebc;*/
-  background: none;
-  float: left;
-  transform: rotate(30deg);
-  z-index: -1;
-
-
-}
-
-#c1bTop{
-  width:80px;
-  height: 80px;
-  transition: background-color 0.5s ease;
-  /*background: #044ebc;
-  /*background: url(../img/pattern2F.jpg) repeat;*/
-  background: url(../img/menu/B1.png);
-  background-size: cover;
-  float: left;
-  margin-left: -60px;
-
-}
-
-#c1bTop p{
-  width: 100%;
-  text-align: center;
-  font-family: ubuntu;
-  color:#044ebc;
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 18px;
-
-}
-
-#c1aTop:hover, #c1bTop:hover, #c2aTop:hover,#c2bTop:hover, #c3aTop:hover,#c3bTop:hover, #c4aTop:hover,#c4bTop:hover, #c5aTop:hover,#c5bTop:hover, #c6aTop:hover,#c6bTop:hover, #c7aTop:hover,#c7bTop:hover, #c8aTop:hover,#c8bTop:hover{
-  /*border:5px solid #044ebc;*/
-  background-color: white;
-}
-
-#line1Top{
-  width: 120px;
-  height: 77px;
-  transform: scaleY(0.10);
-  float: left;
-  z-index: 1;
-  /*background-image:linear-gradient(to right, #044ebc, #0c53ca);
-  background-image:-moz-linear-gradient(left, #044ebc, #0c53ca);*/
-  background: #4D4D4D;
-
-}
-
-#c2aTop{
-  width:60px;
-  height: 60px;
-  /*background: #0c53ca;*/
-  background: none;
-  float: left;
-  z-index: -1;
-  transition: background-color 0.5s ease;
- transform: rotate(30deg);
-
-}
-#c2bTop{
-  width:80px;
-  height: 80px;
-  /*background: #0c53ca;*/
-  background: url(../img/menu/B2.png);
-  background-size: cover;
-  float: left;
-  margin-left: -60px;
-  transition: background-color 0.5s ease;
-
-}
-#c2bTop p{
-  width: 100%;
-  text-align: center;
-  font-family: 'Ubuntu';
-  color:#0c53ca;
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 18px;
-
-}
-
-#line2Top{
-  width: 120px;
-  height: 77px;
-  transform: scaleY(0.10);
-  float: left;
-  z-index: 1;
-  /*background-image:linear-gradient(to right, #0c53ca, #0c5ee3);
-  background-image:-moz-linear-gradient(left, #0c53ca, #0c5ee3 );*/
-  background: #4D4D4D;
-
-}
-
-#c3aTop{
-  width:60px;
-  height: 60px;
-  /*background: #0c5ee3;*/
-  background:none;
-  float: left;
-  z-index: -1;
-  transition: background-color 0.5s ease;
-  transform: rotate(30deg);
-
-}
-#c3bTop{
-  width:80px;
-  height: 80px;
-  /*background: #0c5ee3;*/
-  background: url(../img/menu/B3.png);
-  background-size: cover;
-  float: left;
-  margin-left: -60px;
-  transition: background-color 0.5s ease;
-}
-#c3bTop p{
-  width: 100%;
-  text-align: center;
-  font-family: 'Ubuntu';
-  color:#0c5ee3;
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 18px;
-
-}
-
-#line3Top{
-  width: 120px;
-  height: 77px;
-  transform: scaleY(0.10);
-  float: left;
-  z-index: 1;
-  /*background-image:linear-gradient(to right, #0c5ee3, #2173ef);
-  background-image:-moz-linear-gradient(left, #0c5ee3, #2173ef );*/
-  background: #4D4D4D;
-
-}
-#c4aTop{
-  width:60px;
-  height: 60px;
-  /*background: #2173ef;*/
-  background: none;
-  float: left;
-  z-index: -1;
-  transition: background-color 0.5s ease;
-  transform: rotate(30deg);
-
-}
-#c4bTop{
-  width:80px;
-  height: 80px;
-  /*background: #2173ef;*/
-  background: url(../img/menu/B4.png);
-  background-size: cover;
-  float: left;
-  margin-left: -60px;
-  transition: background-color 0.5s ease;
-}
-#c4bTop p{
-  width: 100%;
-  text-align: center;
-  font-family: 'Ubuntu';
-  color:#2173ef;
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 18px;
-
-}
-
-#line4Top{
-  width: 120px;
-  height: 77px;
-  transform: scaleY(0.10);
-  float: left;
-  z-index: 1;
-  /*background-image:linear-gradient(to right, #2173ef, #5193f5);
-  background-image:-moz-linear-gradient(left, #2173ef, #5193f5 );*/
-  background: #1569E8;
-}
-#c5aTop{
-  width:60px;
-  height: 60px;
-  /*background: #5193f5;*/
-  background: none;
-  float: left;
-  z-index: -1;
-  transition: background-color 0.5s ease;
-  transform: rotate(30deg);
-
-}
-#c5bTop{
-  width:80px;
-  height: 80px;
-  /*background: #5193f5;*/
-  background: url(../img/menu/B5.png);
-  background-size: cover;
-  float: left;
-  margin-left: -60px;
-  transition: background-color 0.5s ease;
-}
-#c5bTop p{
-  width: 100%;
-  text-align: center;
-  font-family: ubuntu;
-  color:#5193f5;
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 18px;
-
-}
-#line5Top{
-  width: 120px;
-  height: 77px;
-  transform: scaleY(0.10);
-  float: left;
-  z-index: 1;
-  /*background-image:linear-gradient(to right, #5193f5, #90baf9);
-  background-image:-moz-linear-gradient(left, #5193f5, #90baf9 );*/
-  background: #1569E8;
-}
-
-#c6aTop{
-  width:60px;
-  height: 60px;
-  /*background: #90baf9;*/
-  background: none;
-  float: left;
-  z-index: -1;
-  transition: background-color 0.5s ease;
-  transform: rotate(30deg);
-
-}
-#c6bTop{
-  width:80px;
-  height: 80px;
-  /*background: #90baf9;*/
-  background: url(../img/menu/B6.png);
-  background-size: cover;
-  float: left;
-  margin-left: -60px;
-  transition: background-color 0.5s ease;
-}
-#c6bTop p{
-  width: 100%;
-  text-align: center;
-  font-family: 'Ubuntu';
-  color:#90baf9;
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 18px;
-
-}
-#line6Top{
-  width: 120px;
-  height: 77px;
-  transform: scaleY(0.10);
-  float: left;
-  z-index: 1;
-  /*background-image:linear-gradient(to right, #90baf9, #bcd5fb);
-  background-image:-moz-linear-gradient(left, #90baf9, #bcd5fb );*/
-  background: #1569E8;
-}
-#c7aTop{
-  width:60px;
-  height: 60px;
-  /*background: #bcd5fb;*/
-  background: none;
-  float: left;
-  z-index: -1;
-  transition: background-color 0.5s ease;
-  transform: rotate(30deg);
-
-}
-#c7bTop{
-  width:80px;
-  height: 80px;
-  /*background: #bcd5fb;*/
-  background: url(../img/menu/B7.png);
-  background-size: cover;
-  float: left;
-  margin-left: -60px;
-  transition: background-color 0.5s ease;
-}
-#c7bTop p{
-  width: 100%;
-  text-align: center;
-  font-family: 'Ubuntu';
-  color:#bcd5fb;
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 18px;
-
-}
-#line7Top{
-  width: 120px;
-  height: 77px;
-  transform: scaleY(0.10);
-  float: left;
-  z-index: 1;
- /* background-image:linear-gradient(to right, #bcd5fb, #e8f1fe);
-  background-image:-moz-linear-gradient(left, #bcd5fb, #e8f1fe );*/
-  background: #1569E8;
-
-}
-
-#c8aTop{
-  width:60px;
-  height: 60px;
- /*background: #e8f1fe;*/
-  background: none;
-  float: left;
-  z-index: -1;
-  transition: background-color 0.5s ease;
-  transform: rotate(30deg);
-
-}
-#c8bTop{
-  width:80px;
-  height: 80px;
-  /*background: #e8f1fe;*/
-  background: url(../img/menu/B8.png);
-  background-size: cover;
-  float: left;
-  margin-left: -60px;
-  transition: background-color 0.5s ease;
-}
-
-#c8bTop p{
-  width: 100%;
-  text-align: center;
-  font-family: 'Ubuntu';
-  color:#e8f1fe;
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 18px;
-
-
-}
-
-#c1bTop p a,#c2bTop p a,#c3bTop p a,#c4bTop p a,#c5bTop p a,#c6bTop p a,#c7bTop p a,#c8bTop p a{
-  color:#4D4D4D;
-}
-#c1bTop ,#c2bTop ,#c3bTop ,#c4bTop ,#c5bTop ,#c6bTop ,#c7bTop ,#c8bTop {
-  cursor: pointer;
-}
-
 
 .fading-in {
   animation: fadeIn 1s;
@@ -3100,75 +2662,79 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
      height: 0;
   }
 }
-
-#buttonProject1{
+/*
+#buttonProject1, #buttonProject3{
   width: 60%;
-  min-height: 30px;
   margin: auto;
-  border: 1px solid #1569E8;
-  padding-top: 10px;
+  border: 2px solid #09ABC6;
+  padding: 10px 30px;
   margin-bottom: 20px;
-
+  margin-top: 35px;
+  margin-left: 20%;
+  text-transform: uppercase;
+  font-family: 'Ubuntu';
+  font-weight: 800;
+  background: none;
+  -webkit-transition: background 1s ease, color 1s -webkit-transform 1s;
+  transition: background 1s ease, color 1s, transform 1s;
 }
 
-#buttonProject1 a{
+
+#buttonProject1 a, #buttonProject3 a{
   width: 70%;
   text-align: center;
-  color: #1569E8;
-  font-family: 'Ubuntu';
-  font-weight: 400;
-  margin-left: 15%;
-
+  color: #09ABC6;
 }
 
+#buttonProject1:hover, #buttonProject3:hover{
+  background: #09ABC6;
+}
+#buttonProject1:hover a, #buttonProject3:hover a{
+  color:whitesmoke;
+}*/
 
 
-#buttonProject2{
+
+#buttonProject2, #buttonProject1, #buttonProject3{
   width: 60%;
-  min-height: 30px;
   margin: auto;
-  border: 1px solid white;
-  padding-top: 10px;
+  border: 2px solid whitesmoke;
+  padding: 10px 30px;
   margin-bottom: 20px;
-
+  margin-top: 35px;
+  margin-left: 20%;
+  text-transform: uppercase;
+  font-family: 'Ubuntu';
+  font-weight: 800;
+  background: none;
+  -webkit-transition: background 1s ease, color 1s -webkit-transform 1s;
+  transition: background 1s ease, color 1s, transform 1s;
 }
 
-#buttonProject2 a{
+#buttonProject2 a, #buttonProject1 a, #buttonProject3 a{
   width: 70%;
   text-align: center;
   color: white;
-  font-family: 'Ubuntu';
-  font-weight: 400;
-  margin-left: 15%;
+   -webkit-transition: background 1s ease, color 1s -webkit-transform 1s;
+  transition: background 1s ease, color 1s, transform 1s;
 }
 
-#buttonProject3{
-  width: 60%;
-  min-height: 30px;
-  margin: auto;
-  border: 1px solid #1569E8;
-  padding-top: 10px;
-  margin-bottom: 20px;
-
+#buttonProject2:hover, #buttonProject1:hover, #buttonProject3:hover{
+  background: whitesmoke;
+}
+#buttonProject2:hover a, #buttonProject1:hover a, #buttonProject3:hover a{
+  color:#09ABC6;
 }
 
-#buttonProject3 a{
-  width: 70%;
-  text-align: center;
-  color: #1569E8;
-  font-family: 'Ubuntu';
-  font-weight: 400;
-  margin-left: 15%;
-}
 
 
 
 
 
 #scene{
-  float: left;
+ display: inline-block;
   width: 50%;
-  height: 500px;
+  min-height: 300px;
 }
 
 
@@ -3180,8 +2746,98 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   margin-top: 30vh;
 }
 
+/* NEW STEP LINE */
 
+.stepLine{
+  width:1200px;
+  height: auto;
+  min-width: 50px;
+  margin-left:10%;
+  padding-bottom: 50px;
+}
 
+.step1, .step2, .step3, .step4, .step5, .step6, .step7, .step8{
+  width: 50px;
+  height: 50px;
+  border:2px solid black;
+  display: inline-block;
+  margin-right: -5px;
+  margin-left: -5px;
+  -webkit-transition: border 0.5s , color 0.5s,  margin-left 0.5s, -webkit-transform 0.5s;
+  transition: border 0.5s , color 0.5s,  margin-left 0.5s, transform 0.5s;
+  cursor: pointer;
+  background: #fff9;
+}
+/*
+.step1:hover, .step2:hover{
+  border: 5px solid blue;
+}*/
 
+.l1, .l2, .l3, .l4, .l5, .l6, .l7{
+  width: 100px;
+  height: 2px;
+  background: black;
+  display: inline-block;
+  margin-bottom: 5px;
+  z-index: 1;
+}
+.l1b, .l2b, .l3b, .l4b, .l5b, .l6b, .l7b{
+  width: 0px;
+  height: 2px;
+  margin-right: -5px;
+  margin-left: -105px;
+  display: inline-block;
+  margin-bottom: 5px;
+  background: #09abc6;
+  z-index: 5;
+  -webkit-transition: border 0.5s , width 0.5s, height 0.5s, margin-left 0.5s, margin-right 0.5s, color 0.5s -webkit-transform 0.5s;
+  transition: border 0.5s , width 0.5s, height 0.5s, margin-left 0.5s, margin-right 0.5s, color 0.5s, transform 0.5s;
+}
 
+.step2, .step3, .step4, .step5, .step6, .step7, .step8{
+  margin-left: 100px;
+}
 
+.step1 p,.step2 p, .step3 p, .step4 p, .step5 p, .step6 p, .step7 p, .step8 p{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 21px;
+  margin-top: 11px;
+  -webkit-transition: color 0.5s -webkit-transform 0.5s;
+  transition: color 0.5s, transform 0.5s;
+}
+
+.step1:hover ,.step2:hover , .step3:hover , .step4:hover , .step5:hover , .step6:hover , .step7:hover , .step8:hover {
+  border: 2px solid #09abc6;
+}
+
+.step1:hover p,.step2:hover p, .step3:hover p, .step4:hover p, .step5:hover p, .step6:hover p, .step7:hover p, .step8:hover p{
+  color: #09abc6;
+}
+.stepFilled{
+  border:5px solid blue;
+}
+
+.seeMore{
+  display: none;
+}
+
+#stepTop{
+  border-bottom: 1px solid black;
+  opacity: 0;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: opacity 1.0s, height 1.0s, -webkit-transform 1.0s;
+  transition: opacity 0.5s, height 1.0s,  transform 1.0s;
+}
+.stepLineMini{
+  width:1200px;
+  height: auto;
+  min-width: 50px;
+  margin-left:10%;
+  padding-bottom: 0px;
+  transform: scale(0.5);
+}

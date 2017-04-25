@@ -1,13 +1,14 @@
 {
-  "nameStep": "4 - Image Matching",
-  "nameSecond" : "4- Natural feature extraction",
-  "objectives" : "Objectives",
-  "objectivesP" : "Find associations between images that see the same part of the scene.",
+  "nameStep": "Image Matching",
+  "nameSecond" : "Natural feature extraction",
+  "stepNumber" : "Step 4",
+  "objectives" : "Find associations between images that see the same part of the scene.",
   "introStep": "Feature Extraction de coins, de lignes, de contraste : utiliser dans du multi-view, du coup quand on ajoute une nouvelle photo, essayer de repérer ces mêmes points dans la scène.<br/><br/>Feature Extraction de coins, de lignes, de contrasteBut : utiliser dans du multi-view, du coup quand on ajoute une nouvelle photo.",
   "entry": "Images with associated features",
   "exit" : "Link between images",
   "generalPrincipeIMG":"img_step4.png",
 
+  "adresseVideo1" : "https://www.youtube.com/embed/O-IZz1n4F4g",
   "step1Name": "Step 1 : Image Simplification",
   "step1Content":"Simplification of the image format into a compact descriptor.",
   "step2Name": "Step 2 : Images Association",

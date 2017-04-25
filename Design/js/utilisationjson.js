@@ -177,22 +177,23 @@ $(function() {
     });
 
 
-    $('#c4b , #c4a, #c4aTop,#c4bTop, #stepForMobile div:nth-child(4)').click(function() {
+    $('#c4b , #c4a, #c4aTop,#c4bTop, #stepForMobile div:nth-child(4), #step4').click(function() {
 
         $.getJSON(js + 'json/step4.json', function(donnees) {
-        $(".generalStep div:nth-child(1)").css("background-color","#2173EF");
-        $('.generalStep div:nth-child(1) ').html('<h1> ' + donnees.nameSecond + '</h1>');
-        /*$('.generalStep div:nth-child(1)').append('<h2> ' + donnees.nameSecond + '</h2><br/>');*/
-        $('.generalStep div:nth-child(1)').append('<h3> ' + donnees.objectives + '</h3>');
-        $('.generalStep div:nth-child(1)').append('<p> ' + donnees.objectivesP + '</p>');
+        $('.generalStep div:nth-child(1) ').html('<h1> ' + donnees.nameStep + '</h1>');
+        $('.generalStep div:nth-child(1)').append('<h5> ' + donnees.nameSecond + '</h5><br/>');
+        $('.generalStep div:nth-child(1)').append('<h2> ' + donnees.stepNumber + '</h2><br/>');
+        $('.generalStep div:nth-child(1)').append('<h3>Objectives</h3>');
+        $('.generalStep div:nth-child(1)').append('<p> ' + donnees.objectives + '</p>');
 
         $('.generalStep div:nth-child(2)').html('<h4>Inputs  :</h4><p> ' + donnees.entry + '</p>');
         $('.generalStep div:nth-child(2)').append('<h4>Outputs  :</h4><p> ' + donnees.exit + '</p>');
 
-        $('.videoPresentation div').html('iframe width="560" height="315" src="https://www.youtube.com/embed/O-IZz1n4F4g" frameborder="0" allowfullscreen></iframe>');
-        
-        $('.gp1').html("<img/>");
-        $('.gp1 img').attr("src",'../Design/img/step_img/' + donnees.generalPrincipeIMG);
+        $('.videoPresentation div').html('<div><iframe width="560" height="315" src=" ' + donnees.adresseVideo1 + '" frameborder="0" allowfullscreen></iframe></div>');
+        $('.videoPresentation div').append('<h3>Resume and comments</h3>');
+        $('.videoPresentation div').append('<p>'+ donnees.introStep + '</p>');
+
+        $('.gp1').html("<h1>General Principle</h1>");
         $('.gp1').append('<h4> ' + donnees.step1Name + '</h4>');
         $('.gp1').append('<p> ' + donnees.step1Content + '</p>');
         $('.gp1').append('<h4> ' + donnees.step2Name + '</h4>');
@@ -201,6 +202,9 @@ $(function() {
         $('.gp1').append('<p> ' + donnees.step3Content + '</p>');
         $('.gp1').append('<h4> ' + donnees.step4Name + '</h4>');
         $('.gp1').append('<p> ' + donnees.step4Content + '</p>');
+
+        $('.gp2').html("<img />");
+        $('.gp2 img').attr("src",'../Design/img/step_img/' + donnees.generalPrincipeIMG);
 
         $('.implementedAlgo').html("<h1>The algorithm</h1>");
         $('.implementedAlgo').append("<h2>" + donnees.algo1H2 + "</h2>");
