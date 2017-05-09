@@ -13,10 +13,12 @@
         <title>Alice Vision</title>
         <!-- appel de la feuille de style pour la page index.php-->
         <link rel="stylesheet" href="Design/css/global.css"/>
+        <link rel="stylesheet" href="Design/css/homePage.css"/>
+        <link rel="stylesheet" href="Design/css/step.css"/>
 
        <!-- <link rel="stylesheet" href="Design/css/jquery.ui.css"/>
         <link rel="stylesheet" href="Design/css/jquery.ui.html4.css"/>-->
-        <link rel="shortcut icon" type="image/x-icon" href="" />
+        <link rel="shortcut icon" type="image/x-icon" href="Design/img/icon.png" />
        <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Monsieur+La+Doulaise|Rouge+Script|Tangerine"/>-->
         <script type="text/javascript" src="Design/js/jquery-1.11.1.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"> 
@@ -42,7 +44,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="Template/page1.html">Photogrammetry</a></li>
                     <li><a href="Template/projet.html">Project</a></li>
-                    <li><a href="">About Us</a></li>
+                    <li><a href="Template/about.html">About Us</a></li>
                     <li><a href="https://openmvg.readthedocs.io/en/latest/">Docs</a></li>
 
                 </ul>
@@ -66,74 +68,44 @@
             </div>
             
             <div id="objectif">
-                <div>
-                    <h1>Objective</h1>
-                    <p>The goal of dense modeling of the scene is the result yielded by chaining two computer vision-based pipelines, namely the “Structure-from-Motion” (SfM) and the “Multi View Stereo” (MVS) modules.</p>
+                <div id="objectifIntro">
+                    <h1>Photogrammetry Pipeline</h1>
+                    <p>Alice Vision provides a full photogrammetry pipeline to infer the geometry of a scene from a set of unordered photographies. Photography is a projection of a 3D scene onto a 2D plane, losing depth information. The goal of photogrammetry is to reverse this process.  </p>
+                    <div id="viewPipeline">
+                        <p>The dense modeling of the scene is the result yielded by chaining two computer vision-based pipelines: “Structure-from-Motion” (SfM) and “Multi View Stereo” (MVS).</p>
+                        <h2>Learn more about each step of the photogrammetry pipeline:
+                        </h2>
+                        <div id="pipeline">
+                            <div class="stepLine">
+                                <div class="step1" id=""><p>1</p></div>
+                                <div class="l1"></div>
+                                <div class="l1b" id="lb"></div>
+                                <div class="step2" id=""><p>2</p></div>
+                                <div class="l2"></div>
+                                <div class="l2b" id=""></div>
+                                <div class="step3" id=""><p>3</p></div>
+                                <div class="l3"></div>
+                                <div class="l3b" id=""></div>
+                                <div class="step4" id=""><p>4</p></div>
+                                <div class="l4"></div>
+                                <div class="l4b" id=""></div>
+                                <div class="step5" id=""><p>5</p></div>
+                                <div class="l5"></div>
+                                <div class="l5b" id=""></div>
+                                <div class="step6" id=""><p>6</p></div>
+                                <div class="l6"></div>
+                                <div class="l6b" id=""></div>
+                                <div class="step7" id=""><p>7</p></div>
+                                <div class="l7"></div>
+                                <div class="l7b" id=""></div>
+                                <div class="step8" id=""><p>8</p></div>
+                            </div>
+                        </div>
+                    </div>
                     <button>View more</button>
                 </div>
-                <div>
-                    <iframe width="560" height="315" src="https://sketchfab.com/models/0d38fbbf35ce44d085e2ec18368942df/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
-                </div>
-            </div>
-            <div id="libsDiv">
-               <!-- <svg  xmlns="http://www.w3.org/2000/svg " viewBox="0 0 1000 300">
-                   
-                    <polygon points="0 0,  400 0, 200 300, 0 300"><text>La librairie</text></polygon>
-                    <polygon points="400 0,  600 0, 400 300, 200 300"><image x="0" y="0" xlink:href="Design/img/pattern2F.jpg"></image></polygon>
-                    <polygon points="600 0, 800 0, 600 300, 400 300"/>
-                    <polygon points="800 0, 1000 0, 800 300, 600 300"/>
-                    <polygon points="1000 0, 1000 300, 800 300"/>
-
-                </svg>-->
-                <h1>The Library</h1>
-
-                <div id="libContent">
-                    <div id="divSFM">
-                        <div>
-                            <h3>Structure from Motion</h3>
-                            <h4>Photomodeling plugin - Autodesk © Maya</h4>
-                            <p>MayaMVG allows graphic artists to do photomodeling on top of a 3D reconstruction  with pixel precision.</p>
-                        </div>
-                        <img href="#" class="btnForCube" src="Design/img/seemore.png"/>
-
-                    </div>
-                    <div id="divMS">
-                        <div>
-                            <h3>MultiView Stereo</h3>
-                            <h4>Concentric Circles Tag</h4>
-                            <p>This library allows you to detect and identify CCTag markers. Such marker system can deliver sub-pixel precision while being largely robust to challenging shooting conditions.</p>
-                        </div>
-                        
-                        <img href="#" class="btnForCube" src="Design/img/seemore.png"/>
-                    </div>
-                    <div id="divCT">
-                        <div>
-                            <h3>Camera Tracking</h3>
-                            <h4>OpenFX Camera Localization and Calibration plugins.</h4>
-                            <p>The CameraLocalizer plugin estimates the camera pose of an image regarding an existing 3D reconstruction generated by openMVG.</p>    
-                        </div>
-                        <img href="#" class="btnForCube" src="Design/img/seemore.png"/>
-                    </div>
-
-                </div>
-                 <div class="clear"></div>
-
                 
             </div>
-            <div id = "mikrosDiv">
-                
-                <div>
-                    <h1>Alice Vision and Mikros Image</h1>
-                    <p>Mikros Image is one of our user. They use our library for their special effects.</p>
-
-                </div>
-                <div>
-                    <iframe  src="https://www.youtube.com/embed/pBy1g7gbXCQ" frameborder="0" allowfullscreen></iframe>
-                </div>
-                
-                 <div class="clear"></div>
-            </div>
-           
             <div id="softDiv">
                 <h1>Softwares</h1>
 
@@ -154,16 +126,16 @@
                     <div id="divMeshroom">
                         <div>
                              <h3>Meshroom</h3>
-                            <h4>Concentric Circles Tag</h4>
-                            <p>This library allows you to detect and identify CCTag markers. Such marker system can deliver sub-pixel precision while being largely robust to challenging shooting conditions. </p>
+                            <h4>Specialist 3D illustration services</h4>
+                            <p>This library provides a GPU implementation of SIFT. 25 fps on HD images on recent graphic cards.</p>
                         </div>
                         
                         <img href="#" class="btnForCube" src="Design/img/seemore.png"/>
                     </div>
                      <div id="divOFX">
                         <div>
-                            <h3>OFX MVG</h3>
-                            <h4>OpenFX Camera Localization and Calibration plugins.</h4>
+                            <h3>OpenFX</h3>
+                            <h4>Camera Localization OpenFX Plugin for Nuke</h4>
                             <p>The CameraLocalizer plugin estimates the camera pose of an image regarding an existing 3D reconstruction generated by openMVG. </p>
                         </div>
                         <img href="#" class="btnForCube" src="Design/img/seemore.png"/>
@@ -171,9 +143,83 @@
                 </div>
 
             </div>
+            <div id = "mikrosDiv">
+                
+                <div>
+                    <h1>Alice Vision and Mikros Image</h1>
+                    <p>Mikros Image is one of our user. They use our library for their special effects.</p>
+
+                </div>
+                
+                <div class="sketchfab-embed-wrapper">
+                    <iframe width="640" height="480" src="https://sketchfab.com/models/0d38fbbf35ce44d085e2ec18368942df/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+                </div>
+                 <div class="clear"></div>
+            </div>
+           <div id="libsDiv">
+               <!-- <svg  xmlns="http://www.w3.org/2000/svg " viewBox="0 0 1000 300">
+                   
+                    <polygon points="0 0,  400 0, 200 300, 0 300"><text>La librairie</text></polygon>
+                    <polygon points="400 0,  600 0, 400 300, 200 300"><image x="0" y="0" xlink:href="Design/img/pattern2F.jpg"></image></polygon>
+                    <polygon points="600 0, 800 0, 600 300, 400 300"/>
+                    <polygon points="800 0, 1000 0, 800 300, 600 300"/>
+                    <polygon points="1000 0, 1000 300, 800 300"/>
+
+                </svg>-->
+                <h1>Libraries</h1>
+
+                <div id="libContent">
+                    <div id="lib1">
+                        <div>
+                            <h3>Open MVG</h3>
+                            <h4>Open Multiple View Geometry</h4>
+                            <p>OpenMVG library solves classical problems in Multiple View Geometry and provides a full Structure-from-Motion pipeline with a strong focus on accuracy.</p>
+                        </div>
+                        <img href="#" class="btnForCube" src="Design/img/seemore.png"/>
+
+                    </div>
+                    <div id="lib2">
+                        <div>
+                            <h3>CCTag</h3>
+                            <h4>Concentric Circles Tag</h4>
+                            <p>This library allows you to detect and identify CCTag markers. Such marker system can deliver sub-pixel precision while being largely robust to challenging shooting conditions.</p>
+                        </div>
+                        
+                        <img href="#" class="btnForCube" src="Design/img/seemore.png"/>
+                    </div>
+                    <div id="lib3">
+                        <div>
+                            <h3>PopSIFT</h3>
+                            <h4>Scale-Invariant Feature Transform (SIFT)</h4>
+                            <p>This library provides a GPU implementation of SIFT. 25 fps on HD images on recent graphic cards.</p>    
+                        </div>
+                        <img href="#" class="btnForCube" src="Design/img/seemore.png"/>
+                    </div>
+
+                </div>
+                 <div class="clear"></div>
+
+                
+            </div>
+            
             <div id="promoAlgo">
+                <h1>Result example</h1>
+                <h3>Model 1</h3>
+                <h3>Model 2</h3>
+                <div class="sketchfab-embed-wrapper">
+                    <iframe width="640" height="480" src="https://sketchfab.com/models/0d38fbbf35ce44d085e2ec18368942df/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+                </div>
+                <div class="sketchfab-embed-wrapper">
+                    <iframe width="640" height="480" src="https://sketchfab.com/models/0d38fbbf35ce44d085e2ec18368942df/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+                </div>
+                 <div class="clear"></div>
+                    
+            </div>
+
+
+            <!--
                 <h1>stage by stage</h1>
-                <h3>Discover stage by stage the functioning of Alice Vision</h3>
+                <h3>Learn more about each step of the photogrammetry pipeline:</h3>
                 <div class="stepLine">
                     <div class="step1" id=""><p>1</p></div>
                     <div class="l1"></div>
@@ -200,7 +246,7 @@
                 </div>
                 <div id="linkAlgoForMobile">
                     <p><a href="Template/page1.html">Discover</a></p>
-                </div>
+                </div>-->
             </div>
             <div id="openSource">
                 <div>

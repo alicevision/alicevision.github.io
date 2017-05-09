@@ -1,0 +1,226 @@
+
+.backgroundAbout{
+  background: url('../img/sky4.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 50px;
+  font-family: 'Ubuntu';
+  min-height: 100px;
+  padding-top: 80px;
+}
+
+#contribution, #aboutHistory{
+  width: 80%;
+  color: whitesmoke;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 10px;
+}
+#contribution h1, #partners h1, #aboutHistory h1{
+  width: 66%;
+  height: auto;
+  padding-top: 30px;
+  margin-left: 17%;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 30px;
+  text-transform: uppercase;
+   -webkit-transition: color 1s -webkit-transform 2s;
+  transition: color 1s, transform 2s;
+}
+
+#contribution h2, #aboutHistory h2{
+  width: 66%;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 17%;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 20px;
+   -webkit-transition: color 1s -webkit-transform 2s;
+  transition: color 1s, transform 2s;
+}
+
+#contribution p, #aboutHistory p{
+  width: 70%;
+  height: auto;
+  margin-top: 30px;
+  margin-left: 15%;
+  font-family: 'Ubuntu';
+  font-weight: 200;
+  font-size: 18px;
+   -webkit-transition: color 1s -webkit-transform 2s;
+  transition: color 1s, transform 2s;
+  text-align: justify;
+}
+
+#contribution strong{
+  font-weight: 500;
+}
+
+#contribution a, #namePartners a, #europeanProject a, #aboutHistory a{
+  color: #09ABCA;
+  text-decoration: none;
+  cursor: pointer;
+}
+#contribution a:hover, #namePartners a:hover, #europeanProject a:hover, #aboutHistory a:hover{
+  text-decoration: underline;
+}
+
+#contribution ul{
+  width: 100%;
+}
+#contribution ul li{
+  width: 80%;
+  height: auto;
+  display: block;
+  font-family: 'Ubuntu';
+  font-weight: 200;
+  font-size: 18px;
+  text-align: left;
+  margin-left: 11%;
+}
+#partners{
+  width: 100%;
+  color: #09ABC6;
+  background: whitesmoke;
+  text-align: center;
+  margin: auto;
+}
+
+#mapPartners{
+  width: 25vw;
+  height:25vw; 
+  background: #09abc6;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10%;
+}
+#namePartners{
+  width: 49%;
+  height:200px; 
+  display: inline-block;
+}
+
+#namePartners p, #europeanProject p{
+  width: 90%;
+  height: auto;
+  margin-left: 5%;
+  font-family: 'Ubuntu';
+  font-weight: 200;
+  font-size: 15px;
+   -webkit-transition: color 1s -webkit-transform 2s;
+  transition: color 1s, transform 2s;
+  text-align: justify;
+  color: black;
+}
+
+#partners p{
+  width: 80%;
+  margin-left: 10%;
+}
+
+#europeanProject p{
+  display: inline-block;
+  width: 55%;
+}
+
+#europeanProject{
+  margin-left: 2%;
+  margin-top: 20px;
+}
+
+#europeanFlag{
+  width: 30px;
+  height: auto;
+}
+
+#aboutHistory h4{
+  width: 70%;
+  height: auto;
+  margin-top: 30px;
+  margin-left: 15%;
+  font-family: 'Ubuntu';
+  font-weight: 200;
+  font-size: 18px;
+   -webkit-transition: color 1s -webkit-transform 2s;
+  transition: color 1s, transform 2s;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  #contribution h1, #partners h1, #aboutHistory h1{
+    font-size: 25px;
+  }
+
+  #contribution h2, #aboutHistory h2{
+    width: 90%;
+    margin-left: 5%;
+    font-size: 18px;
+  }   
+  #contribution p, #aboutHistory p{
+  width: 90%;
+  margin-left: 5%;
+  font-size: 15px;
+  line-height: 23px;
+}
+  #contribution ul li{
+    width: 85%;
+    margin-left: 0;
+    font-size: 15px;
+  }
+  #mapPartners{
+    width: 80vw;
+    height: 80vw;
+    margin-left: 0;
+  }
+  #namePartners{
+    width: 100%;
+  }
+  #aboutHistory h4{
+    width: 90%;
+    margin-left: 5%;
+  }
+
+}
+
+
+
+@media (min-width: 481px) and (max-width: 589px) {
+ #contribution h2, #aboutHistory h2{
+  width: 90%;
+  margin-left: 5%;
+ }
+ #contribution p, #aboutHistory p{
+  width: 90%;
+  margin-left: 5%;
+ }
+ #mapPartners{
+    width: 35vw;
+    height: 35vw;
+    margin-left: 0;
+ }
+
+}
+ @media (min-width: 590px) and (max-width: 767px) {
+   #contribution h2, #aboutHistory h2{
+  width: 90%;
+  margin-left: 5%;
+ }
+ #contribution p, #aboutHistory p{
+  width: 90%;
+  margin-left: 5%;
+ }
+ #mapPartners{
+    width: 35vw;
+    height: 35vw;
+    margin-left: 0;
+ }
+ }
+
+
+@media (min-width: 768px) and (max-width: 979px) {}
+
+@media (min-width: 980px) and (max-width: 1199px) {}
+
+@media (min-width: 1200px) and (max-width: 1499px) {}

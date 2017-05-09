@@ -1,0 +1,217 @@
+
+.backgroundProject{
+  background: url('../img/sky4.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 50px;
+  font-family: 'Ubuntu';
+}
+
+#projectPresentation{
+  width: 100%;
+  height: auto;
+  background:none;
+  color: whitesmoke;
+}
+
+#projectTextPromo{
+  width: 90%;
+  margin: auto;
+  font-family: 'Ubuntu';
+}
+/*
+#projectTextPromo h1{
+  width: 100%;
+  height: auto;
+  font-weight: 600;
+  font-size: 35px;
+  text-align: center;
+  
+  text-transform: uppercase;
+}*/
+
+#projectTextPromo h2{
+  padding-top: 100px;
+  width: 100%;
+  height: auto;
+  font-weight: 300;
+  font-size: 28px;
+  text-align: center;
+}
+
+#project1, #project2, #project3, #project4, #project5, #project6{
+  width: 82vw;
+  height: auto;
+  margin:auto;
+  margin-left: 18vw;
+  color: whitesmoke;
+}
+
+#project1 div:nth-child(1), #project3 div:nth-child(1), #project5 div:nth-child(1){
+  width: 32vw;
+  min-height: 32vw;
+  display: inline-block;
+  /*background: whitesmoke;*/
+  vertical-align: top;
+  -webkit-transition: background 2s, color 2s -webkit-transform 2s;
+  transition: background 2s, color 2s, transform 2s;
+}
+#project1 h1, #project2 h1, #project3 h1, #project4 h1, #project5 h1, #project6 h1{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 4vw;
+}
+
+#project1 h2, #project2 h2, #project3 h2, #project4 h2, #project5 h2, #project6 h2{
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+#project1 p, #project2 p, #project3 p, #project4 p, #project5 p, #project6 p{
+  width: 70%;
+  height: auto;
+  margin-top: 12px;
+  margin-bottom: 10px;
+  margin-left: 15%;
+  font-size: 15px;
+  text-align: justify;
+}
+
+#project1 div:nth-child(2), #project3 div:nth-child(2), #project5 div:nth-child(2){
+  width: 31.5vw;
+  min-height:31.5vw;
+  margin-left: -5px;
+  display: inline-block;
+  background-size: cover;
+  border: 2px solid white;
+}
+
+#project1 div:nth-child(2){
+  background: url(../img/img_project/mayaMVG2.png) ;
+  background-size: cover;
+}
+#project3 div:nth-child(2){
+  background: url(../img/img_project/sift_keypoints.jpg) ;
+  background-size: cover;
+}
+#project5 div:nth-child(2){
+  background: url(../img/img_project/sift_keypoints.jpg) ;
+  background-size: cover;
+}
+
+#project2 div:nth-child(1), #project4 div:nth-child(1), #project6 div:nth-child(1){
+  width: 31.5vw;
+  min-height: 31.5vw;
+  display: inline-block;
+  vertical-align: top;
+  border:2px solid white;
+}
+
+#project2 div:nth-child(1){
+  background: url(../img/img_project/ofxMVG2.png) ;
+  background-size: cover;
+}
+#project4 div:nth-child(1){
+  background: url(../img/img_project/openMVG.jpg) ;
+  background-size: cover;
+}
+#project6 div:nth-child(1){
+  background: url(../img/img_project/cctag.png) ;
+  background-size: cover;
+}
+
+#project2 div:nth-child(2), #project4 div:nth-child(2), #project6 div:nth-child(2){
+   width: 32vw;
+  min-height: 32vw;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -5px;
+}
+
+#buttonProject2, #buttonProject1, #buttonProject3, #buttonProject4, #buttonProject5, #buttonProject6{
+  width: 60%;
+  margin: auto;
+  border: 2px solid whitesmoke;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  margin-top: 35px;
+  margin-left: 20%;
+  text-transform: uppercase;
+  font-family: 'Ubuntu';
+  font-weight: 800;
+  background: none;
+  -webkit-transition: background 1s ease, color 1s -webkit-transform 1s;
+  transition: background 1s ease, color 1s, transform 1s;
+}
+
+#buttonProject2 a, #buttonProject1 a, #buttonProject3 a, #buttonProject4 a, #buttonProject5 a, #buttonProject6 a{
+  width: 70%;
+  text-align: center;
+  color: white;
+   -webkit-transition: background 1s ease, color 1s -webkit-transform 1s;
+  transition: background 1s ease, color 1s, transform 1s;
+}
+
+#buttonProject2:hover, #buttonProject1:hover, #buttonProject3:hover, #buttonProject4:hover, #buttonProject5:hover, #buttonProject6:hover{
+  background: whitesmoke;
+}
+#buttonProject2:hover a, #buttonProject1:hover a, #buttonProject3:hover a, #buttonProject4:hover a, #buttonProject5:hover a, #buttonProject6:hover a{
+  color:#09ABC6;
+}
+
+
+.title{  
+  width: 66%;
+  height: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color:whitesmoke;
+  margin-left: 17%;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 30px;
+  text-transform: uppercase;
+   -webkit-transition: color 1s -webkit-transform 2s;
+  transition: color 1s, transform 2s;
+  text-align: center;
+}
+
+
+@media (max-width: 480px) {
+   #project1, #project2, #project3, #project4, #project5, #project6{
+    width: 90vw ; 
+    margin:auto;
+    margin-left: 5vw;
+  }
+  #project1 div:nth-child(1), #project3 div:nth-child(1), #project5 div:nth-child(1){
+    width: 80vw;
+    min-height: 80vw;
+    display: inline-block;
+    /*background: whitesmoke;*/
+    vertical-align: top;
+    -webkit-transition: background 2s, color 2s -webkit-transform 2s;
+    transition: background 2s, color 2s, transform 2s;
+  }
+
+}
+
+
+@media (min-width: 481px) and (max-width: 589px) {
+ 
+
+}
+ @media (min-width: 590px) and (max-width: 767px) {}
+
+
+@media (min-width: 768px) and (max-width: 979px) {}
+
+@media (min-width: 980px) and (max-width: 1199px) {}
+
+@media (min-width: 1200px) and (max-width: 1499px) {}

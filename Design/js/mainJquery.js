@@ -39,4 +39,38 @@ $(".btnForCube").mouseout(function(){
     $(this).attr("src","Design/img/seemore.png");
 });
 
-  });
+var viewObjectifVideo = 0;
+$("#objectif button").click(function(){
+   if( viewObjectifVideo == 0 ){
+    /*
+        $("#objectif div:nth-child(2)").animate({
+            height : 400
+          }, 1000 );
+        viewObjectifVideo = 1;
+        $("#objectif button").text('view less');
+    */
+        $("#viewPipeline").animate({
+            height : 225
+          }, 1000 );
+        viewObjectifVideo = 1;
+        $("#objectif button").text('view less');
+   }else{
+    /*
+        $("#objectif div:nth-child(2)").animate({
+            height : 0
+          }, 1000 );
+        viewObjectifVideo = 0;
+        $("#objectif button").text('view more');
+    */
+        $("#viewPipeline").animate({
+            height : 0
+          }, 1000 );
+        viewObjectifVideo = 0;
+        $("#objectif button").text('view more');
+   }
+});
+
+
+
+
+});
