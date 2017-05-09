@@ -530,7 +530,7 @@
   width: 50%;
   min-height: 203px;
   float: left;
-  background: red;
+  background: #09ABC6;
   color:#09abc6;
   font-size: 20px;
   text-align: center;
@@ -540,12 +540,16 @@
   width: 50%;
   min-height: 203px;
   float: right;
-  background: green;
+  background: #09ABC6;
   color:#09abc6;
   font-size: 20px;
   text-align: center;
 }
 
+#promoAlgo div:nth-child(4) iframe, #promoAlgo div:nth-child(5) iframe{
+  width: 100%;
+  
+}
 #scene{
  display: inline-block;
   width: 50%;
