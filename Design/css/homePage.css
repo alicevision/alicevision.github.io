@@ -224,7 +224,6 @@
   height: auto;
   margin: auto;
   background:none;
-  padding-bottom: 70px;
 }
 
 #lib1, #lib2, #lib3{
@@ -484,7 +483,7 @@
 
 #promoAlgo{
   width: 100%;
-  background: whitesmoke;
+  background: none;
   min-height: 200px;
 }
 
@@ -510,7 +509,7 @@
   font-weight: 400;
   font-size: 30px;
   text-transform: uppercase;
-   color:#09abc6;
+   color:black;
    -webkit-transition: color 1s -webkit-transform 2s;
   transition: color 1s, transform 2s;
 }
@@ -548,7 +547,7 @@
 
 #promoAlgo div:nth-child(4) iframe, #promoAlgo div:nth-child(5) iframe{
   width: 100%;
-  
+
 }
 #scene{
  display: inline-block;
