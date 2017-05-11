@@ -623,37 +623,37 @@ function loadStep8(){
         });/*fin partie json*/
 
 }
-$('#step1, #step1Mini').click(function() {
+$('#step1, #step1Mini, #pipelineS1').click(function() {
     stepSelected = 1;
     loadStep1();
 });
 
-$('#step2, #step2Mini').click(function() {
+$('#step2, #step2Mini, #pipelineS2').click(function() {
     stepSelected = 2;
     loadStep2();
 });
 
-$('#step3, #step3Mini').click(function() {
+$('#step3, #step3Mini, #pipelineS3').click(function() {
     stepSelected = 3;
     loadStep3();
 });
-$('#step4, #step4Mini').click(function() {
+$('#step4, #step4Mini, #pipelineS4').click(function() {
     stepSelected = 4;
     loadStep4();
 });
-$('#step5, #step5Mini').click(function() {
+$('#step5, #step5Mini, #pipelineS5').click(function() {
     stepSelected = 5;
     loadStep5();
 });
-$('#step6, #step6Mini').click(function() {
+$('#step6, #step6Mini, #pipelineS6').click(function() {
     stepSelected = 6;
     loadStep6();
 });
-$('#step7, #step7Mini').click(function() {
+$('#step7, #step7Mini, #pipelineS7').click(function() {
     stepSelected = 7;
     loadStep7();
 });
-$('#step8, #step8Mini').click(function() {
+$('#step8, #step8Mini, #pipelineS8').click(function() {
     stepSelected = 8;
     loadStep8();
 });

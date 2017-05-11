@@ -760,6 +760,7 @@
  #pipeline .l1,#pipeline .l2,#pipeline .l3,#pipeline .l4,#pipeline .l5,#pipeline .l6,#pipeline .l7{
   height: 4px;
   margin-bottom: 8px;
+  background: black;
  }
 
  .stepLine p{
