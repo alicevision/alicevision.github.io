@@ -3,9 +3,7 @@
 #aliceVisionFirstPromo{
   width: 100%;
   height: auto;
-  /*margin-top: -95px;*/
   background: url(../img/fond1.PNG) no-repeat;
-  /*background: #359DE9;*/
   background-size: cover;
   background-attachment: fixed;
 }
@@ -181,7 +179,7 @@
   margin:auto;
   color: black;
   /*background: url(../img/homePage.jpg) no-repeat;*/
-  background: url(../img/fond1.png);
+  background: url(../img/fond1.PNG);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -291,7 +289,7 @@
 #softDiv{
   width: 100%;
   height: auto;
-   background:  url(../img/fond1.png);
+   background:  url(../img/fond1.PNG);
   background-size: cover;
   background-attachment: fixed;
   margin:auto;

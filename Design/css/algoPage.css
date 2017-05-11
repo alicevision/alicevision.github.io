@@ -2,7 +2,7 @@
 #stepDiv{
   width: 100%;
   height: auto;
-  background: url('../img/fond4.png');
+  background: url('../img/fond4.PNG');
   vertical-align: top;
   background-attachment: fixed;
   background-size: 100%;
@@ -222,28 +222,10 @@
   display: none;
 }
 
-/*
-#gp2{
-  width:50%;
-  min-height: 100px;
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  background: url('../img/step_img/img_step1.png');
-  background-size: cover;
-  margin-right: -5px;
-  vertical-align: top;
-}
-
-*/
-
-
 .gp1{
   width: auto;
   height: auto;
 }
-
-
 
 .gp1 img{
   width: 43%;

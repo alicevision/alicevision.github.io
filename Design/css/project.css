@@ -1,6 +1,6 @@
 
 .backgroundProject{
-  background: url('../img/fond5.png');
+  background: url('../img/fond5.PNG');
   background-size: cover;
   background-attachment: fixed;
   padding-bottom: 50px;
@@ -193,7 +193,6 @@
     width: 90vw;
     min-height: 90vw;
     display: inline-block;
-    /*background: whitesmoke;*/
     vertical-align: top;
     -webkit-transition: background 2s, color 2s -webkit-transform 2s;
     transition: background 2s, color 2s, transform 2s;
