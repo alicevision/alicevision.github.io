@@ -1,6 +1,7 @@
 {
-  "nameStep": "1 - Structure From Motion",
-  "nameSecond" : "1- Structure From Motion",
+  "nameStep": "Extract features",
+  "nameSecond" : "",
+  "stepNumber" : "Step 1",
   "objectives" : "Objectives",
   "objectivesP" : "Extract 2D points of interest from input images, in order to get image keypoints, corresponding to salient 3D points.",
   "introStep": "Feature Extraction de coins, de lignes, de contraste : utiliser dans du multi-view, du coup quand on ajoute une nouvelle photo, essayer de repérer ces mêmes points dans la scène.<br/><br/>Feature Extraction de coins, de lignes, de contrasteBut : utiliser dans du multi-view, du coup quand on ajoute une nouvelle photo.",

@@ -356,7 +356,7 @@
   color: #09ABC6;
   font-weight: 400;
   font-size: 17px;
-  margin: 0;
+
 }
 
 .implementedAlgo div p{
@@ -478,3 +478,66 @@
   font-size: 16px;
   text-align: justify;
 }
+
+.pagination{
+  width: 100%;
+  border-bottom: 1px solid #09ABC6;
+  height: 70px;
+  padding-top: 10px;
+}
+
+#prevBtn, #nextBtn{
+  min-width: 160px;
+  border: 2px solid #09ABC6;
+  padding: 10px 30px;
+  font-family: 'Ubuntu';
+  font-weight: 800;
+  color:#09ABC6;
+  background: none;
+  text-transform: uppercase;
+  margin-top: 10px;
+  -webkit-transition: background 1s ease-out, color 1s -webkit-transform 1s;
+  transition: background 1s ease-out, color 1s, transform 1s;
+  cursor: pointer;
+}
+
+#prevBtn:hover, #nextBtn:hover{
+  color: whitesmoke;
+  background: #09ABC6;
+}
+#prevBtn{
+  float: left;
+  margin-left: 7%;
+}
+#nextBtn{
+  float: right;
+  margin-right: 7%;
+}
+
+@media (max-width: 480px) {
+   .implementedAlgo div{
+    width: 90%;
+   }
+   #algoExisted1, #algoExisted2{
+    margin-left: 10%;
+   }
+}
+
+
+@media (min-width: 481px) and (max-width: 589px) {
+  
+  
+}
+ @media (min-width: 590px) and (max-width: 767px) {
+
+ }
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+}
+
+@media (min-width: 980px) and (max-width: 1199px) {}
+
+@media (min-width: 1200px) and (max-width: 1499px) {}

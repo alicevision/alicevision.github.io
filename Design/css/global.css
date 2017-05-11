@@ -17,7 +17,7 @@ src: url(../fonts/BEBAS.ttf);
 #header
 {
 	width : 100%;
-  height : auto;
+  height : 65px;
   position: fixed;
   background: whitesmoke;
    /* background: #89bad1;*/
@@ -215,7 +215,6 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   background: whitesmoke;
   color: black;
   padding-top: 30px;
-  padding-bottom: 30px;
 }
 #informations{
   width: 90%;
@@ -536,72 +535,12 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* MEDIA QUERIES */
-
-@media (max-width: 480px) { 
-
-  #stepForMobile{
-    display: block;
- }
-
-  #hamburgerMenu{display: none;}
-  #stepDiv h1{
-    width: 90%;
-    margin:auto;
-    margin-top: 90px;
-    margin-bottom: 30px;
-  }
-
-  #promoAlgo{
-    height: auto !important;
-  }
-  #linkAlgoForMobile{
-    display: block;
-  }
-
-#scene{display: none;}
-
-#aliceVisionFirstPromo{margin-top: 65px;height: 400px;}
-
-  /* menu*/
-
-  #borderTop{
-    display: none;
-  }
-
-#header{
-  background: white;
-}
-
-#menu{
-  display: none;
-}
-
 #menuMobile{
-  /*display: block;*/
+  display: none;
   position: fixed;
-  top:0;
+  top:7px;
   right: 0;
-  background: white;
   width: 100%;
-  border-top: 10px solid #1569E8;
 }
 
 
@@ -624,9 +563,9 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   background-size: cover;
 }
 #menuMobile div:nth-child(2){
-  opacity: 0;
+  opacity: 1;
   width: 100%;
-  height: auto;
+  height: 0;
   background: whitesmoke;
   position: fixed;
   top:60px;
@@ -645,8 +584,6 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   list-style: none;
   width: 100%;
   text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
   border-bottom: 1px solid #DBDBDB;
 }
 #menuMobile div:nth-child(2) li a{
@@ -654,6 +591,8 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   color: black;
   font-family: 'Ubuntu';
   font-weight: 400;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }/*
 #hamburgerMenu div:nth-child(2) li a:hover{
   color:#156BEC;
@@ -663,7 +602,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 #menuMobile div:nth-child(2) ul li a {
   color: black;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 27px;
   display: block;
   padding: 0 15px;
@@ -673,7 +612,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 /*hover effect on links*/
 #menuMobile div:nth-child(2) ul li a:hover {
   background: #DBDBDB;
-  border-left: 5px solid #156BEC;
+  border-left: 5px solid #09ABC6;
 }
 /*Lets hide the non active LIs by default*/
 #menuMobile ul ul {
@@ -685,28 +624,69 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 480px) { 
+
+  #menuMobile{
+  display: block;
+}
+
+ 
+  #hamburgerMenu{display: none;}
+  #stepDiv h1{
+    width: 90%;
+    margin:auto;
+    margin-top: 90px;
+    margin-bottom: 30px;
+  }
+
+  #promoAlgo{
+    height: auto !important;
+  }
+  #linkAlgoForMobile{
+    display: block;
+  }
+
+#scene{display: none;}
+
+#aliceVisionFirstPromo{margin-top: 65px;height: 400px;}
+
+  /* menu*/
+
+#borderTop{
+  display: none;
+}
+
+#menu{
+  display: none;
+}
+
+
+
+
   #logoTop{
-    width:37px;
-    top:20px;
+    width:215px;
+    top:2px;
     position: absolute;
     z-index: 2;
   }
   
-  
-  #objectif div:nth-child(1){
-    width:100%;
-  }
-  #objectif :nth-child(1) h1{
-    margin-top: 30px;
-  }
-#objectif :nth-child(1) p{
-  margin-bottom: 30px;
 
-}
-
-  #objectif div:nth-child(2){
-    width: 100%;
-  }
 
   #libContent{
     width:98%;
@@ -958,29 +938,30 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 /* Extra small devices (portrait phones, less than 576px)*//*768*1024  */
 @media (min-width: 481px) and (max-width: 589px) { 
 
+  #header{
+    height: 68px;
+  }
 
   #logoTop{
-    width:37px;
-    top:20px;
+    width:215px;
+    top:2px;
     position: absolute;
+    z-index: 2;
+    margin-top: 18px;
   }
   #menu{
-    width:90%;
-    margin-right: 0;
+    display: none;
   }
-  #menu ul li {
-    font-size: 13px;
-    padding: 18px 0px 0px 10px;
-
+  
+  #menuMobile{
+    display: block;
   }
 
   #avTextPromo{
     width: 87%;
     margin-right: 7%;
   }
-  #objectif div:nth-child(1){
-    width:100%;
-  }
+  
   #objectif :nth-child(1) h1{
     margin-top: 30px;
   }
@@ -988,9 +969,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   margin-bottom: 30px;
 }
 
-  #objectif div:nth-child(2){
-    width: 100%;
-  }
+
 
   #libContent{
     width:98%;
@@ -1010,19 +989,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
     background: black;
   }
 
-  #softContent div{
-    width: 100%;
-  }
-  #softContent div div{
-    height: 120px;
-  }
-  #softContent div h4{
-    text-align: center;
-  }
-  #softContent div p{
-    padding-bottom: 20px;
-    width: 90%;
-  }
+  
 
 
   #promoAlgo{
@@ -1084,6 +1051,15 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
  @media (min-width: 590px) and (max-width: 767px) {
  /*  menu fixed*/
 
+
+#logoTop{
+  width: 175px;
+  margin-top: 21px;
+}
+#scene{
+  width: 47%
+}
+
 #stepsTop{
   margin-left: 8% !important;
 }
@@ -1095,17 +1071,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 
  /* Home */
 
- #project1 :nth-child(1) h1{
-    margin-top: 40px;
- }
-
- #project2 div:nth-child(2) h1{
-    margin-top: 20px;
-  }
-
-  #project3 :nth-child(1) h1{
-    margin-top: 40px;
-  }
+ 
 
  #avTextPromo h1{font-size: 30px;}
   #avTextPromo h2{font-size:22px;}
@@ -1136,6 +1102,11 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 
 
 /* step*/
+
+  #menu{
+    margin-right: 0;
+    margin-top: 10px;
+  }
     #menu ul li {
     font-size: 13px;
     padding: 18px 16px 0px 16px;

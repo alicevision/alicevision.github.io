@@ -1,0 +1,12 @@
+{
+  "nameStep": "Image Matching",
+  "nameSecond" : "",
+  "stepNumber" : "Step 2",
+  "objectives" : "Coming soon.",
+  "introStep": "Feature Extraction de coins, de lignes, de contraste : utiliser dans du multi-view, du coup quand on ajoute une nouvelle photo, essayer de repérer ces mêmes points dans la scène.<br/><br/>Feature Extraction de coins, de lignes, de contrasteBut : utiliser dans du multi-view, du coup quand on ajoute une nouvelle photo.",
+  "entry": "Images with associated features",
+  "exit" : "Link between images",
+  
+
+   "" : ""
+}

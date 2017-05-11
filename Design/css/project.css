@@ -191,26 +191,93 @@
     margin-left: 5vw;
   }
   #project1 div:nth-child(1), #project3 div:nth-child(1), #project5 div:nth-child(1){
-    width: 80vw;
-    min-height: 80vw;
+    width: 90vw;
+    min-height: 90vw;
     display: inline-block;
     /*background: whitesmoke;*/
     vertical-align: top;
     -webkit-transition: background 2s, color 2s -webkit-transform 2s;
     transition: background 2s, color 2s, transform 2s;
+    border: 2px solid whitesmoke;
   }
+  #project1 div:nth-child(2), #project3 div:nth-child(2), #project5 div:nth-child(2){
+    width: 90vw;
+    min-height: 90vw;
+    margin-left: 0;
+  }
+
+  #project2 div:nth-child(1), #project4 div:nth-child(1), #project6 div:nth-child(1){
+    width: 90vw;
+    min-height: 90vw;
+    margin-left: 0;
+  }
+  #project2 div:nth-child(2), #project4 div:nth-child(2), #project6 div:nth-child(2){
+    
+    width: 90vw;
+    min-height: 90vw;
+    display: inline-block;
+    /*background: whitesmoke;*/
+    vertical-align: top;
+    -webkit-transition: background 2s, color 2s -webkit-transform 2s;
+    transition: background 2s, color 2s, transform 2s;
+    border: 2px solid whitesmoke;
+  }
+
 
 }
 
 
 @media (min-width: 481px) and (max-width: 589px) {
- 
+  
+  
+}
+ @media (min-width: 590px) and (max-width: 767px) {
+  #project1, #project2, #project3, #project4, #project5, #project6{
+    width: 96vw;
+    margin-left: 0;
+  }
+
+  #project1 div:nth-child(1), #project3 div:nth-child(1), #project5 div:nth-child(1){
+    width: 50%;
+
+  }
+
+  #project1 div:nth-child(2), #project3 div:nth-child(2), #project5 div:nth-child(2), #project2 div:nth-child(1), #project4 div:nth-child(1), #project6 div:nth-child(1){
+    width: 46vw;
+    height: 46vw;
+  }
+  #project1 h1, #project2 h1, #project3 h1, #project4 h1, #project5 h1, #project6 h1{
+    margin-top: 0;
+  }
+
+  #project2 div:nth-child(2), #project4 div:nth-child(2), #project6 div:nth-child(2){
+    width: 50%;
+    margin-left:0;
+  }
+
+
+
+ }
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+#project1, #project2, #project3, #project4, #project5, #project6{
+  width: 90vw;
+  margin-left: 5vw;
+}
+
+#project1 div:nth-child(1), #project3 div:nth-child(1), #project5 div:nth-child(1), #project2 div:nth-child(2), #project4 div:nth-child(2), #project6 div:nth-child(2){
+  width: 50vw;
+  min-height: 50vw;
+} 
+
+#project1 div:nth-child(2), #project3 div:nth-child(2), #project5 div:nth-child(2),#project2 div:nth-child(1), #project4 div:nth-child(1), #project6 div:nth-child(1){
+  width: 39vw;
+  height: 39vw;
+} 
+
 
 }
- @media (min-width: 590px) and (max-width: 767px) {}
-
-
-@media (min-width: 768px) and (max-width: 979px) {}
 
 @media (min-width: 980px) and (max-width: 1199px) {}
 

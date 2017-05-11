@@ -720,3 +720,20 @@ function clearStep8(){
     }, 500);       
   }, 500); 
 }
+
+var prevBtn = document.getElementById("prevBtn");
+var nextBtn = document.getElementById("nextBtn");
+
+var prev;
+var next;
+
+prevBtn.addEventListener('click', function(){
+  prev = stepSelected-1
+    stepFill(prev);
+    stepSelected = prev;
+});
+nextBtn.addEventListener('click', function(){
+    next = stepSelected+1
+    stepFill(next);
+    stepSelected = next;
+});

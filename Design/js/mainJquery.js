@@ -1,5 +1,9 @@
 $( document ).ready(function() {
 
+//$("#menuMobile nth-child(2)").css("display", "none");
+
+
+
 /*
 $("#buttonProject1").mouseover(function(){
     $(this).css("background","#1569E8");
@@ -28,7 +32,7 @@ $("#buttonProject3").mouseout(function(){
     $("#buttonProject3 a").css("color","#1569E8");
 });
 */
-
+/*
 $("#softContent div, #libContent div ").mouseover(function(){
     $(this + 'img').attr("src","Design/img/seemoreWhite.png");
 });
@@ -38,39 +42,40 @@ $(".btnForCube").mouseover(function(){
 $(".btnForCube").mouseout(function(){
     $(this).attr("src","Design/img/seemore.png");
 });
-
+*/
 var viewObjectifVideo = 0;
+var heightView; 
+
+
 $("#objectif button").click(function(){
+     
+    if (window.matchMedia("(max-width: 480px)").matches) {
+      heightView = 415;
+    }
+     else if (window.matchMedia("(min-width: 481px) and (max-width: 589px)").matches) {
+      heightView = 315;
+    } else {
+          heightView = 225;
+    }
    if( viewObjectifVideo == 0 ){
-    /*
-        $("#objectif div:nth-child(2)").animate({
-            height : 400
-          }, 1000 );
-        viewObjectifVideo = 1;
-        $("#objectif button").text('view less');
-    */
+
         $("#viewPipeline").animate({
-            height : 225
+            height : heightView
           }, 1000 );
         viewObjectifVideo = 1;
         $("#objectif button").text('view less');
    }else{
-    /*
-        $("#objectif div:nth-child(2)").animate({
-            height : 0
-          }, 1000 );
-        viewObjectifVideo = 0;
-        $("#objectif button").text('view more');
-    */
+
         $("#viewPipeline").animate({
             height : 0
           }, 1000 );
         viewObjectifVideo = 0;
         $("#objectif button").text('view more');
    }
+
+
+
 });
-
-
 
 
 });
