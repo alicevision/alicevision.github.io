@@ -4,7 +4,7 @@
   width: 100%;
   height: auto;
   /*margin-top: -95px;*/
-  background: url(../img/sky3.jpg) no-repeat;
+  background: url(../img/fond1.png) no-repeat;
   /*background: #359DE9;*/
   background-size: cover;
   background-attachment: fixed;
@@ -181,7 +181,7 @@
   margin:auto;
   color: black;
   /*background: url(../img/homePage.jpg) no-repeat;*/
-  background: url(../img/sky2.jpg);
+  background: url(../img/fond1.png);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -291,7 +291,7 @@
 #softDiv{
   width: 100%;
   height: auto;
-   background:  url(../img/sky2.jpg);
+   background:  url(../img/fond1.png);
   background-size: cover;
   background-attachment: fixed;
   margin:auto;
@@ -311,7 +311,7 @@
   padding-top: 65px;
   padding-bottom: 15px;
   margin: 0;
-  color:black;
+  color:whitesmoke;
 }
 
 #softDiv h2, #libsDiv h2{
@@ -323,7 +323,7 @@
   text-align: center;
   padding-bottom: 20px;
   margin: 0;
-  color:black;
+  color:whitesmoke;
 }
 
 

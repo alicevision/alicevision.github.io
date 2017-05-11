@@ -1,6 +1,6 @@
 
 .backgroundProject{
-  background: url('../img/sky4.jpg');
+  background: url('../img/fond5.png');
   background-size: cover;
   background-attachment: fixed;
   padding-bottom: 50px;
@@ -90,7 +90,7 @@
   margin-left: -5px;
   display: inline-block;
   background-size: cover;
-  border: 2px solid white;
+
 }
 
 #project1 div:nth-child(2){
@@ -111,7 +111,6 @@
   min-height: 31.5vw;
   display: inline-block;
   vertical-align: top;
-  border:2px solid white;
 }
 
 #project2 div:nth-child(1){
@@ -198,7 +197,6 @@
     vertical-align: top;
     -webkit-transition: background 2s, color 2s -webkit-transform 2s;
     transition: background 2s, color 2s, transform 2s;
-    border: 2px solid whitesmoke;
   }
   #project1 div:nth-child(2), #project3 div:nth-child(2), #project5 div:nth-child(2){
     width: 90vw;

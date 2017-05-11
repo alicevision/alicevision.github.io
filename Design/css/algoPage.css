@@ -2,10 +2,10 @@
 #stepDiv{
   width: 100%;
   height: auto;
-  background: url('../img/fond3.jpg');
+  background: url('../img/fond4.png');
   vertical-align: top;
   background-attachment: fixed;
-  min-height: 290px;
+  background-size: 100%;
 }
 
 #stepDiv h1{
@@ -16,7 +16,7 @@
   vertical-align: top;
   text-align: center;
   padding-bottom: 35px;
-  color: black;
+  color: white;
   text-transform: uppercase;
   padding-top: 90px;
   font-weight: 500;

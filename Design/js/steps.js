@@ -3,7 +3,7 @@ var stepSelected = 0;
 var stepActu = 0;
 var timeToGo = 0;
 var colorActiv = '#09abc6';
-var colorPassiv = 'black';
+var colorPassiv = 'white';
 
 var caseStep1 = document.getElementById('step1');
 var caseStep2 = document.getElementById('step2');

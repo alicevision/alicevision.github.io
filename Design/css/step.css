@@ -11,7 +11,7 @@
 .step1, .step2, .step3, .step4, .step5, .step6, .step7, .step8{
   width: 50px;
   height: 50px;
-  border:2px solid black;
+  border:2px solid white;
   display: inline-block;
   margin-right: -5px;
   margin-left: -5px;
@@ -28,7 +28,7 @@
 .l1, .l2, .l3, .l4, .l5, .l6, .l7{
   width: 100px;
   height: 2px;
-  background: black;
+  background: white;
   display: inline-block;
   margin-bottom: 5px;
   z-index: 1;
