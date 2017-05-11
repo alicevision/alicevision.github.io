@@ -12,13 +12,14 @@
   height: auto;
   background:none;
   color: whitesmoke;
+  padding-top: 27px;
 }
 
 #projectTextPromo{
   width: 90%;
   margin: auto;
   font-family: 'Ubuntu';
-  padding-bottom: 27px;
+  padding-bottom: 20px;
 }
 
 #projectTextPromo h2{
@@ -29,7 +30,7 @@
   text-align: center;
 }
 
-#project1, #project2, #project3{
+#project4, #project5, #project6{
   width: 82vw;
   height: auto;
   margin:auto;
@@ -37,7 +38,7 @@
   color: whitesmoke;
 }
 
-#project1 div:nth-child(1), #project3 div:nth-child(1){
+#project5 div:nth-child(1){
   width: 32vw;
   min-height: 32vw;
   display: inline-block;
@@ -46,7 +47,7 @@
   -webkit-transition: background 2s, color 2s -webkit-transform 2s;
   transition: background 2s, color 2s, transform 2s;
 }
-#project1 h1, #project2 h1, #project3 h1{
+#project4 h1, #project5 h1, #project6 h1{
   width: 80%;
   margin: auto;
   text-align: center;
@@ -55,7 +56,7 @@
   margin-top: 4vw;
 }
 
-#project1 h2, #project2 h2, #project3 h2{
+#project4 h2, #project5 h2, #project6 h2{
   width: 70%;
   margin: auto;
   text-align: center;
@@ -64,7 +65,7 @@
   margin-top: 10px;
 }
 
-#project1 p, #project2 p, #project3 p{
+#project4 p, #project5 p, #project6 p{
   width: 70%;
   height: auto;
   margin-top: 12px;
@@ -74,7 +75,7 @@
   text-align: justify;
 }
 
-#project1 div:nth-child(2), #project3 div:nth-child(2){
+#project5 div:nth-child(2){
   width: 31.5vw;
   min-height:31.5vw;
   margin-left: -5px;
@@ -83,28 +84,21 @@
 
 }
 
-#project1 div:nth-child(2){
-  background: url(../img/img_project/mayaMVG2.png) ;
-  background-size: cover;
-}
-#project3 div:nth-child(2){
+#project5 div:nth-child(2){
   background: url(../img/img_project/sift_keypoints.jpg) ;
   background-size: cover;
 }
 
-#project2 div:nth-child(1){
-  width: 31.5vw;
-  min-height: 31.5vw;
-  display: inline-block;
-  vertical-align: top;
+#project4 div:nth-child(1){
+  background: url(../img/img_project/openMVG.jpg) ;
+  background-size: cover;
 }
-
-#project2 div:nth-child(1){
-  background: url(../img/img_project/ofxMVG2.png) ;
+#project6 div:nth-child(1){
+  background: url(../img/img_project/cctag.png) ;
   background-size: cover;
 }
 
-#project2 div:nth-child(2){
+#project4 div:nth-child(2), #project6 div:nth-child(2){
    width: 32vw;
   min-height: 32vw;
   display: inline-block;
@@ -161,12 +155,12 @@
 
 
 @media (max-width: 480px) {
-   #project1, #project2, #project3{
+   #project4, #project5, #project6{
     width: 90vw ; 
     margin:auto;
     margin-left: 5vw;
   }
-  #project1 div:nth-child(1), #project3 div:nth-child(1){
+  #project5 div:nth-child(1){
     width: 90vw;
     min-height: 90vw;
     display: inline-block;
@@ -174,18 +168,18 @@
     -webkit-transition: background 2s, color 2s -webkit-transform 2s;
     transition: background 2s, color 2s, transform 2s;
   }
-  #project1 div:nth-child(2), #project3 div:nth-child(2){
+  #project5 div:nth-child(2){
     width: 90vw;
     min-height: 90vw;
     margin-left: 0;
   }
 
-  #project2 div:nth-child(1){
+  #project4 div:nth-child(1), #project6 div:nth-child(1){
     width: 90vw;
     min-height: 90vw;
     margin-left: 0;
   }
-  #project2 div:nth-child(2){
+  #project4 div:nth-child(2), #project6 div:nth-child(2){
     
     width: 90vw;
     min-height: 90vw;
@@ -206,26 +200,25 @@
   
 }
  @media (min-width: 590px) and (max-width: 767px) {
-  #project1, #project2, #project3{
+  #project4, #project5, #project6{
     width: 96vw;
     margin-left: 0;
   }
 
-  #project1 div:nth-child(1), #project3 div:nth-child(1){
+  #project5 div:nth-child(1){
     width: 50%;
 
   }
 
-  #project1 div:nth-child(2), #project3 div:nth-child(2), #project2 div:nth-child(1)
-  {
+ #project5 div:nth-child(2), #project4 div:nth-child(1), #project6 div:nth-child(1){
     width: 46vw;
     height: 46vw;
   }
-  #project1 h1, #project2 h1, #project3 h1{
+  #project4 h1, #project5 h1, #project6 h1{
     margin-top: 0;
   }
 
-  #project2 div:nth-child(2){
+  #project4 div:nth-child(2), #project6 div:nth-child(2){
     width: 50%;
     margin-left:0;
   }
@@ -236,17 +229,17 @@
 
 
 @media (min-width: 768px) and (max-width: 979px) {
-#project1, #project2, #project3{
+#project4, #project5, #project6{
   width: 90vw;
   margin-left: 5vw;
 }
 
-#project1 div:nth-child(1), #project3 div:nth-child(1), #project2 div:nth-child(2){
+#project5 div:nth-child(1), #project4 div:nth-child(2), #project6 div:nth-child(2){
   width: 50vw;
   min-height: 50vw;
 } 
 
-#project1 div:nth-child(2), #project3 div:nth-child(2),#project2 div:nth-child(1){
+#project5 div:nth-child(2), #project4 div:nth-child(1), #project6 div:nth-child(1){
   width: 39vw;
   height: 39vw;
 } 
