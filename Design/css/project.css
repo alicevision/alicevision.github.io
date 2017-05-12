@@ -84,11 +84,11 @@
 }
 
 #project1 div:nth-child(2){
-  background: url(../img/img_project/mayaMVG2.png) ;
+  background: url(../img/img_project/meshroom.png) ;
   background-size: cover;
 }
 #project3 div:nth-child(2){
-  background: url(../img/img_project/sift_keypoints.jpg) ;
+  background: url(../img/img_project/mayaMVG2.png) ;
   background-size: cover;
 }
 #project5 div:nth-child(2){
