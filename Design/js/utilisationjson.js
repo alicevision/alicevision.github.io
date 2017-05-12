@@ -193,7 +193,9 @@ function loadStep1(){
         $('.generalStep div:nth-child(2)').html('<h4>Inputs  :</h4><p> ' + donnees.entry + '</p>');
         $('.generalStep div:nth-child(2)').append('<h4>Outputs  :</h4><p> ' + donnees.exit + '</p>');
 
-        $('.videoPresentation div').html('<div><iframe width="560" height="315" src=" ' + donnees.adresseVideo1 + '" frameborder="0" allowfullscreen></iframe></div>');
+        $('.videoPresentation').html('');
+        $('.videoPresentation').append('<div></div>');
+        $('.videoPresentation div').append('<iframe width="560" height="315" src=" ' + donnees.adresseVideo1 + '" frameborder="0" allowfullscreen></iframe>');
         $('.videoPresentation div').append('<h3>Resume and comments</h3>');
         $('.videoPresentation div').append('<p>'+ donnees.introStep + '</p>');
 

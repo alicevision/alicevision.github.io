@@ -8,7 +8,7 @@
   "entry": "Images",
   "exit" : "2D points of interest for each images",
   "generalPrincipeIMG":"img_step1.png",
-
+  "adresseVideo1":"https://www.youtube.com/embed/O-IZz1n4F4g",
   "step1Name": "Step 1 : Features Detector",
   "step1Content":"Find points of interest in all the images that are irrespective of rotation, translation, and scale.",
   "step2Name": "Step 2 : Filtering",
@@ -18,6 +18,7 @@
   "step4Name": "Optional Step : Masking Optimization",
   "step4Content": "Use a binary image mask to only extract features in a subpart of the image.",
    "algo1H2":"The implemented algorithm",
+
 
    "algo1":"SIFT (Scale Invariant Feature Transform)",
    "algo1ATitle":"1- Scale-space Extrema Detection",

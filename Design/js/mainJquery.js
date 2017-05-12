@@ -43,6 +43,9 @@ $(".btnForCube").mouseout(function(){
     $(this).attr("src","Design/img/seemore.png");
 });
 */
+
+
+/* animation finalement pas utilisé
 var viewObjectifVideo = 0;
 var heightView; 
 
@@ -75,7 +78,7 @@ $("#objectif button").click(function(){
 
 
 
-});
+});*/
 
 
 });

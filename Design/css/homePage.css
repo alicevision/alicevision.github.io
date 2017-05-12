@@ -134,6 +134,12 @@
   cursor: pointer;
 }
 
+#objectif button a{
+  color:#09abc6;
+}
+#objectif button a:hover{
+  color:whitesmoke;
+}
 #objectif button:hover{
   background: #09abc6;
   color: whitesmoke;
@@ -161,8 +167,7 @@
 
 #viewPipeline{
   width: 100%;
-  /*min-height:397px;*/
-  height: 0;
+  height: auto;
   background: whitesmoke;
   margin: auto;
   display: block;
@@ -732,8 +737,6 @@
 #pipeline{
   width: 100%;
   background: whitesmoke;
-  min-height: 200px;
-  padding-bottom: 60px;
 }
 
 #pipeline p{
