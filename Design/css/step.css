@@ -90,3 +90,20 @@
   transform: scale(0.5);
 }
 
+@media (min-width: 481px) and (max-width: 589px) { }
+
+@media (min-width: 590px) and (max-width: 767px) {
+  #pipeline .stepLine{
+    transform: scale(0.4);
+    margin-left: 0%;
+    transform-origin: left;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {}
+
+@media (min-width: 980px) and (max-width: 1199px) {}
+
+@media (min-width: 1200px) and (max-width: 1499px) {}
+
+@media (min-width: 1500px) {}

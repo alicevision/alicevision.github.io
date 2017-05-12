@@ -35,14 +35,14 @@ $("#buttonProject3").mouseout(function(){
 /*
 $("#softContent div, #libContent div ").mouseover(function(){
     $(this + 'img').attr("src","Design/img/seemoreWhite.png");
-});
+});*/
 $(".btnForCube").mouseover(function(){
     $(this).attr("src","Design/img/seemoreBlue.png");
 });
 $(".btnForCube").mouseout(function(){
     $(this).attr("src","Design/img/seemore.png");
 });
-*/
+
 
 
 /* animation finalement pas utilisé

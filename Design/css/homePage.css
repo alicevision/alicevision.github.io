@@ -504,7 +504,6 @@
 
 #promoAlgo{
   width: 100%;
-  background: whitesmoke;
   min-height: 200px;
 }
 
@@ -530,7 +529,7 @@
   font-weight: 400;
   font-size: 30px;
   text-transform: uppercase;
-   color:#09abc6;
+   color:whitesmoke;
    -webkit-transition: color 1s -webkit-transform 2s;
   transition: color 1s, transform 2s;
 }
@@ -700,7 +699,8 @@
   }
   #pipeline .stepLine{
     transform: scale(0.4) !important;
-    margin-left: -73% !important;
+    margin-left: 0% !important;
+    transform-origin: left;
   }
 
   #divMayaMVG, #divMeshroom, #divOFX, #lib1, #lib2, #lib3{
@@ -719,9 +719,42 @@
 
  }
 
-@media (min-width: 590px) and (max-width: 767px) {}
+@media (min-width: 590px) and (max-width: 767px) {
+   #pipeline .stepLine{
+    transform: scale(0.4) !important;
+    margin-left: 0% !important;
+    transform-origin: left;
+  }
+  #divMayaMVG, #divMeshroom, #divOFX, #lib1, #lib2, #lib3{
+    margin-left: 27%;
+  }
+  #promoAlgo div:nth-child(4),#promoAlgo div:nth-child(5){
+    width: 100%;
+  }
 
-@media (min-width: 768px) and (max-width: 979px) {}
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  #pipeline .stepLine{
+    transform: scale(0.5) !important;
+    margin-left: 0% !important;
+    transform-origin: left;
+  }
+  #promoAlgo h3{
+    display: none;
+  }
+   #divOFX, #lib3{
+    margin-left: 36%;
+   }
+   #promoAlgo div:nth-child(4){
+    float: left;
+  }
+    #promoAlgo div:nth-child(5){
+    float: right;
+  }
+  
+}
 
 @media (min-width: 980px) and (max-width: 1199px) {}
 

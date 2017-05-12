@@ -20,6 +20,7 @@ src: url(../fonts/BEBAS.ttf);
   height : 55px;
   position: fixed;
   background: whitesmoke;
+  z-index: 5;
    /* background: #89bad1;*/
 }
 #header h1{
@@ -594,6 +595,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   width: 100%;
   text-align: center;
   border-bottom: 1px solid #DBDBDB;
+  padding: 5px 0 5px 0;
 }
 #menuMobile div:nth-child(2) li a{
   padding: 20px;
@@ -1061,10 +1063,25 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
  /*  menu fixed*/
 
 
-#logoTop{
-  width: 175px;
-  margin-top: 21px;
-}
+#header{
+    height: 68px;
+  }
+
+  #logoTop{
+    width:215px;
+    top:2px;
+    position: absolute;
+    z-index: 2;
+    margin-top: 18px;
+  }
+  #menu{
+    display: none;
+  }
+  
+  #menuMobile{
+    display: block;
+  }
+
 #scene{
   width: 47%
 }
@@ -1159,6 +1176,24 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 979px) {
+   #header{
+    height: 68px;
+  }
+
+  #logoTop{
+    width:215px;
+    top:2px;
+    position: absolute;
+    z-index: 2;
+    margin-top: 18px;
+  }
+  #menu{
+    display: none;
+  }
+  
+  #menuMobile{
+    display: block;
+  }
   #hamburgerMenu div:nth-child(2){
     width: 30% !important;
   }
