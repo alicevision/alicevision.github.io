@@ -89,9 +89,10 @@
 }
 
 #mapPartners{
-  width: 25vw;
-  height:25vw; 
-  background: #09abc6;
+  width: 17vw;
+  height:17vw; 
+  background: url('../img/logo_big.png');
+  background-size: contain;
   display: inline-block;
   vertical-align: top;
   margin-left: 10%;
