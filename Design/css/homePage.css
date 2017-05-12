@@ -756,7 +756,17 @@
   
 }
 
-@media (min-width: 980px) and (max-width: 1199px) {}
+@media (min-width: 980px) and (max-width: 1199px) {
+  #pipeline .stepLine{
+    transform: scale(0.6) !important;
+    margin-left: 2% !important;
+    transform-origin: left;
+  }
+
+  #lib1, #divMayaMVG{
+    margin-left: 8%;
+  }
+}
 
 @media (min-width: 1200px) and (max-width: 1499px) {}
 
