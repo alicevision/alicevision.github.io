@@ -6,16 +6,17 @@
   background: url(../img/fond1.PNG) no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  text-align: center;
 }
 
 #avTextPromo{
-  width: 40%;
   display: inline-block;
   margin-right: 70px;
   color: white;
   margin-top: 160px;
   min-height: 300px;
   vertical-align: top;
+  letter-spacing: 3px;
 }
 
 #avTextPromo h1{
