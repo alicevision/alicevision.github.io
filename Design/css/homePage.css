@@ -64,8 +64,6 @@
 #scrollDiv img{
   width: 60px;
   height: 60px;
-  margin-left:46%;
-
 }
 
 #objectif{
@@ -146,19 +144,6 @@ button:hover{
   color: whitesmoke;
 }
 
-/*#objectif div:nth-child(2){
-  width: 60%;
-  min-height:397px;
-  height: 0;
-  background: whitesmoke;
-  margin: auto;
-  margin-bottom: 20px;
-  display: block;
-  overflow: hidden;
- /*-webkit-transition: height 1s ease-out, color 1s -webkit-transform 1s;
-  transition: height 1s ease-out, color 1s, transform 1s;
-}
-*/
 #objectif :nth-child(2) iframe{
   width: 100%;
   min-height: 397px;
@@ -188,6 +173,7 @@ button:hover{
   background: url(../img/fond1.PNG);
   background-size: cover;
   background-attachment: fixed;
+  text-align: center;
 }
 
 #libsDiv svg{
@@ -226,7 +212,6 @@ button:hover{
   min-height: 300px;
 }
 
-
 #libContent{
   width:100%;
   height: auto;
@@ -252,11 +237,6 @@ button:hover{
   width: 270px;
   height: 196px;
 }
-
-#lib1{
-  margin-left: 17%;
-}
-
 
 #libContent div h3{
   width:90%;
@@ -295,12 +275,13 @@ button:hover{
 #softDiv{
   width: 100%;
   height: auto;
-   background:  url(../img/fond1.PNG);
+  background:  url(../img/fond1.PNG);
   background-size: cover;
   background-attachment: fixed;
   margin:auto;
   color: black;
   margin: 0;
+  text-align: center;
 }
 
 #softDiv h1, #libsDiv h1 {
@@ -328,11 +309,9 @@ button:hover{
   color:whitesmoke;
 }
 
-
 .btnForCube {
-  width:25px;
+  width: 25px;
   height: 25px;
-  margin-left: 120px;
   cursor: pointer;
 }
 
@@ -361,9 +340,6 @@ button:hover{
   height: 196px;
 }
 
-#divMayaMVG{
-  margin-left: 17%;
-}
 
 #softContent div h3{
   width:100%;
