@@ -727,6 +727,7 @@ button:hover{
 #pipeline{
   width: 100%;
   background: whitesmoke;
+  text-align: center;
 }
 
 #pipeline p{
@@ -743,7 +744,6 @@ button:hover{
 
 #pipeline .stepLine{
   transform: scale(0.75);
-  margin-left:-5%;
 }
  #pipeline .step1,#pipeline .step2,#pipeline .step3,#pipeline .step4,#pipeline .step5,#pipeline .step6,#pipeline .step7,#pipeline .step8{
   border : 4px solid black;
