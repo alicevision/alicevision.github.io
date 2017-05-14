@@ -732,9 +732,9 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
     width:75%;
   }
 
-#footer{
-  padding-bottom: 0;
-}
+  #footer{
+    padding-bottom: 0;
+  }
 
   #informations div:nth-child(1){
     width:48%;
@@ -976,9 +976,9 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   #objectif :nth-child(1) h1{
     margin-top: 30px;
   }
-#objectif :nth-child(1) p{
-  margin-bottom: 30px;
-}
+  #objectif :nth-child(1) p{
+    margin-bottom: 30px;
+  }
 
 
 
@@ -989,6 +989,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   #mikrosDiv div:nth-child(1){
     width:100%;
   }
+  /*
   #mikrosDiv :nth-child(1) h1{
     margin-top: 40px;
   }
@@ -999,6 +1000,7 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
     width:100%;
     background: black;
   }
+  */
 
   
 
