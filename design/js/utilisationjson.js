@@ -1,7 +1,7 @@
 
 $(function() {
     var images  = "design/images/";
-    var js      = "../Design/js/";
+    var js      = "design/js/";
 
     $('#charger').click(function() {
         $.getJSON('json/fichier.json', function(donnees) {
@@ -47,7 +47,7 @@ $('#c8b , #c8a, #c8aTop,#c8bTop, #stepForMobile div:nth-child(8)').click(functio
         $('.videoPresentation div').html('iframe width="560" height="315" src="https://www.youtube.com/embed/O-IZz1n4F4g" frameborder="0" allowfullscreen></iframe>');
         
         $('.gp1').html("<img/>");
-        $('.gp1 img').attr("src",'../Design/img/step_img/' + donnees.generalPrincipeIMG);
+        $('.gp1 img').attr("src",'design/img/step_img/' + donnees.generalPrincipeIMG);
         $('.gp1').append('<h4> ' + donnees.step1Name + '</h4>');
         $('.gp1').append('<p> ' + donnees.step1Content + '</p>');
         $('.gp1').append('<h4> ' + donnees.step2Name + '</h4>');
@@ -66,9 +66,9 @@ $('#c8b , #c8a, #c8aTop,#c8bTop, #stepForMobile div:nth-child(8)').click(functio
         $(' #algoImplemented1').append("<p>" + donnees.algo1Ap1 + "<p>");
         $(' #algoImplemented1').append("<p>" + donnees.algo1Ap2 + "<p>");
 
-        $(' #algoImplemented1').append("<img src = '../Design/img/step_img/" + donnees.nameIMG1 + "'/>");
+        $(' #algoImplemented1').append("<img src = 'design/img/step_img/" + donnees.nameIMG1 + "'/>");
         $(' #algoImplemented1').append("<p>" + donnees.algo1Ap3 + "<p>");
-        $(' #algoImplemented1').append("<img src = '../Design/img/step_img/" + donnees.nameIMG2 + "'/>");
+        $(' #algoImplemented1').append("<img src = 'design/img/step_img/" + donnees.nameIMG2 + "'/>");
         $(' #algoImplemented1').append("<h4>" + donnees.algo1BTitle + "<h4>");
         $(' #algoImplemented1').append("<p>" + donnees.algo1Bp + "<p>");
         $(' #algoImplemented1').append("<h4>" + donnees.algo1CTitle + "<h4>");
@@ -82,7 +82,7 @@ $('#c8b , #c8a, #c8aTop,#c8bTop, #stepForMobile div:nth-child(8)').click(functio
         $('#algoImplemented2').html("<h3>" + donnees.algo2 + "<h3>");
         $(' #algoImplemented2').append("<h4>" + donnees.algo2ATitle + "<h4>");
         $(' #algoImplemented2').append("<p>" + donnees.algo2Ap1 + "<p>");
-        $(' #algoImplemented2').append("<img src = '../Design/img/step_img/" + donnees.nameIMG1Algo2 + "'/>");
+        $(' #algoImplemented2').append("<img src = 'design/img/step_img/" + donnees.nameIMG1Algo2 + "'/>");
         $(' #algoImplemented2').append("<p>" + donnees.algo2Ap2 + "<p>");
         $(' #algoImplemented2').append("<p>" + donnees.algo2Ap3 + "<p>");
         $(' #algoImplemented2').append("<h4>" + donnees.algo2BTitle + "<h4>");
@@ -210,7 +210,7 @@ function loadStep1(){
         $('.gp1').append('<p> ' + donnees.step4Content + '</p>');
 
         $('.gp2').html("<img />");
-        $('.gp2 img').attr("src",'../Design/img/step_img/' + donnees.generalPrincipeIMG);
+        $('.gp2 img').attr("src",'design/img/step_img/' + donnees.generalPrincipeIMG);
 
         $('.implementedAlgo').html("<h1>The algorithm</h1>");
         $('.implementedAlgo').append("<h2>" + donnees.algo1H2 + "</h2>");
@@ -221,9 +221,9 @@ function loadStep1(){
         $(' #algoImplemented1').append("<p>" + donnees.algo1Ap1 + "<p>");
         $(' #algoImplemented1').append("<p>" + donnees.algo1Ap2 + "<p>");
 
-        $(' #algoImplemented1').append("<img src = '../Design/img/step_img/" + donnees.nameIMG1 + "'/>");
+        $(' #algoImplemented1').append("<img src = 'design/img/step_img/" + donnees.nameIMG1 + "'/>");
         $(' #algoImplemented1').append("<p>" + donnees.algo1Ap3 + "<p>");
-        $(' #algoImplemented1').append("<img src = '../Design/img/step_img/" + donnees.nameIMG2 + "'/>");
+        $(' #algoImplemented1').append("<img src = 'design/img/step_img/" + donnees.nameIMG2 + "'/>");
         $(' #algoImplemented1').append("<h4>" + donnees.algo1BTitle + "<h4>");
         $(' #algoImplemented1').append("<p>" + donnees.algo1Bp + "<p>");
         $(' #algoImplemented1').append("<h4>" + donnees.algo1CTitle + "<h4>");
@@ -237,7 +237,7 @@ function loadStep1(){
         $('#algoImplemented2').html("<h3>" + donnees.algo2 + "<h3>");
         $(' #algoImplemented2').append("<h4>" + donnees.algo2ATitle + "<h4>");
         $(' #algoImplemented2').append("<p>" + donnees.algo2Ap1 + "<p>");
-        $(' #algoImplemented2').append("<img src = '../Design/img/step_img/" + donnees.nameIMG1Algo2 + "'/>");
+        $(' #algoImplemented2').append("<img src = 'design/img/step_img/" + donnees.nameIMG1Algo2 + "'/>");
         $(' #algoImplemented2').append("<p>" + donnees.algo2Ap2 + "<p>");
         $(' #algoImplemented2').append("<p>" + donnees.algo2Ap3 + "<p>");
         $(' #algoImplemented2').append("<h4>" + donnees.algo2BTitle + "<h4>");
@@ -412,7 +412,7 @@ function loadStep4(){
         $('.gp1').append('<p> ' + donnees.step4Content + '</p>');
 
         $('.gp2').html("<img />");
-        $('.gp2 img').attr("src",'../Design/img/step_img/' + donnees.generalPrincipeIMG);
+        $('.gp2 img').attr("src",'design/img/step_img/' + donnees.generalPrincipeIMG);
 
         $('.implementedAlgo').html("<h1>The algorithm</h1>");
         $('.implementedAlgo').append("<h2>" + donnees.algo1H2 + "</h2>");
@@ -423,9 +423,9 @@ function loadStep4(){
         $(' #algoImplemented1').append("<p>" + donnees.algo1Ap1 + "<p>");
         $(' #algoImplemented1').append("<p>" + donnees.algo1Ap2 + "<p>");
 
-        $(' #algoImplemented1').append("<img src = '../Design/img/step_img/" + donnees.nameIMG1 + "'/>");
+        $(' #algoImplemented1').append("<img src = 'design/img/step_img/" + donnees.nameIMG1 + "'/>");
         $(' #algoImplemented1').append("<p>" + donnees.algo1Ap3 + "<p>");
-        $(' #algoImplemented1').append("<img src = '../Design/img/step_img/" + donnees.nameIMG2 + "'/>");
+        $(' #algoImplemented1').append("<img src = 'design/img/step_img/" + donnees.nameIMG2 + "'/>");
         $(' #algoImplemented1').append("<h4>" + donnees.algo1BTitle + "<h4>");
         $(' #algoImplemented1').append("<p>" + donnees.algo1Bp + "<p>");
         $(' #algoImplemented1').append("<h4>" + donnees.algo1CTitle + "<h4>");
@@ -439,7 +439,7 @@ function loadStep4(){
         $('#algoImplemented2').html("<h3>" + donnees.algo2 + "<h3>");
         $(' #algoImplemented2').append("<h4>" + donnees.algo2ATitle + "<h4>");
         $(' #algoImplemented2').append("<p>" + donnees.algo2Ap1 + "<p>");
-        $(' #algoImplemented2').append("<img src = '../Design/img/step_img/" + donnees.nameIMG1Algo2 + "'/>");
+        $(' #algoImplemented2').append("<img src = 'design/img/step_img/" + donnees.nameIMG1Algo2 + "'/>");
         $(' #algoImplemented2').append("<p>" + donnees.algo2Ap2 + "<p>");
         $(' #algoImplemented2').append("<p>" + donnees.algo2Ap3 + "<p>");
         $(' #algoImplemented2').append("<h4>" + donnees.algo2BTitle + "<h4>");

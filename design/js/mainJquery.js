@@ -34,13 +34,13 @@ $("#buttonProject3").mouseout(function(){
 */
 /*
 $("#softContent div, #libContent div ").mouseover(function(){
-    $(this + 'img').attr("src","Design/img/seemoreWhite.png");
+    $(this + 'img').attr("src","design/img/seemoreWhite.png");
 });*/
 $(".btnForCube").mouseover(function(){
-    $(this).attr("src","Design/img/seemoreBlue.png");
+    $(this).attr("src","design/img/seemoreBlue.png");
 });
 $(".btnForCube").mouseout(function(){
-    $(this).attr("src","Design/img/seemore.png");
+    $(this).attr("src","design/img/seemore.png");
 });
 
 

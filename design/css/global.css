@@ -279,19 +279,13 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
   width: 100%;
 }
 
-#copyRight{
+#blackLine{
   font-size: 12px;
   color: whitesmoke;
   margin:0;
   padding: 5px 0 5px 0;
   text-align: center;
   background: black;
-
-}
-#copyRight p{
-  margin: 0;
-  padding: 0;
-  margin-right: 30px;
 }
 
 /* Step by step page */

@@ -1,27 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="fr">    
     <head>
-        <!-- encodage de la page -->
         <meta charset="utf-8"/>
-        <!-- petite déscription du site pour les robots google .... -->
-        <meta name="description" content="description de la page"/>
-        <!-- balise meta keywords permettant un bon référencement naturel supplémentaire -->
-        <meta name="keywords" content="mots-clé1, mots-clé2, ..."/>
-
-        <!-- attribution d'un titre à la page internet -->
+        <meta name="description" content="AliceVision, an high-end Computer Vision library for Photogrammetry and Camera Tracking."/>
+        <meta name="keywords" content="Computer Vision, Photogrammetry, Camera Tracking, Library, Software, Application"/>
         <title>Alice Vision</title>
-        <!-- appel de la feuille de style pour la page index.php-->
-        <link rel="stylesheet" href="../Design/css/global.css"/>
-        <link rel="stylesheet" href="../Design/css/step.css"/>
-        <link rel="stylesheet" href="../Design/css/algoPage.css"/>
-
-       <!-- <link rel="stylesheet" href="Design/css/jquery.ui.css"/>
-        <link rel="stylesheet" href="Design/css/jquery.ui.html4.css"/>-->
-        <link rel="shortcut icon" type="image/x-icon" href="../Design/img/icon.png" />
-       <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Monsieur+La+Doulaise|Rouge+Script|Tangerine"/>-->
-        <script type="text/javascript" src="../Design/js/jquery-1.11.1.min.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"> 
+        <link rel="stylesheet" href="design/css/global.css"/>
+        <link rel="stylesheet" href="design/css/photogrammetry.css"/>
+        <link rel="stylesheet" href="design/css/step.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="design/img/icon.png" />
+        <script type="text/javascript" src="design/js/jquery-1.11.1.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
     </head>
     <body>
         <div id="borderTop"></div>
@@ -30,20 +19,20 @@
                 <div></div>
                 <div>
                     <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="page1.html">Photogrammetry</a></li>
-                        <li><a href="projet.html">Softwares</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="photogrammetry.html">Photogrammetry</a></li>
+                        <li><a href="softwares.html">Softwares</a></li>
                         <li><a href="libraries.html">Libraries</a></li>
                         <li><a href="about.html">About Us</a></li>
                     </ul>
                 </div>
             </div>
-            <a href="../index.html"><img id="logoTop" src="../Design/img/logo2.png"/></a>
+            <a href="index.html"><img id="logoTop" src="design/img/logo2.png"/></a>
             <div id="menu">
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="page1.html">Photogrammetry</a></li>
-                    <li><a href="projet.html">Softwares</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="photogrammetry.html">Photogrammetry</a></li>
+                    <li><a href="softwares.html">Softwares</a></li>
                     <li><a href="libraries.html">Libraries</a></li>
                     <li><a href="about.html">About Us</a></li>
 
@@ -54,9 +43,9 @@
                 <div></div>
                 <div>
                     <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="page1.html">Photogrammetry</a></li>
-                        <li><a href="projet.html">Project</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="photogrammetry.html">Photogrammetry</a></li>
+                        <li><a href="softwares.html">Project</a></li>
                         <li><a href="">About Us</a></li>
                         <li><a href="https://openmvg.readthedocs.io/en/latest/">Docs</a></li>
                     </ul>
@@ -169,7 +158,7 @@
 
                 </div>
                 <div id="gp2">
-                    <img src="../Design/img/step_img/img_step1b.png">
+                    <img src="design/img/step_img/img_step1b.png">
                 </div>
             
                     
@@ -177,7 +166,7 @@
                 <!--<div>
                     
                     <div class="gp1">
-                        <img src="../Design/img/step_img/img_step1.png">
+                        <img src="design/img/step_img/img_step1.png">
                         
                     </div>
                     <div class="gp2">
@@ -202,9 +191,9 @@
                                 <h3>SIFT (Scale Invariant Feature Transform)</h3>
                                 <h4>1- Scale-space Extrema Detection</h4><h4></h4>
                                 <p>The initial goal of SIFT is to extract discriminative patches in a first image that can be compared to discriminative patches of a second image irrespective of rotation, translation, and scale. As a relevant detail only exists at a certain scale, the extracted patches are centered at stable points of interest which are well-known to lie at extrema of some specific image energy-based representation ---so-called Laplacian--- in the image scale-space representation. The key idea is that, to some extent, one can use the SIFT invariance to deal with the image transformations occurring when the viewpoints are changing during image acquisition.<br/><br/>From the representation of one image at different scales, which is technically done by computing a pyramid of downscaled images at different scales, SIFT computes scale-space maxima of the Laplacian representation, which is a specific image energy-based representation, of the image, using so-called differences of Gaussians.</p>
-                                <img src="../Design/img/step_img/step4Algo1img1.jpg">
+                                <img src="design/img/step_img/step4Algo1img1.jpg">
                                 <p>Once this DoG are found, images are searched for local extrema over scale and space. For eg, one pixel in an image is compared with its 8 neighbours as well as 9 pixels in next scale and 9 pixels in previous scales. If it is a local extrema, it is a potential keypoint. It basically means that keypoint is best represented in that scale.</p><p></p>
-                                <img src="../Design/img/step_img/step4Algo1img2.jpg">
+                                <img src="design/img/step_img/step4Algo1img2.jpg">
                                 <h4>2- Keypoint Localization</h4><h4></h4>
                                 <p>Once potential keypoints locations are found, they have to be refined to get more accurate results. They used Taylor series expansion of scale space to get more accurate location of extrema, and if the intensity at this extrema is less than a threshold value (0.03 as per the paper), it is rejected. DoG has higher response for edges, so edges also need to be removed. For this, a concept similar to Harris corner detector is used. So it eliminates any low-contrast keypoints and edge keypoints and what remains is strong interest points.</p><p></p>
                                 <h4>3- Orientation Assignment</h4><h4></h4>
@@ -212,7 +201,7 @@
                                 <h4>4- Keypoint Descriptor</h4><h4></h4>
                                 <p>Now an orientation is assigned to each keypoint to achieve invariance to image rotation. A neighbourhood is taken around the keypoint location depending on the scale, and the gradient magnitude and direction is calculated in that region. An orientation histogram with 36 bins covering 360 degrees is created. (It is weighted by gradient magnitude and gaussian-weighted circular window with σ equal to 1.5 times the scale of keypoint. The highest peak in the histogram is taken and any peak above 80% of it is also considered to calculate the orientation. It creates keypoints with same location and scale, but different directions. It contribute to stability of matching.</p><p></p>
                                 <p><a href="http://docs.opencv.org/trunk/da/df5/tutorial_py_sift_intro.html">For more informations</a></p><p></p></div>
-                                <p class="seeMore" id="seeMore1" ><a>See more</a></p><div id="algoImplemented2"><h3>AKAZE</h3><h3></h3><h4>1- Computation of the Nonlinear Scale Space</h4><h4></h4><p> Similar approach as done in SIFT, discretizing the scale space in logarithmic steps arranged in a series of O octaves and S sub-levels. Note that we always work with the original image resolution, without performing any downsampling at each new octave as done in SIFT. The set of octaves and sub-levels are identified by a discrete octave index o and a sub-level one s. Given an input image, we firstly convolve the image with a Gaussian kernel to reduce noise and possible image artefacts. From that base image we compute the image gradient histogram and obtain a contrast parameter. </p><p></p><img src="../Design/img/step_img/step4Algo2img1.png"><p>fig :  Comparison between the Gaussian and nonlinear diffusion scale space for several evolution times ti. First Row: Gaussian scale space (linear diffusion). The scale space is formed by convolving the original image with a Gaussian kernel of increasing standard deviation. Second Row: Nonlinear diffusion scale space with conductivity function g3. </p><p></p><p>Then, given the contrast parameter and the set of evolution times ti, it is straightforward to build the nonlinear scale space.As it can be observed, Gaussian blurring smoothes for equal all the structures in the image, whereas in the nonlinear scale space strong image edges remain unaffected</p><p></p><h4>2- Feature Detection</h4><h4></h4><p>For detecting points of interest, we compute the response of scale-normalized determinant of the Hessian at multiple scale levels. Given the set of filtered images from the nonlinear scale space, we analyze the detector response at different scale levels. We search for maxima in scale and spatial location. The search for extrema is performed in all the filtered images. For speeding-up the search for extrema, we firstly check the responses over a window of size 3×3 pixels, in order to discard quickly non-maxima responses. Finally, the position of the keypoint is estimated with sub-pixel accuracy. The set of first and second order derivatives are approximated by means of 3 × 3 Scharr filters of different derivative step sizes. Second order derivatives are approximated by using consecutive Scharr filters in the desired coordinates of the derivatives</p><p></p><p>These filters approximate rotation invariance significantly better than other popular filters such as Sobel filters or standard central differences differentiation. Notice here that although we need to compute multiscale derivatives for every pixel, we save computational efforts in the description step, since we re-use the same set of derivatives that are computed in the detection step.</p><p></p><h4>3-Feature Description</h4><h4></h4><p><strong>3.1- Finding the Dominant Orientation</strong></p><p></p><p>For obtaining rotation invariant descriptors, it is necessary to estimate the dominant orientation in a local neighbourhood centered at the keypoint location. Similar to SURF, we find the dominant orientation in a circular area with a sampling step of size. For each of the samples in the circular area, first order derivatives are weighted with a Gaussian centered at the interest point. Then, the derivative responses are represented as points in vector space and the dominant orientation is found by summing the responses within a sliding circle segment covering an angle of π/3. From the longest vector the dominant orientation is obtained.</p><p></p><p><strong>3.2- Building the Descriptor</strong></p><p></p><p>We use the M-SURF descriptor adapted to our nonlinear scale space framework. For a detected feature at a certain scale, first order derivatives are computed over a rectangular grid. This grid is divided into 4×4 subregions. The derivative responses in each subregion are weighted with a Gaussian centered on the subregion center and summed into a descriptor vector. Then, each subregion vector is weighted using a Gaussian defined over a mask of 4×4 and centered on the interest keypoint. When considering the dominant orientation of the keypoint, each of the samples in the rectangular grid is rotated according to the dominant orientation. In addition, the derivatives are also computed according to the dominant orientation. Finally, the descriptor vector of length 64 is normalized into a unit vector to achieve invariance to contrast.</p><p></p><p><a href="http://docs.opencv.org/trunk/da/df5/tutorial_py_sift_intro.html">For more informations</a></p><p></p></div><p class="seeMore" id="seeMore2" >See more</a></p></div>
+                                <p class="seeMore" id="seeMore1" ><a>See more</a></p><div id="algoImplemented2"><h3>AKAZE</h3><h3></h3><h4>1- Computation of the Nonlinear Scale Space</h4><h4></h4><p> Similar approach as done in SIFT, discretizing the scale space in logarithmic steps arranged in a series of O octaves and S sub-levels. Note that we always work with the original image resolution, without performing any downsampling at each new octave as done in SIFT. The set of octaves and sub-levels are identified by a discrete octave index o and a sub-level one s. Given an input image, we firstly convolve the image with a Gaussian kernel to reduce noise and possible image artefacts. From that base image we compute the image gradient histogram and obtain a contrast parameter. </p><p></p><img src="design/img/step_img/step4Algo2img1.png"><p>fig :  Comparison between the Gaussian and nonlinear diffusion scale space for several evolution times ti. First Row: Gaussian scale space (linear diffusion). The scale space is formed by convolving the original image with a Gaussian kernel of increasing standard deviation. Second Row: Nonlinear diffusion scale space with conductivity function g3. </p><p></p><p>Then, given the contrast parameter and the set of evolution times ti, it is straightforward to build the nonlinear scale space.As it can be observed, Gaussian blurring smoothes for equal all the structures in the image, whereas in the nonlinear scale space strong image edges remain unaffected</p><p></p><h4>2- Feature Detection</h4><h4></h4><p>For detecting points of interest, we compute the response of scale-normalized determinant of the Hessian at multiple scale levels. Given the set of filtered images from the nonlinear scale space, we analyze the detector response at different scale levels. We search for maxima in scale and spatial location. The search for extrema is performed in all the filtered images. For speeding-up the search for extrema, we firstly check the responses over a window of size 3×3 pixels, in order to discard quickly non-maxima responses. Finally, the position of the keypoint is estimated with sub-pixel accuracy. The set of first and second order derivatives are approximated by means of 3 × 3 Scharr filters of different derivative step sizes. Second order derivatives are approximated by using consecutive Scharr filters in the desired coordinates of the derivatives</p><p></p><p>These filters approximate rotation invariance significantly better than other popular filters such as Sobel filters or standard central differences differentiation. Notice here that although we need to compute multiscale derivatives for every pixel, we save computational efforts in the description step, since we re-use the same set of derivatives that are computed in the detection step.</p><p></p><h4>3-Feature Description</h4><h4></h4><p><strong>3.1- Finding the Dominant Orientation</strong></p><p></p><p>For obtaining rotation invariant descriptors, it is necessary to estimate the dominant orientation in a local neighbourhood centered at the keypoint location. Similar to SURF, we find the dominant orientation in a circular area with a sampling step of size. For each of the samples in the circular area, first order derivatives are weighted with a Gaussian centered at the interest point. Then, the derivative responses are represented as points in vector space and the dominant orientation is found by summing the responses within a sliding circle segment covering an angle of π/3. From the longest vector the dominant orientation is obtained.</p><p></p><p><strong>3.2- Building the Descriptor</strong></p><p></p><p>We use the M-SURF descriptor adapted to our nonlinear scale space framework. For a detected feature at a certain scale, first order derivatives are computed over a rectangular grid. This grid is divided into 4×4 subregions. The derivative responses in each subregion are weighted with a Gaussian centered on the subregion center and summed into a descriptor vector. Then, each subregion vector is weighted using a Gaussian defined over a mask of 4×4 and centered on the interest keypoint. When considering the dominant orientation of the keypoint, each of the samples in the rectangular grid is rotated according to the dominant orientation. In addition, the derivatives are also computed according to the dominant orientation. Finally, the descriptor vector of length 64 is normalized into a unit vector to achieve invariance to contrast.</p><p></p><p><a href="http://docs.opencv.org/trunk/da/df5/tutorial_py_sift_intro.html">For more informations</a></p><p></p></div><p class="seeMore" id="seeMore2" >See more</a></p></div>
                         <div class="existantAlgo">
                             <h1>The algorithm</h1>
                             <h2>Other algorithms</h2>
@@ -241,18 +230,12 @@
                     <div class="pagination">
                         <button id="prevBtn"><a href="#stepDiv">Previous</a></button>
                         <button id="nextBtn"><a href="#stepDiv"> Next</a></button>
-
                     </div>
                     <div class="clear"></div>
-
             </div>
-
         </div>
+        <div id="blackLine"></div>
         <div id="footer">
-           <!-- <div>
-                <img src="../Design/img/logoNoir.png"/>
-                <p><!--Alice vision build a fully integrated software for 3D reconstruction, photomodeling and camera tracking. We aim to provide a strong software basis with state-of-the-art computer vision algorithms that can be tested, analyzed and reused.<p>
-            </div>-->
             <div id="informations">
                 <div>
                     <h2>Informations</h2>
@@ -263,7 +246,7 @@
                 <div>
                     <h2>Alice Vision</h2>
                     <a href="https://openmvg.readthedocs.io/en/latest/"> Documentation</a>
-                    <a href="page1.html">Step by Step</a>              
+                    <a href="photogrammetry.html">Step by Step</a>              
                 </div>
 
                 <div>
@@ -274,26 +257,23 @@
                 </div>
                 <div id="partenaire">
                     <h2>Partner</h2>
-                    <a href="http://www.mikrosimage.com/"><img src="../Design/img/partenaire1.png"/></a>
-                    <a href="http://cmp.felk.cvut.cz"><img src="../Design/img/partenaire2.png"/></a>
-                    <a href="https://www.simula.no/"><img src="../Design/img/partenaire3.png"/></a>
-                    <a href="http://www.inp-toulouse.fr/fr/index.html"><img src="../Design/img/partenaire4.png"/></a>
+                    <a href="http://www.mikrosimage.com/"><img src="design/img/partenaire1.png"/></a>
+                    <a href="http://cmp.felk.cvut.cz"><img src="design/img/partenaire2.png"/></a>
+                    <a href="https://www.simula.no/"><img src="design/img/partenaire3.png"/></a>
+                    <a href="http://www.inp-toulouse.fr"><img src="design/img/partenaire4.png"/></a>
                 </div>
                 
             </div>
-            <div class="clear"></div>
-
+            <div id="blackLine"></div>
         </div>
-        
-        <div id="copyRight"><p> Copyright © 2017 - Alice Vision - All rights reserved</p></div>
-        <div id="borderBottom"></div>
 
 
-        <script src="../Design/js/mainJs.js"></script>
-        <script src="../Design/js/mainJquery.js"></script>
-        <script src="../Design/js/steps.js"></script>
-        <script src="../Design/js/utilisationjson.js"></script>
-        <script type="text/javascript" src="../Design/js/jquery-ui-1.8.20.custom.min.js"></script>
-       <!-- <script type="text/javascript" src="Design/js/modernizr.2.5.3.min.js"></script>-->
+
+        <script src="design/js/mainJs.js"></script>
+        <script src="design/js/mainJquery.js"></script>
+        <script src="design/js/steps.js"></script>
+        <script src="design/js/utilisationjson.js"></script>
+        <script type="text/javascript" src="design/js/jquery-ui-1.8.20.custom.min.js"></script>
+       <!-- <script type="text/javascript" src="design/js/modernizr.2.5.3.min.js"></script>-->
     </body>
 </html>

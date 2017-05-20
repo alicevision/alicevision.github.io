@@ -11,10 +11,10 @@
 
 #avTextPromo{
   display: inline-block;
-  margin-right: 70px;
+  margin-right: 60px;
   color: white;
-  margin-top: 160px;
-  min-height: 300px;
+  margin-top: 135px;
+  min-height: 380px;
   vertical-align: top;
   letter-spacing: 3px;
 }
@@ -23,7 +23,7 @@
   width: 100%;
   height: auto;
   font-family: 'Ubuntu';
-  font-size: 35px;
+  font-size: 50px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -33,10 +33,9 @@
   height: auto;
   font-family: 'Ubuntu';
   font-weight: 300;
-  font-size: 24px;
+  font-size: 30px;
+  letter-spacing: 4px;
   text-align: center;
- /* background: rgba(255, 255, 255, 0.7);*/
-
 }
 #backgroundVideo{
   width: 100%;
@@ -429,8 +428,7 @@ button:hover{
 }
 
 #openSource div{
-  width:420px;
-  height: 420px;
+  width: 500px;
   margin: auto;
   border:2px solid whitesmoke;
   padding: 30px;
