@@ -10,30 +10,25 @@
 }
 
 #contribution, #aboutHistory{
-  width: 80%;
+  width: 50%;
   color: whitesmoke;
-  text-align: center;
   margin: auto;
   padding-bottom: 10px;
+
 }
 #contribution h1, #partners h1, #aboutHistory h1{
-  width: 66%;
-  height: auto;
   padding-top: 30px;
-  margin-left: 17%;
   font-family: 'Ubuntu';
   font-weight: 400;
   font-size: 30px;
   text-transform: uppercase;
+  text-align: center;
    -webkit-transition: color 1s -webkit-transform 2s;
   transition: color 1s, transform 2s;
 }
 
 #contribution h2, #aboutHistory h2{
-  width: 66%;
-  height: auto;
   margin-top: 20px;
-  margin-left: 17%;
   font-family: 'Ubuntu';
   font-weight: 400;
   font-size: 20px;
@@ -41,18 +36,6 @@
   transition: color 1s, transform 2s;
 }
 
-#contribution p, #aboutHistory p{
-  width: 70%;
-  height: auto;
-  margin-top: 30px;
-  margin-left: 15%;
-  font-family: 'Ubuntu';
-  font-weight: 200;
-  font-size: 18px;
-   -webkit-transition: color 1s -webkit-transform 2s;
-  transition: color 1s, transform 2s;
-  text-align: justify;
-}
 
 #contribution strong{
   font-weight: 500;
@@ -67,18 +50,8 @@
   text-decoration: underline;
 }
 
-#contribution ul{
-  width: 100%;
-}
 #contribution ul li{
-  width: 80%;
-  height: auto;
-  display: block;
-  font-family: 'Ubuntu';
-  font-weight: 200;
-  font-size: 18px;
   text-align: left;
-  margin-left: 11%;
 }
 #partners{
   width: 100%;
