@@ -4,7 +4,6 @@
   width:1200px;
   height: auto;
   min-width: 50px;
-  margin-left:10%;
   padding-bottom: 50px;
 }
 
@@ -20,10 +19,6 @@
   cursor: pointer;
   background: #fff9;
 }
-/*
-.step1:hover, .step2:hover{
-  border: 5px solid blue;
-}*/
 
 .l1, .l2, .l3, .l4, .l5, .l6, .l7{
   width: 100px;

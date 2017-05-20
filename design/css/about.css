@@ -77,9 +77,7 @@
 }
 
 #namePartners p, #europeanProject p{
-  width: 90%;
   height: auto;
-  margin-left: 5%;
   font-family: 'Ubuntu';
   font-weight: 200;
   font-size: 15px;
@@ -106,7 +104,6 @@
 #europeanFlag{
   width: 60px;
   height: auto;
-  margin-right: -4%;
 }
 
 #aboutHistory h4{

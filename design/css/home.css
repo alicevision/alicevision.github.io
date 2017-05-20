@@ -11,12 +11,12 @@
 
 #avTextPromo{
   display: inline-block;
-  margin-right: 60px;
   color: white;
   margin-top: 135px;
   min-height: 380px;
   vertical-align: top;
   letter-spacing: 3px;
+  text-align: center;
 }
 
 #avTextPromo h1{
@@ -37,6 +37,7 @@
   letter-spacing: 4px;
   text-align: center;
 }
+
 #backgroundVideo{
   width: 100%;
   height: 100%;
@@ -73,7 +74,7 @@
 }
 
 #objectifIntro{
-  width: 80%;
+  width: 80em;
   background: whitesmoke;
   color: #09abc6;
   text-align: center;
@@ -118,30 +119,6 @@
   transition: color 1s, transform 2s;
 }
 
-button{
-  border: 2px solid #09abc6;
-  padding: 10px 30px;
-  font-family: 'Ubuntu';
-  font-weight: 800;
-  color:#09abc6;
-  background: none;
-  text-transform: uppercase;
-  margin-top: 10px;
-  -webkit-transition: background 1s ease-out, color 1s -webkit-transform 1s;
-  transition: background 1s ease-out, color 1s, transform 1s;
-  cursor: pointer;
-}
-
-button a{
-  color:#09abc6;
-}
-button a:hover{
-  color:whitesmoke;
-}
-button:hover{
-  background: #09abc6;
-  color: whitesmoke;
-}
 
 #objectif :nth-child(2) iframe{
   width: 100%;
@@ -149,19 +126,6 @@ button:hover{
   height: auto;
   margin-top: 30px;
 }
-
-#viewPipeline{
-  width: 100%;
-  height: auto;
-  background: whitesmoke;
-  margin: auto;
-  display: block;
-  overflow: hidden;
- /*-webkit-transition: height 1s ease-out, color 1s -webkit-transform 1s;
-  transition: height 1s ease-out, color 1s, transform 1s;*/
-}
-
-
 
 #libsDiv{
   width: 100%;
@@ -369,54 +333,6 @@ button:hover{
   font-size: 13px;
 }
 
-#mikrosDiv{
-  width: 100%;
-  min-height: 200px;
-  background: whitesmoke;
-}
-
-#mikrosDiv div:nth-child(1){
-
-  background: whitesmoke;
-  color:#09abc6;
-  font-size: 20px;
-  text-align: center;
-}
-
-#mikrosDiv :nth-child(1) h1{
-  width: 80%;
-  height: auto;
-  margin-top: 12vw;
-  margin-left: 10%;
-  font-family: 'Ubuntu';
-  font-weight: 400;
-  font-size: 24px;
-   -webkit-transition: color 1s -webkit-transform 2s;
-  transition: color 1s, transform 2s;
-}
-#mikrosDiv :nth-child(1) p{
-  width: 80%;
-  height: auto;
-  margin-left: 10%;
-  font-family: 'Ubuntu';
-  font-weight: 200;
-  font-size:20px;
-   -webkit-transition: color 1s -webkit-transform 2s;
-  transition: color 1s, transform 2s;
-}
-
-
-#mikrosDiv div{
-  background: grey;
-  height: 30vw;
-}
-
-#mikrosDiv : iframe{
-  width: 100%;
-  height: 100%;
-}
-
-
 #openSource{
   width: 100%;
   min-height: 200px;
@@ -499,28 +415,23 @@ button:hover{
   transition: color 1s, transform 2s;
 }
 
-#promoAlgo div:nth-child(2){
-  width: 50%;
-  min-height: 203px;
-  float: left;
-  color:#09abc6;
-  font-size: 20px;
-  text-align: center;
+#datasetsLine{
+  min-height: 20em;
+  display: flex;
 }
 
-#promoAlgo div:nth-child(3){
-  width: 50%;
-  min-height: 203px;
-  float: right;
-  color:#09abc6;
-  font-size: 20px;
-  text-align: center;
+.sketchfab-embed-wrapper iframe {
+  width: 100%;
+  height: 30em;
 }
 
-#promoAlgo div:nth-child(2) iframe, #promoAlgo div:nth-child(3) iframe{
-  width: 95%;
-  
+.sketchfab-embed-wrapper {
+  flex: 1;
+  align-items: center;
+  padding: 1em;
 }
+
+
 #scene{
  display: inline-block;
   width: 50%;

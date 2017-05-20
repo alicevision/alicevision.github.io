@@ -21,7 +21,6 @@ src: url(../fonts/BEBAS.ttf);
   position: fixed;
   background: whitesmoke;
   z-index: 5;
-   /* background: #89bad1;*/
 }
 #header h1{
   
@@ -42,10 +41,8 @@ src: url(../fonts/BEBAS.ttf);
 #content
 {
 	width : 100%;
-	min-height:500px;
   overflow: hidden;
   background: whitesmoke;
-  /*background: black;*/
 }
 
 #borderTop{
@@ -109,6 +106,30 @@ background-image:-moz-linear-gradient(left, #156bec,#156bec, white);
 
 
 
+button{
+  border: 2px solid #09abc6;
+  padding: 10px 30px;
+  font-family: 'Ubuntu';
+  font-weight: 800;
+  color:#09abc6;
+  background: none;
+  text-transform: uppercase;
+  margin-top: 10px;
+  -webkit-transition: background 1s ease-out, color 1s -webkit-transform 1s;
+  transition: background 1s ease-out, color 1s, transform 1s;
+  cursor: pointer;
+}
+
+button a{
+  color:#09abc6;
+}
+button a:hover{
+  color:whitesmoke;
+}
+button:hover{
+  background: #09abc6;
+  color: whitesmoke;
+}
 
 /*.parallelogramme{
   width:200px;
