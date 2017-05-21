@@ -13,36 +13,7 @@
         <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
     </head>
     <body>
-        <div id="borderTop"></div>
-        <div id="header">
-            <div id="menuMobile">
-                <div></div>
-                <div>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="photogrammetry.html">Photogrammetry</a></li>
-                        <li><a href="history.html">History</a></li>
-                        <li><a href="softwares.html">Softwares</a></li>
-                        <li><a href="libraries.html">Libraries</a></li>
-                        <li><a href="results.html">Results</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <a href="index.html"><img id="logoTop" src="design/img/logo2.png"/></a>
-            <div id="menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="photogrammetry.html">Photogrammetry</a></li>
-                    <li><a href="history.html">History</a></li>
-                    <li><a href="softwares.html">Softwares</a></li>
-                    <li><a href="libraries.html">Libraries</a></li>
-                    <li><a href="results.html">Results</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                </ul>
-            </div>
-            <div class="clear"></div>
-        </div>
+        <div id="headerSection"></div>
         <div id="content">
             <div class="backgroundProject">
                 <div id="projectPresentation">
@@ -93,45 +64,16 @@
             </div>
         </div>
 
-        <div id="blackLine"></div>
-        <div id="footer">
-            <div id="informations">
-                <div>
-                    <h2>Informations</h2>
-                    <a href="mailto:alicevision@googlegroups.com">Contact Us</a>  
-                    <a href="about.html">About Us</a>
-                    <a href="history.html">History</a>
-                </div>
-                <div>
-                    <h2>Alice Vision</h2>
-                    <a href="https://openmvg.readthedocs.io/en/latest/"> Documentation</a>
-                    <a href="photogrammetry.html">Step by Step</a>              
-                </div>
+        <div id="footerSection"></div>
 
-                <div>
-                    <h2>Softwares</h2>
-                    <a href="http://github.com/alicevision/mayaMVG"> Maya MVG</a>
-                    <a href="http://github.com/alicevision">Meshroom</a>   
-                    <a href="http://github.com/alicevision/ofxMVG">OfxMVG</a>   
-                </div>
-                <div id="partenaire">
-                    <h2>Partner</h2>
-                    <a href="http://www.mikrosimage.com"><img src="design/img/partenaire1.png"/></a>
-                    <a href="http://cmp.felk.cvut.cz"><img src="design/img/partenaire2.png"/></a>
-                    <a href="https://www.simula.no"><img src="design/img/partenaire3.png"/></a>
-                    <a href="http://www.inp-toulouse.fr"><img src="design/img/partenaire4.png"/></a>
-                </div>
-                
-            </div>
-            <div id="blackLine"></div>
-        </div>
-
+        <script>
+            $("#headerSection").load("./sectionHeader.html");
+            $("#footerSection").load("./sectionFooter.html");
+        </script>
 
 
         <script src="design/js/mainJs.js"></script>
         <script src="design/js/mainJquery.js"></script>
-        <script src="design/js/utilisationjson.js"></script>
         <script type="text/javascript" src="design/js/jquery-ui-1.8.20.custom.min.js"></script>
-       <!-- <script type="text/javascript" src="design/js/modernizr.2.5.3.min.js"></script>-->
     </body>
 </html>
