@@ -137,7 +137,8 @@ button:hover{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1em 0;
+  padding: 1em 0;
+
 }
 #photogrammetryPipeline div{
   margin: 0 1em;
