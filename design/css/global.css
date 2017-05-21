@@ -133,6 +133,31 @@ button:hover{
   color: whitesmoke;
 }
 
+#photogrammetryPipeline{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0;
+}
+#photogrammetryPipeline div{
+  margin: 0 1em;
+  border:1px solid #09abc6;
+  background-color: white;
+  padding: 12px;
+  color: #09abc6;
+}
+
+#photogrammetryPipeline div:hover{
+  margin: 0 1em;
+  border:1px solid white;
+  background-color: #09abc6;
+  padding: 12px;
+  color: white;
+}
+
+.webui-popover-title{
+  text-align: center;
+}
 /*.parallelogramme{
   width:200px;
   height: 200px;

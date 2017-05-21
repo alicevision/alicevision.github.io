@@ -9,8 +9,11 @@
         <link rel="stylesheet" href="design/css/home.css"/>
         <link rel="stylesheet" href="design/css/step.css"/>
         <link rel="shortcut icon" type="image/x-icon" href="design/img/icon.png" />
+        <link rel="stylesheet" href="design/js/webui-popover-1.2.18/dist/jquery.webui-popover.min.css">
         <script type="text/javascript" src="design/js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="design/js/webui-popover-1.2.18/dist/jquery.webui-popover.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+        <link rel="stylesheet" href="http://cdn.materialdesignicons.com/1.9.32/css/materialdesignicons.min.css">
     </head>
     <body>
         <div id="headerSection"></div>
@@ -40,31 +43,48 @@
                         The dense modeling of the scene is the result yielded by chaining two computer vision-based pipelines:<br/>“Structure-from-Motion” (SfM) and “Multi View Stereo” (MVS).
                     </p>
                     <h2>Learn more about each step of the photogrammetry pipeline:</h2>
-                    <div id="pipeline">
-                        <div class="stepLine">
-                            <a href="photogrammetry.html" id="pipelineS1"><div class="step1" ><p>1</p></div></a>
-                            <div class="l1"></div>
-                            <div class="l1b" id="lb"></div>
-                            <a href="photogrammetry.html" id="pipelineS2"><div class="step2"><p>2</p></div></a>
-                            <div class="l2"></div>
-                            <div class="l2b" id=""></div>
-                            <a href="photogrammetry.html" id="pipelineS3"><div class="step3"><p>3</p></div></a>
-                            <div class="l3"></div>
-                            <div class="l3b" id=""></div>
-                            <a href="photogrammetry.html" id="pipelineS4"><div class="step4"><p>4</p></div></a>
-                            <div class="l4"></div>
-                            <div class="l4b" id=""></div>
-                            <a href="photogrammetry.html"  id="pipelineS5"><div class="step5"><p>5</p></div></a>
-                            <div class="l5"></div>
-                            <div class="l5b" id=""></div>
-                            <a href="photogrammetry.html" id="pipelineS6"><div class="step6"><p>6</p></div></a>
-                            <div class="l6"></div>
-                            <div class="l6b" id=""></div>
-                            <a href="photogrammetry.html" id="pipelineS7"><div class="step7"><p>7</p></div></a>
-                            <div class="l7"></div>
-                            <div class="l7b" id=""></div>
-                            <a href="photogrammetry.html" id="pipelineS8"><div class="step8"><p>8</p></div></a>
-                        </div>
+
+                    <div id="photogrammetryPipeline">
+                        <a href="photogrammetry.html" data-title="Features Extraction" data-content="Extract natural or fiducial features from images.">
+                            <div id="step_1">
+                            <i class="mdi mdi-48px mdi-blur"></i>
+                            </div>
+                        </a>
+                        <a href="photogrammetry.html" data-title="Image Matching" data-content="Group images that share content.">
+                            <div id="step_2">
+                            <i class="mdi mdi-48px mdi-vector-circle"></i>
+                            </div>
+                        </a>
+                        <a href="photogrammetry.html" data-title="Features Matching" data-content="Detect common features between image pairs.">
+                            <div id="step_3">
+                            <i class="mdi mdi-48px mdi-vector-combine"></i>
+                            </div>
+                        </a>
+                        <a href="photogrammetry.html" data-title="Structure from Motion" data-content="Infer geometric information: 3D structure (point cloud) and camera parameters (pose and intrinsics).">
+                            <div id="step_4">
+                            <i class="mdi mdi-48px mdi-weather-hail"></i>
+                            </div>
+                        </a>
+                        <a href="photogrammetry.html" data-title="Depth Map Estimation" data-content="Estimate depth information per pixel on each image.">
+                            <div id="step_5">
+                            <i class="mdi mdi-48px mdi-image-area-close"></i>
+                            </div>
+                        </a>
+                        <a href="photogrammetry.html" data-title="Meshing" data-content="Fuse all depth maps, vote to decide the parts of the volume that are full or empty and generate the final surface.">
+                            <div id="step_6">
+                            <i class="mdi mdi-48px mdi-cube-outline"></i>
+                            </div>
+                        </a>
+                        <a href="photogrammetry.html" data-title="Texturing" data-content="Project input images onto the mesh and fuse them.">
+                            <div id="step_7">
+                            <i class="mdi mdi-48px mdi-format-paint"></i>
+                            </div>
+                        </a>
+                        <a href="photogrammetry.html" data-title="Camera Localization" data-content="Localize images from a video inside a 3D reconstruction.">
+                            <div id="step_8">
+                            <i class="mdi mdi-48px mdi-camera-enhance"></i>
+                            </div>
+                        </a>
                     </div>
                     <a href="photogrammetry.html"><button>Learn more</button></a>
                 </div>
@@ -177,6 +197,7 @@
         <script>
             $("#headerSection").load("./sectionHeader.html");
             $("#footerSection").load("./sectionFooter.html");
+            $('#photogrammetryPipeline a').webuiPopover({trigger:'hover', placement:'bottom', animation:'fade'});
         </script>
 
     </body>

@@ -546,6 +546,7 @@
 
   #objectifIntro{
     width: 85% !important;
+    text-align: center;
   }
 
   #objectifIntro h2{
