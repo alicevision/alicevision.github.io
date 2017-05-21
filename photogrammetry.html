@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">    
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content="AliceVision, an high-end Computer Vision library for Photogrammetry and Camera Tracking."/>
+        <meta name="keywords" content="Computer Vision, Photogrammetry, Camera Tracking, Library, Software, Application"/>
+        <title>Alice Vision</title>
+        <link rel="stylesheet" href="design/css/global.css"/>
+        <link rel="stylesheet" href="design/css/photogrammetry.css"/>
+        <link rel="stylesheet" href="design/css/step.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="design/img/icon.png" />
+        <link rel="stylesheet" href="design/js/webui-popover-1.2.18/dist/jquery.webui-popover.min.css">
+        <script type="text/javascript" src="design/js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="design/js/webui-popover-1.2.18/dist/jquery.webui-popover.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+        <link rel="stylesheet" href="http://cdn.materialdesignicons.com/1.9.32/css/materialdesignicons.min.css">
+    </head>
+    <body>
+        <div id="headerSection"></div>
+
+        <div id="content">
+            <div id="stepDiv">
+                <h1>Photogrammetry pipeline</h1>
+                <div id="photogrammetryPipeline">
+                        
+                        <a href="#" data-title="Features Extraction" data-content="Extract natural or fiducial features from images.">
+                            <div id="step_1">
+                            <i class="mdi mdi-48px mdi-blur"></i>
+                            </div>
+                        </a>
+
+                        <a href="#" data-title="Image Matching" data-content="Group images that share content.">
+                            <div id="step_2">
+                            <i class="mdi mdi-48px mdi-vector-circle"></i>
+                            </div>
+                        </a>
+
+                        <a href="#" data-title="Features Matching" data-content="Detect common features between image pairs.">
+                            <div id="step_3">
+                            <i class="mdi mdi-48px mdi-vector-combine"></i>
+                            </div>
+                        </a>
+                        <a href="#" data-title="Structure from Motion" data-content="Infer geometric information: 3D structure (point cloud) and camera parameters (pose and intrinsics).">
+                            <div id="step_4">
+                            <i class="mdi mdi-48px mdi-weather-hail"></i>
+                            </div>
+                        </a>
+                        <a href="#" data-title="Depth Map Estimation" data-content="Estimate depth information per pixel on each image.">
+                            <div id="step_5">
+                            <i class="mdi mdi-48px mdi-image-area-close"></i>
+                            </div>
+                        </a>
+                        <a href="#" data-title="Meshing" data-content="Fuse all depth maps, vote to decide the parts of the volume that are full or empty and generate the final surface.">
+                            <div id="step_6">
+                            <i class="mdi mdi-48px mdi-cube-outline"></i>
+                            </div>
+                        </a>
+                        <a href="#" data-title="Texturing" data-content="Project input images onto the mesh and fuse them.">
+                            <div id="step_7">
+                            <i class="mdi mdi-48px mdi-format-paint"></i>
+                            </div>
+                        </a>
+                        <a href="#" data-title="Camera Localization" data-content="Localize images from a video inside a 3D reconstruction.">
+                            <div id="step_8">
+                            <i class="mdi mdi-48px mdi-camera-enhance"></i>
+                            </div>
+                        </a>
+                    </div>
+            </div>
+
+
+            <div class="stepsSection">
+                <div id="step1" class="current"></div>
+                <div id="step2"></div>
+                <div id="step3"></div>
+                <div id="step4"></div>
+                <div id="step5"></div>
+                <div id="step6"></div>
+                <div id="step7"></div>
+                <div id="step8"></div>
+            </div>
+
+            <script>
+                var currentStep = 1;
+
+                $("#photogrammetryPipeline div").click(function(){
+                    var currentStep = $(this).attr("id").slice(-1)[0];
+                    $(".stepsSection div").each(function(){
+                      $(this).removeClass("current");
+                    })
+                    $(".stepsSection #step"+currentStep).addClass("current");
+                })
+            </script>
+
+        </div>
+
+        <div id="footerSection"></div>
+        
+        <script>
+            $("#step1").load("./sectionStep1.html");
+            $("#step2").load("./sectionStep2.html");
+            $("#step3").load("./sectionStep3.html");
+            $("#step4").load("./sectionStep4.html");
+            $("#step5").load("./sectionStep5.html");
+            $("#step6").load("./sectionStep6.html");
+            $("#step7").load("./sectionStep7.html");
+            $("#step8").load("./sectionStep8.html");
+
+            $("#headerSection").load("./sectionHeader.html");
+            $("#footerSection").load("./sectionFooter.html");
+
+            $('#photogrammetryPipeline a').webuiPopover({trigger:'hover', placement:'bottom', animation:'fade'});
+
+        </script>
+
+        <script src="design/js/mainJs.js"></script>
+        <script src="design/js/mainJquery.js"></script>
+        <script src="design/js/utilisationjson.js"></script>
+        <script type="text/javascript" src="design/js/jquery-ui-1.8.20.custom.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+
+.backgroundHistory{
+  background: url('../img/fond5.PNG');
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Ubuntu';
+  min-height: 100px;
+}
+
+#history{
+  width: 40em;
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  color: white;
+  text-align: center;
+}
+
+#history h1{
+  font-family: 'Ubuntu';
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}

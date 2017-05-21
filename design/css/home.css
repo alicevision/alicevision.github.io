@@ -1,0 +1,695 @@
+/* HOME PAGE CSS */
+
+#aliceVisionFirstPromo{
+  width: 100%;
+  height: auto;
+  background: url(../img/fond1.PNG) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+#avTextPromo{
+  display: inline-block;
+  color: white;
+  margin-top: 135px;
+  min-height: 380px;
+  vertical-align: top;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+#avTextPromo h1{
+  width: 100%;
+  height: auto;
+  font-family: 'Ubuntu';
+  font-size: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#avTextPromo h2{
+  width: 100%;
+  height: auto;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-size: 30px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+#backgroundVideo{
+  width: 100%;
+  height: 100%;
+  margin-bottom: -41%;
+  margin-top: -5%;
+  overflow: hidden;
+}
+#backgroundVideo video{
+  width: 100%;
+  height: 120%;
+  display: block;
+  z-index: 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+
+#scrollDiv{
+  width: 100%;
+  height: 80px;
+}
+#scrollDiv img{
+  width: 60px;
+  height: 60px;
+}
+
+#objectif{
+  width: 100%;
+  height: auto;
+  background: whitesmoke;
+  color:#2FC0D5;
+}
+
+#objectifIntro{
+  width: 80em;
+  background: whitesmoke;
+  color: #09abc6;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 40px;
+}
+#objectifIntro h1{
+  width: 66%;
+  height: auto;
+  margin-top: 65px;
+  margin-left: 17%;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 30px;
+  text-transform: uppercase;
+   -webkit-transition: color 1s -webkit-transform 2s;
+  transition: color 1s, transform 2s;
+}
+
+#objectifIntro h2{
+  width: 66%;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 17%;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+   -webkit-transition: color 1s -webkit-transform 2s;
+  transition: color 1s, transform 2s;
+}
+
+#objectifIntro p{
+  width: 80%;
+  height: auto;
+  margin-top: 14px;
+  margin-left: 10%;
+  font-family: 'Ubuntu';
+  font-weight: 200;
+  font-size: 20px;
+   -webkit-transition: color 1s -webkit-transform 2s;
+  transition: color 1s, transform 2s;
+}
+
+
+#objectif :nth-child(2) iframe{
+  width: 100%;
+  min-height: 397px;
+  height: auto;
+  margin-top: 30px;
+}
+
+#libsDiv{
+  width: 100%;
+  height: auto;
+  margin:auto;
+  color: black;
+  /*background: url(../img/homePage.jpg) no-repeat;*/
+  background: url(../img/fond1.PNG);
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+#libsDiv svg{
+  width: 100%;
+  height: 100%;
+  background: blue;
+
+}
+
+#libsDiv svg polygon:nth-child(1){
+  fill: yellow;
+  min-height: 300px;
+
+}
+
+#libsDiv svg polygon:nth-child(2){
+  fill: green;
+  min-height: 300px;
+}
+#libsDiv svg polygon:nth-child(3){
+  fill: grey;
+  min-height: 300px;
+}
+
+#libsDiv svg polygon:nth-child(4){
+  fill: orange;
+  min-height: 300px;
+}
+#libsDiv svg polygon:nth-child(5){
+  fill: violet;
+  min-height: 300px;
+}
+
+#libsDiv svg polygon:nth-child(5){
+  fill: ;
+  min-height: 300px;
+}
+
+#libContent{
+  width:100%;
+  height: auto;
+  margin: auto;
+  background:none;
+  padding-bottom: 70px;
+}
+
+#lib1, #lib2, #lib3{
+  width: 270px;
+  min-height: 270px;
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 5px;
+  margin:10px;
+  border:1px solid black;
+  background: rgba(255,255,255,0.6);
+  -webkit-transition: background 1s ease, color 1s -webkit-transform 1s;
+  transition: background 1s ease, color 1s, transform 1s;
+}
+
+#lib1 div, #lib2 div, #lib3 div{
+  width: 270px;
+  height: 196px;
+}
+
+#libContent div h3{
+  width:90%;
+  margin: auto;
+  height: auto;
+  font-family: 'Ubuntu';
+  font-size: 25px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#libContent div h4{
+  width:80%;
+  height: auto;
+  margin:auto;
+  font-family: 'Ubuntu';
+  font-weight: 600;
+  font-style: italic;
+  font-size: 16px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+#libContent div p{
+  width:80%;
+  height: auto;
+  margin: auto;
+  text-align: justify;
+  font-family: 'Ubuntu';
+  font-size: 13px;
+}
+
+
+#softDiv{
+  width: 100%;
+  height: auto;
+  background:  url(../img/fond1.PNG);
+  background-size: cover;
+  background-attachment: fixed;
+  margin:auto;
+  color: black;
+  margin: 0;
+  text-align: center;
+}
+
+#softDiv h1, #libsDiv h1 {
+  width:100%;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 65px;
+  padding-bottom: 15px;
+  margin: 0;
+  color:whitesmoke;
+}
+
+#softDiv h2, #libsDiv h2{
+  width:100%;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+  color:whitesmoke;
+}
+
+.btnForCube {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+#softContent{
+  width:100%;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+}
+
+#divMayaMVG, #divMeshroom, #divOFX{
+  width: 270px;
+  min-height: 270px;
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 5px;
+  margin:10px;
+  border:1px solid black;
+  background: rgba(255,255,255,0.6);
+  -webkit-transition: background 1s ease, color 1s -webkit-transform 1s;
+  transition: background 1s ease, color 1s, transform 1s;
+}
+
+#divMayaMVG div, #divMeshroom div, #divOFX div{
+  width: 270px;
+  height: 196px;
+}
+
+
+#softContent div h3{
+  width:100%;
+  height: auto;
+  font-family: 'Ubuntu';
+  text-align: center;
+  font-weight: 500;
+}
+
+#softContent div h4{
+  width:80%;
+  height: auto;
+  margin:auto;
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  
+}
+
+#softContent div p{
+  width:80%;
+  height: auto;
+  margin: auto;
+  text-align: justify;
+  font-family: 'Ubuntu';
+  font-size: 13px;
+}
+
+#openSource{
+  width: 100%;
+  min-height: 200px;
+  background: #09abc6;
+  color: white;
+  font-family: 'Ubuntu';
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+#openSource div{
+  width: 500px;
+  margin: auto;
+  border:2px solid whitesmoke;
+  padding: 30px;
+}
+
+#openSource h1{
+  width: 100%;
+  text-align: center;
+  padding-bottom:  20px;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  text-transform: uppercase;
+  margin:0;
+}
+
+#openSource p:nth-child(2) {
+  width: 100%;
+  text-align: justify;
+  margin:auto;/*
+  text-align: left;
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+   /* -moz-column-count: 3; /* Firefox */
+  /*  column-count: 3;
+
+    -webkit-column-gap: 60px; /* Chrome, Safari, Opera */
+ /*   -moz-column-gap: 60px; /* Firefox */
+  /*  column-gap: 60px;*/
+}
+
+#openSource p:nth-child(3) {
+  width: 100%;
+  margin:auto;
+  margin-top: 20px;
+  text-align: justify;
+
+}
+
+#promoAlgo{
+  width: 100%;
+  min-height: 200px;
+  background: whitesmoke;
+  text-align: center;
+  color:#2FC0D5;
+}
+
+#objectifIntro h1{
+  
+  margin-top: 65px;
+  margin-left: 17%;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 30px;
+  text-transform: uppercase;
+   -webkit-transition: color 1s -webkit-transform 2s;
+  transition: color 1s, transform 2s;
+}
+
+#promoAlgo h1{
+  width: 66%;
+  height: auto;
+  text-align: center;
+  margin-left: 17%;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 30px;
+  text-transform: uppercase;
+   -webkit-transition: color 1s -webkit-transform 2s;
+  transition: color 1s, transform 2s;
+}
+
+#datasetsLine{
+  min-height: 20em;
+  display: flex;
+}
+
+.sketchfab-embed-wrapper iframe {
+  width: 100%;
+  height: 30em;
+}
+
+.sketchfab-embed-wrapper {
+  flex: 1;
+  align-items: center;
+  padding: 1em;
+}
+
+
+#scene{
+ display: inline-block;
+  width: 50%;
+  min-height: 300px;
+  margin-top: 6vw;
+}
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 480px) { 
+
+#scene{display: none;}
+
+#avTextPromo{
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 40px;
+	margin-right: 0;
+	min-height: 100px;
+
+}
+#avTextPromo h1{
+   font-size: 25px;
+ }
+ #avTextPromo h2{
+    font-size: 20px;
+ }
+
+ #objectifIntro h1{
+  font-size: 26px;
+  margin-left: 5%;
+  width: 90%;
+ }
+ #objectifIntro h2{
+    width: 100%;
+    margin-left: 0%;
+  font-size: 16px;
+ }
+ #objectifIntro p{
+    width: 90%;
+    margin-left: 5%;
+  font-size: 17px;
+ }
+
+
+ #softDiv h1, #libsDiv h1{
+  font-size: 28px;
+ }
+
+#lib1, #lib2, #lib3, #divMayaMVG, #divMeshroom, #divOFX{
+	width:80vw;
+	height: 80vw;
+	margin-left: 10vw;
+}
+
+#lib1 div,  #lib2 div, #lib3 div, #divMayaMVG div, #divMeshroom div, #divOFX div{
+	width: 90%;
+	margin-left: 5%;
+}
+
+#libContent div h3{
+  margin-bottom: 20px;
+}
+.btnForCube{
+  margin-left:37vw;
+}
+
+
+
+#mikrosDiv div:nth-child(1), #mikrosDiv div:nth-child(2){
+  width: 100%;
+}
+#mikrosDiv div:nth-child(1){
+  padding-bottom: 20px;
+}
+
+#mikrosDiv div:nth-child(2){
+  min-height: 260px;
+}
+
+#openSource div{
+  width: 70%;
+  height: auto;
+}
+
+#backgroundVideo{
+  display: none;
+}
+
+#promoAlgo div:nth-child(4), #promoAlgo div:nth-child(5){
+  width: 100%;
+}
+#promoAlgo h3{
+  display: none;
+}
+
+}
+
+
+@media (min-width: 481px) and (max-width: 589px) {
+  #scene{
+    display: none;
+  }
+  #avTextPromo{
+    width: 100%;
+    min-height: 215px;
+  }
+
+  #objectifIntro{
+    width: 85% !important;
+    text-align: center;
+  }
+
+  #objectifIntro h2{
+    width: 80%;
+    margin-left: 10%;
+    font-size: 19px;
+  }
+  #pipeline .stepLine{
+    transform: scale(0.4) !important;
+    margin-left: 0% !important;
+    transform-origin: left;
+  }
+
+  #divMayaMVG, #divMeshroom, #divOFX, #lib1, #lib2, #lib3{
+    margin-left: 27%;
+  }
+  #mikrosDiv div:nth-child(1),#mikrosDiv div:nth-child(2){
+    width: 100%;
+  }
+
+  #promoAlgo h3{
+    display: none;
+  }
+  #promoAlgo div:nth-child(4),#promoAlgo div:nth-child(5){
+    width: 100%;
+  }
+
+ }
+
+@media (min-width: 590px) and (max-width: 767px) {
+   #pipeline .stepLine{
+    transform: scale(0.4) !important;
+    margin-left: 0% !important;
+    transform-origin: left;
+  }
+  #divMayaMVG, #divMeshroom, #divOFX, #lib1, #lib2, #lib3{
+    margin-left: 27%;
+  }
+  #promoAlgo div:nth-child(4),#promoAlgo div:nth-child(5){
+    width: 100%;
+  }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  #pipeline .stepLine{
+    transform: scale(0.5) !important;
+    margin-left: 0% !important;
+    transform-origin: left;
+  }
+  #promoAlgo h3{
+    display: none;
+  }
+   #divOFX, #lib3{
+    margin-left: 36%;
+   }
+   #promoAlgo div:nth-child(4){
+    float: left;
+  }
+    #promoAlgo div:nth-child(5){
+    float: right;
+  }
+  
+}
+
+@media (min-width: 980px) and (max-width: 1199px) {
+  #pipeline .stepLine{
+    transform: scale(0.6) !important;
+    margin-left: 2% !important;
+    transform-origin: left;
+  }
+
+  #lib1, #divMayaMVG{
+    margin-left: 8%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1499px) {}
+
+@media (min-width: 1500px) {}
+
+
+/*Fin Media queries */
+
+/* Partie pipeline  */
+
+#pipeline{
+  width: 100%;
+  background: whitesmoke;
+  text-align: center;
+}
+
+#pipeline p{
+  width: 80%;
+  height: auto;
+  margin-top: 14px;
+  margin-left: 10%;
+  font-family: 'Ubuntu';
+  font-weight: 200;
+  font-size: 20px;
+   -webkit-transition: color 1s -webkit-transform 2s;
+  transition: color 1s, transform 2s;
+}
+
+#pipeline .stepLine{
+  transform: scale(0.75);
+}
+ #pipeline .step1,#pipeline .step2,#pipeline .step3,#pipeline .step4,#pipeline .step5,#pipeline .step6,#pipeline .step7,#pipeline .step8{
+  border : 4px solid black;
+  cursor: pointer;
+ }
+
+ #pipeline .l1,#pipeline .l2,#pipeline .l3,#pipeline .l4,#pipeline .l5,#pipeline .l6,#pipeline .l7{
+  height: 4px;
+  margin-bottom: 8px;
+  background: black;
+ }
+
+ .stepLine p{
+  font-weight: 500 !important;
+  font-size: 22px !important;
+ }
+
+
+
+
+
+
+ /* 
+
+
+@media (min-width: 481px) and (max-width: 589px) { }
+
+@media (min-width: 590px) and (max-width: 767px) {}
+
+@media (min-width: 768px) and (max-width: 979px) {}
+
+@media (min-width: 980px) and (max-width: 1199px) {}
+
+@media (min-width: 1200px) and (max-width: 1499px) {}
+
+@media (min-width: 1500px) {}
+
+
+*/

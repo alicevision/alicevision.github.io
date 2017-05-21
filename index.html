@@ -5,87 +5,88 @@
         <meta name="description" content="AliceVision, an high-end Computer Vision library for Photogrammetry and Camera Tracking."/>
         <meta name="keywords" content="Computer Vision, Photogrammetry, Camera Tracking, Library, Software, Application"/>
         <title>Alice Vision</title>
-        <link rel="stylesheet" href="Design/css/global.css"/>
-        <link rel="stylesheet" href="Design/css/homePage.css"/>
-        <link rel="stylesheet" href="Design/css/step.css"/>
-        <link rel="shortcut icon" type="image/x-icon" href="Design/img/icon.png" />
-        <script type="text/javascript" src="Design/js/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" href="design/css/global.css"/>
+        <link rel="stylesheet" href="design/css/home.css"/>
+        <link rel="stylesheet" href="design/css/step.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="design/img/icon.png" />
+        <link rel="stylesheet" href="design/js/webui-popover-1.2.18/dist/jquery.webui-popover.min.css">
+        <script type="text/javascript" src="design/js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="design/js/webui-popover-1.2.18/dist/jquery.webui-popover.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+        <link rel="stylesheet" href="http://cdn.materialdesignicons.com/1.9.32/css/materialdesignicons.min.css">
     </head>
     <body>
-        <div id="borderTop"></div>
-        <div id="header">
-            <div id="menuMobile">
-                <div></div>
-                <div>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="Template/page1.html">Photogrammetry</a></li>
-                        <li><a href="Template/projet.html">Softwares</a></li>
-                        <li><a href="Template/libraries.html">Libraries</a></li>
-                        <li><a href="Template/about.html">About Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <a href="index.html"><img id="logoTop" src="Design/img/logo2.png"/></a>
-            <div id="menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="Template/page1.html">Photogrammetry</a></li>
-                    <li><a href="Template/projet.html">Softwares</a></li>
-                    <li><a href="Template/libraries.html">Libraries</a></li>
-                    <li><a href="Template/about.html">About Us</a></li>
-                </ul>
-            </div>
-            <div class="clear"></div>
-        </div>
+        <div id="headerSection"></div>
         <div id="content">
             <div id="aliceVisionFirstPromo">
                 <div id="avTextPromo">
                     <h1>Alice Vision</h1>
-                    <h2>An high-end Computer Vision library for Photogrammetry and Camera Tracking</h2>
+                    <h2>A Protogrammetric Computer Vision Library</h2>
+                    <br/><br/><br/>
+                    <h3>3D Reconstruction</h3>
+                    <h3>Photomodeling</h3> 
+                    <h3>Camera Tracking</h3>
+                    <br/>
                 </div>
                 <div id="scrollDiv">
-                    <img src="Design/img/scrollWhite.png">
+                    <img src="design/img/scrollWhite.png">
                 </div>
             </div>
             
             <div id="objectif">
                 <div id="objectifIntro">
                     <h1>Photogrammetry Pipeline</h1>
-                    <p>Alice Vision is an open-source solution for the reconstruction of textured 3D models from images.</p>
-                    <p>It provides a full photogrammetry pipeline to infer the geometry of a scene from a set of unordered photographies or videos. Photography is a projection of a 3D scene onto a 2D plane, losing depth information. The goal of photogrammetry is to reverse this process.</p>
-                    <div id="viewPipeline">
-                        <p>The dense modeling of the scene is the result yielded by chaining two computer vision-based pipelines:<br/>“Structure-from-Motion” (SfM) and “Multi View Stereo” (MVS).</p>
-                        <h2>Learn more about each step of the photogrammetry pipeline:</h2>
-                        <div id="pipeline">
-                            <div class="stepLine">
-                                <a href="Template/page1.html" id="pipelineS1"><div class="step1" ><p>1</p></div></a>
-                                <div class="l1"></div>
-                                <div class="l1b" id="lb"></div>
-                                <a href="Template/page1.html" id="pipelineS2"><div class="step2"><p>2</p></div></a>
-                                <div class="l2"></div>
-                                <div class="l2b" id=""></div>
-                                <a href="Template/page1.html" id="pipelineS3"><div class="step3"><p>3</p></div></a>
-                                <div class="l3"></div>
-                                <div class="l3b" id=""></div>
-                                <a href="Template/page1.html" id="pipelineS4"><div class="step4"><p>4</p></div></a>
-                                <div class="l4"></div>
-                                <div class="l4b" id=""></div>
-                                <a href="Template/page1.html"  id="pipelineS5"><div class="step5"><p>5</p></div></a>
-                                <div class="l5"></div>
-                                <div class="l5b" id=""></div>
-                                <a href="Template/page1.html" id="pipelineS6"><div class="step6"><p>6</p></div></a>
-                                <div class="l6"></div>
-                                <div class="l6b" id=""></div>
-                                <a href="Template/page1.html" id="pipelineS7"><div class="step7"><p>7</p></div></a>
-                                <div class="l7"></div>
-                                <div class="l7b" id=""></div>
-                                <a href="Template/page1.html" id="pipelineS8"><div class="step8"><p>8</p></div></a>
+                    <p>
+                        Photogrammetry is the science of making measurements from photographs. It infers the geometry of a scene from a set of unordered photographies or videos. Photography is the projection of a 3D scene onto a 2D plane, losing depth information. The goal of photogrammetry is to reverse this process.
+                    </p>
+                    <p>
+                        The dense modeling of the scene is the result yielded by chaining two computer vision-based pipelines:<br/>“Structure-from-Motion” (SfM) and “Multi View Stereo” (MVS).
+                    </p>
+                    <h2>Learn more about each step of the photogrammetry pipeline:</h2>
+
+                    <div id="photogrammetryPipeline">
+                        <a href="photogrammetry.html" data-title="Features Extraction" data-content="Extract natural or fiducial features from images.">
+                            <div id="step_1">
+                            <i class="mdi mdi-48px mdi-blur"></i>
                             </div>
-                        </div>
+                        </a>
+                        <a href="photogrammetry.html" data-title="Image Matching" data-content="Group images that share content.">
+                            <div id="step_2">
+                            <i class="mdi mdi-48px mdi-vector-circle"></i>
+                            </div>
+                        </a>
+                        <a href="photogrammetry.html" data-title="Features Matching" data-content="Detect common features between image pairs.">
+                            <div id="step_3">
+                            <i class="mdi mdi-48px mdi-vector-combine"></i>
+                            </div>
+                        </a>
+                        <a href="photogrammetry.html" data-title="Structure from Motion" data-content="Infer geometric information: 3D structure (point cloud) and camera parameters (pose and intrinsics).">
+                            <div id="step_4">
+                            <i class="mdi mdi-48px mdi-weather-hail"></i>
+                            </div>
+                        </a>
+                        <a href="photogrammetry.html" data-title="Depth Map Estimation" data-content="Estimate depth information per pixel on each image.">
+                            <div id="step_5">
+                            <i class="mdi mdi-48px mdi-image-area-close"></i>
+                            </div>
+                        </a>
+                        <a href="photogrammetry.html" data-title="Meshing" data-content="Fuse all depth maps, vote to decide the parts of the volume that are full or empty and generate the final surface.">
+                            <div id="step_6">
+                            <i class="mdi mdi-48px mdi-cube-outline"></i>
+                            </div>
+                        </a>
+                        <a href="photogrammetry.html" data-title="Texturing" data-content="Project input images onto the mesh and fuse them.">
+                            <div id="step_7">
+                            <i class="mdi mdi-48px mdi-format-paint"></i>
+                            </div>
+                        </a>
+                        <a href="photogrammetry.html" data-title="Camera Localization" data-content="Localize images from a video inside a 3D reconstruction.">
+                            <div id="step_8">
+                            <i class="mdi mdi-48px mdi-camera-enhance"></i>
+                            </div>
+                        </a>
                     </div>
-                    <a href="Template/page1.html"><button>Learn more</button></a>
+                    <a href="photogrammetry.html"><button>Learn more</button></a>
                 </div>
             </div>
             <div id="softDiv">
@@ -98,7 +99,7 @@
                             <p>MayaMVG allows graphic artists to do photomodeling on top of a 3D reconstruction (point cloud and cameras) with pixel precision.</p>
                         </div>
                         <!--<span class="fa fa-2x fa-github"></span>-->
-                        <a href="http://github.com/alicevision/mayaMVG"><img href="#" class="btnForCube" src="Design/img/seemore.png"/></a>
+                        <a href="http://github.com/alicevision/mayaMVG"><img href="#" class="btnForCube" src="design/img/seemore.png"/></a>
                     </div>
 
                         
@@ -110,15 +111,15 @@
                             <p>Coming soon</p>
                         </div>
                         
-                        <a href="http://github.com/alicevision"><img href="#" class="btnForCube" src="Design/img/seemore.png"/></a>
+                        <a href="http://github.com/alicevision"><img href="#" class="btnForCube" src="design/img/seemore.png"/></a>
                     </div>
                     <div id="divOFX">
                         <div>
                             <h3>OpenFX</h3>
                             <h4>Camera Localization OpenFX Plugin for Nuke</h4>
-                            <p>The CameraLocalizer plugin estimates the camera pose of an image regarding an existing 3D reconstruction generated by openMVG.</p>
+                            <p>The CameraLocalizer plugin estimates the camera pose of an image regarding an existing 3D reconstruction generated by Meshroom.</p>
                         </div>
-                        <a href="http://github.com/alicevision/ofxMVG"><img href="#" class="btnForCube" src="Design/img/seemore.png"/></a>
+                        <a href="http://github.com/alicevision/ofxMVG"><img href="#" class="btnForCube" src="design/img/seemore.png"/></a>
                     </div>
                 </div>
             </div>
@@ -127,7 +128,7 @@
                <!-- <svg  xmlns="http://www.w3.org/2000/svg " viewBox="0 0 1000 300">
                    
                     <polygon points="0 0,  400 0, 200 300, 0 300"><text>La librairie</text></polygon>
-                    <polygon points="400 0,  600 0, 400 300, 200 300"><image x="0" y="0" xlink:href="Design/img/pattern2F.jpg"></image></polygon>
+                    <polygon points="400 0,  600 0, 400 300, 200 300"><image x="0" y="0" xlink:href="design/img/pattern2F.jpg"></image></polygon>
                     <polygon points="600 0, 800 0, 600 300, 400 300"/>
                     <polygon points="800 0, 1000 0, 800 300, 600 300"/>
                     <polygon points="1000 0, 1000 300, 800 300"/>
@@ -142,7 +143,7 @@
                             <h4>Open Multiple View Geometry</h4>
                             <p>OpenMVG library solves classical problems in Multiple View Geometry and provides a full Structure-from-Motion pipeline with a strong focus on accuracy.</p>
                         </div>
-                        <a href="https://github.com/alicevision/openMVG/"><img href="#" class="btnForCube" src="Design/img/seemore.png"/></a>
+                        <a href="https://github.com/alicevision/openMVG/"><img href="#" class="btnForCube" src="design/img/seemore.png"/></a>
 
                     </div>
                     <div id="lib2">
@@ -152,7 +153,7 @@
                             <p>This library allows you to detect and identify CCTag markers. Such marker system can deliver sub-pixel precision while being largely robust to challenging shooting conditions.</p>
                         </div>
                         
-                        <a href="https://github.com/alicevision/CCTag"><img href="#" class="btnForCube" src="Design/img/seemore.png"/></a>
+                        <a href="https://github.com/alicevision/CCTag"><img href="#" class="btnForCube" src="design/img/seemore.png"/></a>
                     </div>
                     <div id="lib3">
                         <div>
@@ -160,50 +161,26 @@
                             <h4>Scale-Invariant Feature Transform (SIFT)</h4>
                             <p>This library provides a GPU implementation of SIFT. 25 fps on HD images on recent graphic cards.</p>    
                         </div>
-                        <a href="https://github.com/alicevision/popsift"><img href="#" class="btnForCube" src="Design/img/seemore.png"/></a>
+                        <a href="https://github.com/alicevision/popsift"><img href="#" class="btnForCube" src="design/img/seemore.png"/></a>
                     </div>
                 </div>
             </div>
 
             <div id="promoAlgo">
-                <h1>Result Examples</h1>
-                <div class="sketchfab-embed-wrapper">
-                    <iframe width="640" height="480" src="https://sketchfab.com/models/0d38fbbf35ce44d085e2ec18368942df/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
-                </div>
-                <div class="sketchfab-embed-wrapper">
-                    <iframe width="640" height="480" src="https://sketchfab.com/models/fc663c87832f4cf983ac8c21f89c735a/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+                <h1>Results</h1>
+                <div id="datasetsLine">
+                    <div class="sketchfab-embed-wrapper">
+                        <iframe width="640" height="480" src="https://sketchfab.com/models/0d38fbbf35ce44d085e2ec18368942df/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+                    </div>
+                    <div class="sketchfab-embed-wrapper">
+                        <iframe width="640" height="480" src="https://sketchfab.com/models/fc663c87832f4cf983ac8c21f89c735a/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+                    </div>
                 </div>
                 <p>
                     <a href="https://sketchfab.com/AliceVision"><button>See More Results</button></a>
-                </p>
-                
+                </p>   
             </div>
 
-<!-- TODO
-            <div id = "mikrosDiv">
-                <div>
-                    <h1>Photogrammetry Usages</h1>
-                    <p>
-                        <ul>
-                            <li>Cartography / Tourism</li>
-                            <li>Extraterrestrial</li>
-                            <li>Civil Engineering - Urban Planning</li>
-                            <li>Architecture</li>
-                            <li>Cultural heritage - Archaeology, see <a href="http://www.cyark.org">CyArk</a></li>
-                            <li>Robotics</li>
-                            <li>Military - Aerial Surveillance</li>
-                            <li>Medical (like shape-from-template)</li>
-                            <li>Disasters (fast mapping)</li>
-                            <li>Industry</li>
-                            <li>Post-Production</li>
-                        </ul>
-                    </p>
-                    <p>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/FOxT030e3nI" frameborder="0" allowfullscreen></iframe>
-                    </p>
-                </div>
-            </div>
--->
             <div id="openSource">
                 <div>
                     <h1>Open Source</h1>
@@ -214,46 +191,14 @@
                 </div>
             </div>
         </div>
-        <div id="footer">
-            <!--<div>
-                <img src="Design/img/logoNoir.png"/>
-                <p><!--Alice vision build a fully integrated software for 3D reconstruction, photomodeling and camera tracking. We aim to provide a strong software basis with state-of-the-art computer vision algorithms that can be tested, analyzed and reused.<p>
-            </div>-->
-            <div id="informations">
-                <div>
-                    <h2>Informations</h2>
-                    <a href="mailto:alicevision@googlegroups.com">Contact Us</a>  
-                    <a href="Template/about.html">About Us</a>
-                    <a href="Template/history.html">History</a>
-                </div>
-                <div>
-                    <h2>Alice Vision</h2>
-                    <a href="https://openmvg.readthedocs.io/en/latest/"> Documentation</a>
-                    <a href="Template/page1.html">Step by Step</a>              
-                </div>
 
-                <div>
-                    <h2>Softwares</h2>
-                    <a href="http://github.com/alicevision/mayaMVG"> Maya MVG</a>
-                    <a href="http://github.com/alicevision">Meshroom</a>   
-                    <a href="http://github.com/alicevision/ofxMVG">OfxMVG</a>   
-                </div>
-                <div id="partenaire">
-                    <h2>Partner</h2>
-                    <a href="http://www.mikrosimage.com/"><img src="Design/img/partenaire1.png"/></a>
-                    <a href="http://cmp.felk.cvut.cz"><img src="Design/img/partenaire2.png"/></a>
-                    <a href="https://www.simula.no/"><img src="Design/img/partenaire3.png"/></a>
-                    <a href="http://www.inp-toulouse.fr/fr/index.html"><img src="Design/img/partenaire4.png"/></a>
-                </div>
-                
-            </div>
-            <div class="clear"></div>
-            <div id="copyRight">
-                <p> Copyright © 2017 - Alice Vision - All rights reserved</p></div>
-            <div id="borderBottom"></div>
-        </div>
-        
-        <script type="text/javascript" src="Design/js/jquery-ui-1.8.20.custom.min.js"></script>
-       <!-- <script type="text/javascript" src="Design/js/modernizr.2.5.3.min.js"></script>-->
+        <div id="footerSection"></div>
+
+        <script>
+            $("#headerSection").load("./sectionHeader.html");
+            $("#footerSection").load("./sectionFooter.html");
+            $('#photogrammetryPipeline a').webuiPopover({trigger:'hover', placement:'bottom', animation:'fade'});
+        </script>
+
     </body>
 </html>

@@ -1,0 +1,526 @@
+
+#stepDiv{
+  width: 100%;
+  height: auto;
+  background: url('../img/fond4.PNG');
+  vertical-align: top;
+  background-attachment: fixed;
+  background-size: 100%;
+}
+
+#stepDiv h1{
+  width: 100%;
+  font-size: 25px;
+  font-family: 'Ubuntu';
+  font-weight: normal;
+  vertical-align: top;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  padding-top: 90px;
+  font-weight: 500;
+}
+
+.generalStep{
+  width: 100%;
+  height: auto;
+  /*max-width: 1200px;
+  margin: auto;*/
+  font-family: 'Ubuntu';
+
+ }
+
+.generalStep div:nth-child(1){
+  width: 100%;
+  /*background: #09ABC6;*/
+  background: none;
+  padding-top: 15px;
+  padding-bottom: 10px; 
+
+}
+
+.generalStep div h1{
+  width: 80%;
+  margin:auto;
+  text-align:center;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: black;
+  margin-top: 40px;
+}
+.generalStep div h2{
+  width: 80%;
+  margin:auto;
+  text-align:center;
+  font-weight: 400;
+  color: #09ABC6;
+  padding-bottom: 20px;
+  margin-top:5px;
+}
+.generalStep div h3{
+  width: 60%;
+  margin: auto;
+  text-align:left;
+  font-weight: 400;
+  font-size: 20px;
+  color: #09ABC6;
+  padding-bottom: 10px;
+}
+
+.generalStep div h4{
+  width: 60%;
+  margin: auto;
+  text-align:left;
+  font-weight: 500;
+  font-size: 16px;
+  color: black;
+}
+.generalStep div h5{
+  width: 60%;
+  margin: auto;
+  text-align:center;
+  font-weight: 500;
+  font-size: 16px;
+  color: black;
+}
+
+.generalStep div p{
+  width: 60%;
+  margin: auto;
+  text-align:left;
+  font-weight: 200;
+  font-size: 16px;
+  color: black;
+}
+
+
+.generalStep div:nth-child(2){
+  width: 100%; 
+  margin: auto; 
+  padding-bottom: 30px;  
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  color: white;
+}
+
+
+.videoPresentation{
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  color: black;
+  font-family: 'Ubuntu';
+  padding-bottom: 50px;
+  line-height: 18px;
+ /* max-width: 1200px;
+  margin: auto;*/
+}
+
+.videoPresentation div{
+  width: 60%;
+  min-height: 350px;
+  background: none;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.videoPresentation iframe{
+  width : 100%;
+  height: 100%;
+  min-height: 350px;
+  margin: auto;
+}
+
+
+  .videoPresentation h3{
+    width:100%;
+    margin: auto;
+    font-weight: 500;
+    padding-bottom: 10px;
+    font-size: 17px;
+    padding-top: 20px;
+  } 
+  
+  .videoPresentation p{
+    width:100%;
+    text-align: left;
+    font-weight: 200;
+    margin: auto;
+  }
+
+.generalPrincipe{
+  width: 100%;
+  height: auto;
+  background: black; /*#09ABC6;*/
+  color: white;
+  font-family: 'Ubuntu';
+ /* max-width: 1200px;
+  margin: auto;*/
+
+
+}
+
+.generalPrincipe div{
+  width: 80%;
+  height: auto;
+  margin: auto;
+}
+
+
+.generalPrincipe div h1{
+  text-align:  center;
+  padding-top: 20px;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+#gp1{
+  width:60%;
+  min-height: 30vw;
+  margin:0;
+  padding: 0;
+  display: inline-block;
+  background: #09ABC6;
+  margin-right: -4px;
+  padding-bottom: 20px;
+  font-family: 'Ubuntu';
+}
+
+#gp1 h4, #gp1 p{
+  margin:0;
+  padding: 0;
+  width: 80%;
+  margin-left: 10%;
+}
+
+#gp1 h4{
+  font-weight: 500;
+}
+
+#gp1 p{
+  padding-top: 5px;
+  padding-bottom: 15px;
+  font-weight: 100;
+}
+
+#gp2{
+  width: 40%;
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: top;
+  height: 31.4vw;
+  overflow: hidden;
+  background: url('../img/sky3.jpg');
+  background-size: cover;
+}
+#gp2 img{
+  width: 0%;
+  height:auto;
+  vertical-align: top;
+  display: none;
+}
+
+.gp1{
+  width: auto;
+  height: auto;
+}
+
+.gp1 img{
+  width: 43%;
+  height: auto;
+  min-width: 200px;
+  min-height: 200px;
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-right: 5%;
+  float: right;
+
+}
+.gp1 h4{
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.gp1 p{
+  text-align: justify;
+  
+}
+.gp1 h4, .gp1 p{
+  margin-right: 30px;
+  margin-bottom: 0;
+  font-family: 'Ubuntu';
+}
+
+.gp1 p{
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+.gp2{
+  width: 100%;
+  height: auto;
+}
+.gp2 h4{
+  font-size: 25px;
+  font-style: normal;
+}
+.gp2 p{
+  text-align: justify;
+}
+.gp2 h4, .gp2 p{
+  margin-right: 30px;
+}
+
+
+.allAlgo{
+  width: 100%;
+  height: auto;
+  background: white;
+
+}
+
+
+#algo{
+  width: 100%;
+  height: auto;
+  background: whitesmoke;
+}
+
+
+
+.implementedAlgo{
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  color: black;
+  font-family: 'Ubuntu';
+  font-style: normal;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.implementedAlgo h1{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+}
+
+.implementedAlgo h2{
+  width: 80%;
+  margin: auto;
+  color: #09ABC6;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.implementedAlgo img{
+  width:30vw;
+  margin-left: 10vw;
+  border: 2px solid #09ABC6;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.implementedAlgo div{
+  width: 50%;
+  margin: auto;
+}
+
+.implementedAlgo div h4{
+  color: #09ABC6;
+  font-weight: 400;
+  font-size: 17px;
+
+}
+
+.implementedAlgo div p{
+  font-weight: 200;
+  text-align: justify;
+}
+
+.implementedAlgo div p a{
+  color: grey;
+  -webkit-transition: color 0.6s -webkit-transform 0.6s;
+  transition: color 0.6s, transform 0.6s;
+}
+.implementedAlgo div p a:hover{
+  color: #09ABC6;
+}
+
+
+.existantAlgo{
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  padding-top: 60px;
+  background:#E3E3E3;
+  color: black;
+  font-family: 'Ubuntu';
+  padding-bottom: 30px;
+}
+
+.existantAlgo h1{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+}
+
+.existantAlgo h2{
+  width: 80%;
+  margin: auto;
+  color: #09ABC6;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.existantAlgo div{
+  width: 25%;
+  margin-left: 8%;
+  display: inline-block;
+  vertical-align: top;
+
+}
+
+.existantAlgo div h3{
+  /*color: #09ABC6;*/
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0;
+}
+
+.existantAlgo div li{
+  font-weight: 200;
+  text-align: left;
+  list-style: square;
+  padding-bottom: 5px;
+}
+
+.existantAlgo div ul{
+  margin-left: -25px;
+}
+
+#algoExisted1{
+  margin-left: 26%;
+}
+
+#biblio{
+  width:100%;
+  min-height: 100px;
+  height: auto;
+  background: #09ABC6;
+  color: white;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  padding-bottom: 50px;
+}
+
+#biblio div{
+  width: 60%;
+  height: auto;
+  margin:auto;
+  margin-top: 10px;
+}
+
+#biblio h1, #biblio h6,#biblio p{
+  width: 80%;
+  margin: auto;
+}
+
+#biblio h1{
+  font-size: 35px;
+  margin-top: 0;
+  padding-top: 30px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#biblio h6{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#biblio p{
+  padding-bottom: 10px;
+  font-weight: 200;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.pagination{
+  width: 100%;
+  border-bottom: 1px solid #09ABC6;
+  height: 70px;
+  padding-top: 10px;
+}
+
+#prevBtn, #nextBtn{
+  min-width: 160px;
+  border: 2px solid #09ABC6;
+  padding: 10px 30px;
+  font-family: 'Ubuntu';
+  font-weight: 800;
+  color:#09ABC6;
+  background: none;
+  text-transform: uppercase;
+  margin-top: 10px;
+  -webkit-transition: background 1s ease-out, color 1s -webkit-transform 1s;
+  transition: background 1s ease-out, color 1s, transform 1s;
+  cursor: pointer;
+}
+
+#prevBtn:hover, #nextBtn:hover{
+  color: whitesmoke;
+  background: #09ABC6;
+}
+#prevBtn{
+  float: left;
+  margin-left: 7%;
+}
+#nextBtn{
+  float: right;
+  margin-right: 7%;
+}
+
+@media (max-width: 480px) {
+   .implementedAlgo div{
+    width: 90%;
+   }
+   #algoExisted1, #algoExisted2{
+    margin-left: 10%;
+   }
+}
+
+
+@media (min-width: 481px) and (max-width: 589px) {
+  
+  
+}
+ @media (min-width: 590px) and (max-width: 767px) {
+
+ }
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+}
+
+@media (min-width: 980px) and (max-width: 1199px) {}
+
+@media (min-width: 1200px) and (max-width: 1499px) {}

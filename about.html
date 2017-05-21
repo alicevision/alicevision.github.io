@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">    
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content="AliceVision, an high-end Computer Vision library for Photogrammetry and Camera Tracking."/>
+        <meta name="keywords" content="Computer Vision, Photogrammetry, Camera Tracking, Library, Software, Application"/>
+        <title>Alice Vision</title>
+        <link rel="stylesheet" href="design/css/global.css"/>
+        <link rel="stylesheet" href="design/css/about.css"/>
+        <link rel="stylesheet" href="design/css/step.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="design/img/icon.png" />
+        <script type="text/javascript" src="design/js/jquery-1.11.1.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    </head>
+    <body>
+        <div id="headerSection"></div>
+        <div id="content">
+            <div class="backgroundAbout">
+                <div id="contribution">
+                    <h1>Contribution</h1>
+                    <p>Alice Vision relies on a friendly and community-driven effort to create an open source photogrammetry solution.</p>
+                    <p>
+                    The project strives to provide a <strong>pleasant</strong> environment for everybody and tries to be as <strong>non-hierarchical</strong> as possible. Every <strong>contributor</strong> is considered as a member of the team, regardless if they are a newcomer or a long time member. Nobody has <strong>special</strong> rights or prerogatives.
+                    <br/><br/>
+                    The contribution workflow relies on <a href="https://help.github.com/articles/creating-a-pull-request">Github Pull Request</a>. We recommend to discuss new features before starting the development, to ensure that development is efficient for everybody and minimize the review burden.</p>
+                    <p>In order to foster a friendly and cooperative atmosphere where technical collaboration can flourish, we expect all members of the community to be
+                    <ul>
+                        <li>courteous, polite and respectful in their treatment of others</li>
+                        <li>helpful and constructive in suggestions and criticism</li>
+                        <li>stay on topic for the communication medium that is being used</li>
+                        <li>be tolerant of differences in opinion and mistakes that inevitably get made by everyone.</li>
+                    </ul>
+                    </p>
+                    
+                </div>
+                <div id="partners">
+                    <h1>Partners</h1>
+                    <div id="mapPartners"></div>
+                    <div id="namePartners">
+                        <p><a href="http://cmp.felk.cvut.cz">Czech Technical University (CTU)</a> in Prague, Czech Republic</p>
+                        <p><a href="http://ligm.u-pem.fr">IMAGINE</a> from the Universite Paris Est, LIGM Gaspard-Monge, France</p>
+                        <p><a href="http://www.inp-toulouse.fr">Institut National Polytechnique de Toulouse (INPT)</a>, France</p>
+                        <p><a href="http://www.mikrosimage.com">Mikros Image</a>, Post-Production Company in Paris, France</p>
+                        <p><a href="https://www.simula.no">Simula Research Laboratory AS</a> in Oslo, Norway</p>
+                        <p><a href="http://www.quine.no">Quine</a> in Oslo, Norway</p>
+                        <p>See Github authors for the full list of contributors.</p>
+                    </div>
+                    <div id="europeanProject">
+                        <p><img src="design/img/europeanFlag.png" id="europeanFlag">
+                        This project has received funding from the European Union’s Horizon 2020 research and innovation programme, see <a href="http://www.popartproject.eu/">popart</a> and <a href="http://www.ladioproject.eu/">ladio</a>.</p>
+                    </div>
+                </div>
+                <div id="aboutHistory">
+                    <h1>History</h1>
+                    <p>In 2010, <a href="http://imagine.enpc.fr/">IMAGINE</a> research team (a joint research group between <a href="http://www.enpc.fr/en">Ecole des Ponts ParisTech</a> and <a href="http://international.cstb.fr/">Centre Scientifique et Technique du Batiment</a>) and Mikros Image started a partnership around Pierre Moulon’s thesis, supervised by Renaud Marlet and Pascal Monasse on the academic side and Benoit Maujean on the industrial side. In 2013, they released an open source SfM pipeline, called openMVG (“Multiple View Geometry”), to provide the basis of a better solution for the creation of visual effects <a href="https://en.wikipedia.org/wiki/Matte_painting">matte-paintings</a>.
+                    <br/><br/>
+                    In 2009, CMP research team from CTU started the PhD thesis of Michal Jancosek supervised by Tomas Pajdla. They released an open source MVS pipeline, called CMPMVS, in 2012.
+                    <br/><br/>
+                    In 2009, INPT, INRIA and Duran Duboi started a French ANR project to create a model based Camera Tracking solution based on natural features and a new marker design called CCTag.
+                    <br/><br/>
+                    In 2015, Simula, INPT and Mikros joined their efforts in the EU project <a href="http://www.popartproject.eu/">POPART</a> to create a Previz system. In 2017, CTU join the team in the EU project <a href="http://www.ladioproject.eu/">LADIO</a> to create a central hub with structured access to all data generated on set.
+                    </p>
+
+                    <h1>Contact Us</h1>
+                    <h4>You can contact us at <a href="mailto:alicevision@googlegroups.com">alicevision@googlegroups.com</a></h4>
+                </div>
+            </div>
+        </div>
+
+        <div id="footerSection"></div>
+
+        <script>
+            $("#headerSection").load("./sectionHeader.html");
+            $("#footerSection").load("./sectionFooter.html");
+        </script>
+
+        <script src="design/js/mainJs.js"></script>
+        <script src="design/js/mainJquery.js"></script>
+        <script type="text/javascript" src="design/js/jquery-ui-1.8.20.custom.min.js"></script>
+    </body>
+</html>
