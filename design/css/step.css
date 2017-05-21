@@ -1,5 +1,3 @@
-/* NEW STEP LINE */
-
 .stepLine{
   width:1200px;
   height: auto;
@@ -7,98 +5,13 @@
   padding-bottom: 50px;
 }
 
-.step1, .step2, .step3, .step4, .step5, .step6, .step7, .step8{
+.step {
   width: 50px;
   height: 50px;
   border:2px solid white;
   display: inline-block;
-  margin-right: -5px;
-  margin-left: -5px;
-  -webkit-transition: border 0.5s , color 0.5s,  margin-left 0.5s, -webkit-transform 0.5s;
-  transition: border 0.5s , color 0.5s,  margin-left 0.5s, transform 0.5s;
-  cursor: pointer;
-  background: #fff9;
 }
 
-.l1, .l2, .l3, .l4, .l5, .l6, .l7{
-  width: 100px;
-  height: 2px;
-  background: white;
-  display: inline-block;
-  margin-bottom: 5px;
-  z-index: 1;
+.stepsSection div:not(.current) {
+  display: none;
 }
-.l1b, .l2b, .l3b, .l4b, .l5b, .l6b, .l7b{
-  width: 0px;
-  height: 2px;
-  margin-right: -5px;
-  margin-left: -105px;
-  display: inline-block;
-  margin-bottom: 5px;
-  background: #09abc6;
-  z-index: 5;
-  -webkit-transition: border 0.5s , width 0.5s, height 0.5s, margin-left 0.5s, margin-right 0.5s, color 0.5s -webkit-transform 0.5s;
-  transition: border 0.5s , width 0.5s, height 0.5s, margin-left 0.5s, margin-right 0.5s, color 0.5s, transform 0.5s;
-}
-
-.step2, .step3, .step4, .step5, .step6, .step7, .step8{
-  margin-left: 100px;
-}
-
-.step1 p,.step2 p, .step3 p, .step4 p, .step5 p, .step6 p, .step7 p, .step8 p{
-  width: 100%;
-  height: auto;
-  text-align: center;
-  font-family: 'Ubuntu';
-  font-weight: 400;
-  font-size: 21px;
-  margin-top: 11px;
-  -webkit-transition: color 0.5s -webkit-transform 0.5s;
-  transition: color 0.5s, transform 0.5s;
-}
-
-.step1:hover ,.step2:hover , .step3:hover , .step4:hover , .step5:hover , .step6:hover , .step7:hover , .step8:hover {
-  border: 2px solid #09abc6;
-}
-
-.step1:hover p,.step2:hover p, .step3:hover p, .step4:hover p, .step5:hover p, .step6:hover p, .step7:hover p, .step8:hover p{
-  color: #09abc6;
-}
-.stepFilled{
-  border:5px solid blue;
-}
-
-#stepTop{
-  border-bottom: 1px solid black;
-  opacity: 0;
-  overflow: hidden;
-  height: 0;
-  -webkit-transition: opacity 1.0s, height 1.0s, -webkit-transform 1.0s;
-  transition: opacity 0.5s, height 1.0s,  transform 1.0s;
-}
-.stepLineMini{
-  width:1200px;
-  height: auto;
-  min-width: 50px;
-  margin-left:10%;
-  padding-bottom: 0px;
-  transform: scale(0.5);
-}
-
-@media (min-width: 481px) and (max-width: 589px) { }
-
-@media (min-width: 590px) and (max-width: 767px) {
-  #pipeline .stepLine{
-    transform: scale(0.4);
-    margin-left: 0%;
-    transform-origin: left;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 979px) {}
-
-@media (min-width: 980px) and (max-width: 1199px) {}
-
-@media (min-width: 1200px) and (max-width: 1499px) {}
-
-@media (min-width: 1500px) {}
