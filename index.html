@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Alice Vision an high-end Computer Vision library for Photogrammetry and Camera Tracking"/>
+    <meta name="keywords" content="Computer Vision,Photogrammetry,Camera Tracking,Library,Software,Application"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Alice Vision | High-end Computer Vision library for Photogrammetry and Camera Tracking</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/icon.png" />
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Google Icon Font -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Propeller css -->
+    <link rel="stylesheet" href="css/propeller.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- navigation -->
+    <nav id="component_navigation" class="navbar navbar-default navbar-fixed-top pmd-navbar pmd-z-depth"></nav>
+    <!-- page content -->
+    <div id="view">
+      <section class="white_panel">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <h1 class="text-center strong_margin">Loading...</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- footer -->
+    <footer id="component_footer"></footer>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Bootstrap js -->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Propeller js -->
+    <script type="text/javascript" src="js/propeller.min.js"></script>
+    <!-- Router & Components -->
+    <script type="text/javascript">
+        var routes = [];
+
+        // simple router
+        function router() {
+            var hash = window.location.hash.substr(1);
+            if(hash in routes)
+                routes[hash]();
+            else
+                $("#view").load("./view/home.html");
+
+            // restart propeller ripple effect
+            $(".pmd-ripple-effect").on("mousedown touchstart",function(a){var b=$(this);$(".ink").remove(),0===b.find(".ink").length&&b.append("<span class='ink'></span>");var c=b.find(".ink");if(c.removeClass("animate"),!c.height()&&!c.width()){var d=Math.max(b.outerWidth(),b.outerHeight());c.css({height:d,width:d})}var e=a.pageX-b.offset().left-c.width()/2,f=a.pageY-b.offset().top-c.height()/2;c.css({top:f+"px",left:e+"px"}).addClass("animate"),setTimeout(function(){c.remove()},1500)});
+        }
+        $(window).bind('hashchange', function() { router(); });
+
+        // routes
+        routes[''] = function () {
+            $("#view").load("./view/home.html");
+            document.title  = "Alice Vision | High-end Computer Vision library for Photogrammetry and Camera Tracking";
+        }
+        routes['photogrammetry'] = function () {
+            $("#view").load("view/photogrammetry.html");
+            document.title  = "Alice Vision | Photogrammetry Pipeline";
+        };
+        routes['history'] = function () {
+            $("#view").load("view/history.html");
+            document.title  = "Alice Vision | Photogrammetry History";
+        };
+        routes['results'] = function () {
+            $("#view").load("view/results.html");
+            document.title  = "Alice Vision | Library Results";
+        };
+        routes['about'] = function () {
+            $("#view").load("view/about.html");
+            document.title  = "Alice Vision | About";
+        };
+
+        // load page components
+        $("#component_navigation").load("./component/nav.html");
+        $("#component_footer").load("./component/footer.html");
+
+        // initialize router
+        router();
+
+    </script>
+  </body>
+</html>
