@@ -1,0 +1,92 @@
+body {
+    background-color: #ededed;
+}
+
+#view {
+    margin-top: 40px;
+}
+section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+section.white_panel {
+    background-color: #fff;
+}
+
+section.shattered_panel{
+    background: #fff url("img/shattered.png") repeat;
+}
+
+section h1 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+section:last-child {
+    padding-bottom: 6rem;
+}
+
+.btn {
+    text-transform: inherit;
+}
+.btn i {
+    margin-right: 0.5em;
+}
+
+.up_margin {
+    margin-top: 2rem;
+}
+
+.strong_margin {
+    margin: 2rem;
+}
+
+.text-white{
+    color: #FFF;
+}
+
+.text-center img.img-responsive{
+    margin: 1rem auto;
+}
+
+span.img_desc {
+    display: block;
+    font-weight: 100;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+header {
+    background-image: url("../img/result/bouddha.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 300px;
+}
+
+header .container {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+}
+header h1 {
+    font-size: 3rem;
+}
+footer {
+    margin-bottom: 3rem;
+}
+footer::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+}
+
+footer a {
+    display: block;
+}
+
+footer a.partner {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
