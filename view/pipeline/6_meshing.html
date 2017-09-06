@@ -1,0 +1,61 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 class="text-center">Meshing</h1>
+                <p>
+                    The objective of this step is to create a dense geometric surface representation of the scene.
+                </p>
+                <p>
+                    First, we fuse all the depth maps into a global octree where compatible depth values are merged into the octree cells.
+                </p>
+                <p>
+                    We then perform a 3D Delaunay tetrahedralization.
+                    Then a complex voting procedure is done to compute weights on  cells and weights on facets connecting the cells as explained in <a class="ref_link" data-ref="#Jancosek2011">[Jancosek2011]</a> and <a class="ref_link" data-ref="#Jancosek2014">[Jancosek2014]</a>.
+                </p>
+                <p>
+                    A Graph Cut Max-Flow <a class="ref_link" data-ref="#Boykov2004">[Boykov2004]</a> is applied to optimally cut the volume.
+                    This cut represents the extracted mesh surface.
+                    We filter bad cells on the surface.
+                    We finally apply a Laplacian filtering on the mesh to remove local artefacts.
+                </p>
+                <p>
+                    At this point, the mesh can also be simplified to reduce unnecessary vertices.
+                </p>
+                <div class="references pmd-card pmd-card-default pmd-z-depth up_margin">
+                    <div class="pmd-card-title">
+                        <h2 class="pmd-card-title-text">References</h2>
+                    </div>
+                    <div class="pmd-card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td data-title="code" id="Jancosek2014">[Jancosek2014]</td>
+                                        <td data-title="name">Exploiting Visibility Information in Surface Reconstruction to Preserve Weakly Supported Surfaces, Michal Jancosek, Tomas Pajdla</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Jancosek2011">[Jancosek2011]</td>
+                                        <td data-title="name">Multi-view reconstruction preserving weakly-supported surfaces, Michal Jancosek, Tomas Pajdla, CVPR 2011</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Jancosek2010">[Jancosek2010]</td>
+                                        <td data-title="name">Hallucination-free multi-view stereo, M. Jancosek and T. Pajdla, ECCV 2010</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Labatut2009">[Labatut2009]</td>
+                                        <td data-title="name">Robust and efficient surface reconstruction from range data, P. Labatut, J.-P. Pons, and R. Keriven, 2009</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Boykov2004">[Boykov2004]</td>
+                                        <td data-title="name">An Experimental Comparison of Min-Cut/Max-Flow Algorithms for Energy Minimization in Computer Vision, Yuri Boykov and Vladimir Kolmogorov. 2004</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

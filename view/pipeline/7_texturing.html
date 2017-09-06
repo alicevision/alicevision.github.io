@@ -1,0 +1,44 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 class="text-center">Texturing</h1>
+                <p>
+                    The objective of this step is to texture the generated mesh.
+                </p>
+                <div class="sketchfab-embed-wrapper">
+                    <iframe width="100%" height="450" src="https://sketchfab.com/models/0d38fbbf35ce44d085e2ec18368942df/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+                </div>
+                <p>
+                    If the mesh has no associated UV, it computes automatic UV maps.
+                    AliceVision implements a basic UV mapping approach to minimize the texture space.
+                    The standard UV mapping approach is provided by <a class="ref_link" data-ref="#Levy2002">[Levy2002]</a>.
+                </p>
+                <p>
+                    Then for each triangle, we use the visibility information associated to each vertice to retrieve the texture candidates.
+                    We filter the cameras without a good angle to the surface to favor fronto-parallel cameras and finally average the pixel values.
+                </p>
+                <p>
+                    More advanced methods can be added to refine the alignment before averaging pixel colors.
+                </p>
+                <div class="references pmd-card pmd-card-default pmd-z-depth up_margin">
+                    <div class="pmd-card-title">
+                        <h2 class="pmd-card-title-text">References</h2>
+                    </div>
+                    <div class="pmd-card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td data-title="code" id="Levy2002">[Levy2002]</td>
+                                        <td data-title="name">Least Squares Conformal Maps for Automatic Texture Atlas Generation, Bruno Lévy, Sylvain Petitjean, Nicolas Ray, Jérome Maillot, Siggraph 2002</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

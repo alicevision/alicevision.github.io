@@ -1,30 +1,90 @@
-<section class="white_panel">
+<section class="white_panel no_bottom_margin">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h1 class="text-center">Photogrammetry Pipeline</h1>
-                <p>Photogrammetry is the science of making measurements from photographs. It infers the geometry of a scene from a set of unordered photographies or videos. Photography is the projection of a 3D scene onto a 2D plane, losing depth information. The goal of photogrammetry is to reverse this process.</p>
-                <p>The dense modeling of the scene is the result yielded by chaining two computer vision-based pipelines:<br/>“Structure-from-Motion” (SfM) and “Multi View Stereo” (MVS).</p>
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2 id="pipeline_title" class="text-center">Photogrammetry Pipeline</h2>
             </div>
         </div>
-        <div class="row up_margin">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="btn-group btn-group-justified">
-                    <a role="button" class="btn pmd-ripple-effect btn-primary" data-toggle="tooltip" data-placement="bottom" title="Features Extraction"><i class="material-icons pmd-sm">track_changes</i></a>
-                    <a role="button" class="btn pmd-ripple-effect btn-primary" data-toggle="tooltip" data-placement="bottom" title="Features Matching"><i class="material-icons pmd-sm">location_searching</i></a>
-                    <a role="button" class="btn pmd-ripple-effect btn-primary" data-toggle="tooltip" data-placement="bottom" title="Image Matching"><i class="material-icons pmd-sm">compare</i></a>
-                    <a role="button" class="btn pmd-ripple-effect btn-primary" data-toggle="tooltip" data-placement="bottom" title="Structure from Motion"><i class="material-icons pmd-sm">blur_on</i></a>
-                    <a role="button" class="btn pmd-ripple-effect btn-primary" data-toggle="tooltip" data-placement="bottom" title="Depth Map Estimation"><i class="material-icons pmd-sm">filter</i></a>
-                    <a role="button" class="btn pmd-ripple-effect btn-primary" data-toggle="tooltip" data-placement="bottom" title="Meshing"><i class="material-icons pmd-sm">format_paint</i></a>
-                    <a role="button" class="btn pmd-ripple-effect btn-primary" data-toggle="tooltip" data-placement="bottom" title="Texturing"><i class="material-icons pmd-sm">camera_enhance</i></a>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <div id="pipeline_menu" class="btn-group btn-group-justified" role="group">
+                    <button id="pipeline_1" role="button" class="btn pmd-tooltip pmd-ripple-effect btn-primary" data-toggle="tooltip" data-placement="bottom" title="Features Extraction"><a href="#photogrammetry/natural_feature_extraction"><i class="mdi mdi-24px mdi-blur"></i></a></button>
+                    <button id="pipeline_2" role="button" class="btn pmd-tooltip pmd-ripple-effect btn-primary" data-toggle="tooltip" data-placement="bottom" title="Image Matching"><a href="#photogrammetry/image_matching"><i class="mdi mdi-24px mdi-vector-circle"></i></a></button>
+                    <button id="pipeline_3" role="button" class="btn pmd-tooltip pmd-ripple-effect btn-primary" data-toggle="tooltip" data-placement="bottom" title="Feature Matching"><a href="#photogrammetry/feature_matching"><i class="mdi mdi-24px mdi-vector-combine"></i></a></button>
+                    <button id="pipeline_4" role="button" class="btn pmd-tooltip pmd-ripple-effect btn-primary" data-toggle="tooltip" data-placement="bottom" title="Structure from Motion"><a href="#photogrammetry/sfm"><i class="mdi mdi-24px mdi-weather-hail"></i></a></button>
+                    <button id="pipeline_5" role="button" class="btn pmd-tooltip pmd-ripple-effect btn-primary" data-toggle="tooltip" data-placement="bottom" title="Depth Maps Estimation"><a href="#photogrammetry/depth_maps_estimation"><i class="mdi mdi-24px mdi-image-area-close"></i></a></button>
+                    <button id="pipeline_6" role="button" class="btn pmd-tooltip pmd-ripple-effect btn-primary" data-toggle="tooltip" data-placement="bottom" title="Meshing"><a href="#photogrammetry/meshing"><i class="mdi mdi-24px mdi-cube-outline"></i></a></button>
+                    <button id="pipeline_7" role="button" class="btn pmd-tooltip pmd-ripple-effect btn-primary" data-toggle="tooltip" data-placement="bottom" title="Texturing"><a href="#photogrammetry/texturing"><i class="mdi mdi-24px mdi-format-paint"></i></a></button>
+                    <button id="pipeline_8" role="button" class="btn pmd-tooltip pmd-ripple-effect btn-primary" data-toggle="tooltip" data-placement="bottom" title="Localization"><a href="#photogrammetry/localization"><i class="mdi mdi-24px mdi-camera-enhance"></i></a></button>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<div id="pipeline_view">
+    <section class="white_panel">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h1 class="text-center strong_margin">Loading...</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 
-<script>
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-    })
+<script type="text/javascript">
+    $('#pipeline_menu button').removeClass('active');
+    switch(window.router.get_route_params(1))
+    {
+        case "image_matching":
+            document.title  = "AliceVision | Photogrammetry Pipeline - Image Matching";
+            $('#pipeline_view').load('view/pipeline/2_image_matching.html');
+            $('#pipeline_2').addClass('active');
+        break;
+
+        case "feature_matching":
+            document.title  = "AliceVision | Photogrammetry Pipeline - Feature Matching";
+            $('#pipeline_view').load('view/pipeline/3_feature_matching.html');
+            $('#pipeline_3').addClass('active');
+        break;
+
+        case "sfm":
+            document.title  = "AliceVision | Photogrammetry Pipeline - Structure from Motion";
+            $('#pipeline_view').load('view/pipeline/4_sfm.html');
+            $('#pipeline_4').addClass('active');
+        break;
+
+        case "depth_maps_estimation":
+            document.title  = "AliceVision | Photogrammetry Pipeline - Depth Maps Estimation";
+            $('#pipeline_view').load('view/pipeline/5_depth_maps_estimation.html');
+            $('#pipeline_5').addClass('active');
+        break;
+
+        case "meshing":
+            document.title  = "AliceVision | Photogrammetry Pipeline - Meshing";
+            $('#pipeline_view').load('view/pipeline/6_meshing.html');
+            $('#pipeline_6').addClass('active');
+        break;
+
+        case "texturing":
+            document.title  = "AliceVision | Photogrammetry Pipeline - Texturing";
+            $('#pipeline_view').load('view/pipeline/7_texturing.html');
+            $('#pipeline_7').addClass('active');
+        break;
+
+        case "localization":
+            document.title  = "AliceVision | Photogrammetry Pipeline - Localization";
+            $('#pipeline_view').load('view/pipeline/8_localization.html');
+            $('#pipeline_8').addClass('active');
+        break;
+
+        default:
+            document.title  = "AliceVision | Photogrammetry Pipeline - Feature Extraction";
+            $('#pipeline_view').load('view/pipeline/1_feature_extraction.html');
+            $('#pipeline_1').addClass('active');
+        break;
+    };
+
+    $('[data-toggle="tooltip"]').tooltip();
 </script>

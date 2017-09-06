@@ -1,0 +1,40 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 class="text-center">Image Matching</h1>
+                <p>
+                    The objective of this part is to find images that are looking to the same areas of the scene.
+                    For that, we use the image retrieval techniques to find images that share some content without the cost of resolving all feature matches in details.
+                    The ambition is to simplify the image in a compact image descriptor which allows to compute the distance between all images descriptors efficiently.
+                </p>
+                <p>
+                    One of the most common method to generate this image descriptor is the vocabulary tree approach.
+                    By passing all extracted features descriptors into it, it makes a classification by comparing their descriptors to the ones on each node of this tree.
+                    Each feature descriptor ends up in one leaf, which can be stored by a simple index: the index of this leaf in the tree.
+                    The image descriptor is then represented by this collection of used leaves indices.
+                </p>
+                <p>
+                    It is now possible to see if different images share the same content by comparing these image descriptors.
+                </p>
+                <div class="references pmd-card pmd-card-default pmd-z-depth up_margin">
+                    <div class="pmd-card-title">
+                        <h2 class="pmd-card-title-text">References</h2>
+                    </div>
+                    <div class="pmd-card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td data-title="code" id="Nister2006">[Nister2006]</td>
+                                        <td data-title="name">Scalable Recognition with a Vocabulary Tree, David Nister and Henrik Stewenius, CVPR 2006</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

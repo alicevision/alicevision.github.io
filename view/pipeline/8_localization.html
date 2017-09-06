@@ -1,0 +1,66 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 class="text-center">Localization</h1>
+                <p>
+                    Based on the SfM results, we can perform camera localization and retrieve the motion of an animated camera in the scene of the 3D reconstruction.
+                </p>
+                <h2>Camera calibration</h2>
+                <p>
+                    The internal camera parameters can be calibrated from multiple views of a checkerboard.
+                    This allows to retrieve focal length, principal point and distortion parameters.
+                    A detailed explanation is presented in <a class="ref_link" data-ref="#opencvCameraCalibration">[opencvCameraCalibration]</a>.
+                </p>
+                <h2>Single camera localization</h2>
+                <p>
+                    We use the algorithm presented in image matching section to localize the closest images in the SfM results.
+                    Then we perform feature matching with those images as well as with the N previous frames.
+                    Then we directly get 2D-3D associations, that are used to localize the camera.
+                    Finally, a global Bundle Adjustment is performed to refine the camera parameters.
+                </p>
+                <h2>Rig of cameras</h2>
+                <p>
+                    If a rig of cameras is used, we can perform the rig calibration.
+                    We localize cameras individually on the whole sequence.
+                    Then we use all valid poses to compute the relative poses between cameras of the rig and choose the more stable value across the images.
+                    Then we initialize the rig relative pose with this value and perform a global Bundle Adjustment on all the cameras of the rig.
+                    When the rig is calibrated, we can use it to directly localize the rig pose from the synchronized multi-cameras system with <a class="ref_link" data-ref="#Kneip2014-2">[Kneip2014]</a> approaches.
+                </p>
+                <div class="references pmd-card pmd-card-default pmd-z-depth up_margin">
+                    <div class="pmd-card-title">
+                        <h2 class="pmd-card-title-text">References</h2>
+                    </div>
+                    <div class="pmd-card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td data-title="code" id="opencvCameraCalibration">[opencvCameraCalibration]</td>
+                                        <td data-title="name"><a target="_blank" href="http://docs.opencv.org/3.0-beta/doc/tutorials/calib3d/camera_calibration/camera_calibration.html">Camera calibration with OpenCV</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Kneip2011">[Kneip2011]</td>
+                                        <td data-title="name">A Novel Parametrization of the Perspective-Three-Point Problem for a Direct Computation of Absolute Camera Position and Orientation. L. Kneip, D. Scaramuzza, R. Siegwart. June 2011</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Kneip2013">[Kneip2013]</td>
+                                        <td data-title="name">Using Multi-Camera Systems in Robotics: Efficient Solutions to the NPnP ProblemL. Kneip, P. Furgale, R. Siegwart. May 2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Kneip2014-1">[Kneip2014]</td>
+                                        <td data-title="name"><a target="_blank" href="https://github.com/laurentkneip/opengv">OpenGV: A unified and generalized approach to real-time calibrated geometric vision, L. Kneip, P. Furgale. May 2014.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Kneip2014-2">[Kneip2014]</td>
+                                        <td data-title="name">Efficient Computation of Relative Pose for Multi-Camera Systems. L. Kneip, H. Li. June 2014</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

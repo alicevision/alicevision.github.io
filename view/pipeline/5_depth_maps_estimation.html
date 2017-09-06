@@ -1,0 +1,66 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 class="text-center">Depth maps estimation</h1>
+                <p>
+                    For all cameras that have been resolved by SfM, we want to retrieve the depth value of each pixel.
+                    Many approaches exist, like Block Matching, Semi-Global Matching (SGM) <a class="ref_link" data-ref="#Hirschmüller2005">[Hirschmüller2005]</a>, <a class="ref_link" data-ref="#Hirschmüller2008">[Hirschmüller2008]</a> or ADCensus <a class="ref_link" data-ref="#Xing2011">[Xing2011]</a>.
+                    We will focus on the SGM method implemented in AliceVision.
+                </p>
+                <p>
+                    For each image, we select the N best/closest cameras around.
+                    We select fronto-parallel planes based on the intersection of the optical axis with the pixels of the selected neighboring cameras.
+                    This creates a volume W, H, Z with many depth candidates per pixel.
+                    We estimate the similarity for all of them.
+                    The similarity is computed by the Zero Mean Normalized Cross-Correlation (ZNCC) of a small patch in the main image reprojected into the other camera.
+                    This create a volume of similarities.
+                    For each neighboring image, we accumulate similarities into this volume.
+                    This volume is very noisy.
+                    We apply a filtering step along X and Y axes which accumulates local costs which drastically reduce the score of  isolated high values.
+                    We finally select the local minima and replace the selected plane index with the depth value stored into a depth map.
+                    This depth map has banding artifacts as it is based on the original selection of depth values.
+                    So a refine step is applied to get depth values with sub-pixel accuracy.
+                </p>
+                <p>
+                    All these depth maps can be computed independently in parallel.
+                    Then we apply a filtering step to ensure consistency between multiple cameras.
+                    A compromise is chosen based on both similarity value and the number of coherent cameras to keep weakly supported surfaces without adding artefacts.
+                </p>
+                <div class="references pmd-card pmd-card-default pmd-z-depth up_margin">
+                    <div class="pmd-card-title">
+                        <h2 class="pmd-card-title-text">References</h2>
+                    </div>
+                    <div class="pmd-card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td data-title="code" id="Hirschmüller2005">[Hirschmüller2005]</td>
+                                        <td data-title="name">Accurate and efficient stereo processing by semi-global matching and mutual information, H. Hirschmüller. CVPR 2005</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Hirschmüller2008">[Hirschmüller2008]</td>
+                                        <td data-title="name">Stereo processing by semiglobal matching and mutual information, H. Hirschmüller, 2008</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Strecha2006">[Strecha2006]</td>
+                                        <td data-title="name">Combined depth and outlier estimation in multi-view stereo, C. Strecha, R. Fransens, and L. Van Gool, CVPR 2006</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Scharstein2002">[Scharstein2002]</td>
+                                        <td data-title="name">A taxonomy and evaluation of dense two-frame stereo correspondence algorithms, D. Scharstein and R. Szeliski, 2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Xing2011">[Xing2011]</td>
+                                        <td data-title="name">On building an accurate stereo matching system on graphics hardware. Xing, M., Xun, S., Mingcai Z., Shaohui J., Haitao, W., Xiaopeng Z., 2011</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
