@@ -1,0 +1,140 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 class="text-center">Structure from Motion</h1>
+                <p>
+                    The objective of this step is to understand the geometric relationship behind all the observations provided by the input images, and infer the rigid scene structure (3D points) with the pose (position and orientation) and internal calibration of all cameras.
+                    The Incremental pipeline is a growing reconstruction process.
+                    It first computes an initial two-view reconstruction that is iteratively extended by adding new views.
+                </p>
+                <div class="sketchfab-embed-wrapper">
+                    <iframe width="100%" height="450" src="https://sketchfab.com/models/31c093dca5a84057983d8de22a96b416/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+                </div>
+                <p>
+                    First, it fuses all feature matches between image pairs into tracks.
+                    Each track is supposed to represent a point in space, visible from multiple cameras.
+                    However, at this step of the pipeline, it still contains many outliers.
+                    During this fusion of matches, we remove incoherent tracks.
+                </p>
+                <p>
+                    Then, the incremental algorithm has to choose the best initial image pair.
+                    This choice is critical for the quality of the final reconstruction.
+                    It should indeed provide robust matches and contain reliable geometric information.
+                    So, this image pair should maximize the number of matches and the repartition of the corresponding features in each image.
+                    But at the same time, the angle between the cameras should also be large enough to provide reliable geometric information.
+                </p>
+                <p>
+                    Then we compute the fundamental matrix between these 2 images and consider that the first one is the origin of the coordinate system.
+                    Now that we know the pose of the 2 first cameras, we can triangulate the corresponding 2D features into 3D points.
+                </p>
+                <p>
+                    After that, we select all the images that have enough associations with the features that are already reconstructed in 3D.
+                    This algorithm is called next best views selection.
+                    Based on these 2D-3D associations it performs the resectioning of each of these new cameras.
+                    The resectioning is a Perspective-n-Point algorithm (PnP) in a RANSAC framework to find the pose of the camera that validates most of the features associations.
+                    On each camera, a non-linear minimization is performed to refine the pose.
+                </p>
+                <p>
+                    From these new cameras poses, some tracks become visible by 2 or more resected cameras and it triangulates them.
+                    Then, we launch a Bundle Adjustment to refine everything: extrinsics and intrinsics parameters of all cameras as well as the position of all 3D points.
+                    We filter the results of the Bundle Adjustment by removing all observations that have high reprojection error or insufficient angles between observations.
+                </p>
+                <p>
+                    As we have triangulated new points, we get more image candidates for next best views selection.
+                    We iterate like that, adding cameras and triangulating new 2D features into 3D points and removing 3D points that became invalidated, until we can’t localize new views.
+                </p>
+                <p>
+                    Many other approaches exists like Global <a class="ref_link" data-ref="#Moulon2013">[Moulon2013]</a>,
+                    Hierarchical <a class="ref_link" data-ref="#Havlena2010">[Havlena2010]</a>, <a class="ref_link" data-ref="#Toldo2015">[Toldo2015]</a>
+                    or multi-stage <a class="ref_link" data-ref="#Shah2014">[Shah2014]</a> approaches.
+                </p>
+                <div class="references pmd-card pmd-card-default pmd-z-depth up_margin">
+                    <div class="pmd-card-title">
+                        <h2 class="pmd-card-title-text">References</h2>
+                    </div>
+                    <div class="pmd-card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td data-title="code" id="Cheng2014">[Cheng2014]</td>
+                                        <td data-title="name">Fast and Accurate Image Matching with Cascade Hashing for 3D Reconstruction Jian Cheng, Cong Leng, Jiaxiang Wu, Hainan Cui, Hanqing Lu. CVPR 2014</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Fischler1981">[Fischler1981]</td>
+                                        <td data-title="name">Random sample consensus: a paradigm for model fitting with applications to image analysis and automated cartography. Fischler, Martin A., and Robert C. Bolles. 1981</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Moulon2013">[Moulon2013]</td>
+                                        <td data-title="name">Global Fusion of Relative Motions for Robust, Accurate and Scalable Structure from Motion. Pierre Moulon, Pascal Monasse and Renaud Marlet. ICCV 2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Moulon2012-1">[Moulon2012]</td>
+                                        <td data-title="name">Adaptive structure from motion with a contrario model estimation. Pierre Moulon, Pascal Monasse, and Renaud Marlet. ACCV 2012</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Moulon2012-2">[Moulon2012]</td>
+                                        <td data-title="name">Automatic homographic registration of a pair of images, with a contrario elimination of outliers. Moisan, Lionel, Pierre Moulon, and Pascal Monasse. IPOL 2012</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Moulon2012-3">[Moulon2012]</td>
+                                        <td data-title="name">Unordered feature tracking made fast and easy, Pierre Moulon and Pascal Monasse, CVMP 2012</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Kneip2011">[Kneip2011]</td>
+                                        <td data-title="name">A Novel Parametrization of the P3P-Problem for a Direct Computation of Absolute Camera Position and Orientation. Kneip, L.; Scaramuzza, D. ; Siegwart, R. CVPR 2011</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Lepetit2009">[Lepetit2009]</td>
+                                        <td data-title="name">EPnP: An Accurate O(n) Solution to the PnP Problem. V. Lepetit and F. Moreno-Noguer and P. Fua, IJCV 2009</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Nister2004">[Nister2004]</td>
+                                        <td data-title="name">An Efficient Solution to the Five-Point Relative Pose. D. Nister PAMI 2004</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Havlena2010">[Havlena2010]</td>
+                                        <td data-title="name">Efficient Structure from Motion by Graph Optimization. M. Havlena, A. Torii, and T. Pajdla. ECCV 2010</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Toldo2015">[Toldo2015]</td>
+                                        <td data-title="name">Hierarchical structure-and-motion recovery from uncalibrated images. R. Toldo, R. Gherardi, M. Farenzena and A. Fusiello. CVIU 2015</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Shah2014">[Shah2014]</td>
+                                        <td data-title="name">Multistage SFM: Revisiting Incremental Structure from Motion, Rajvi Shah, Aditya Deshpande, P J Narayanan, 2014</td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td data-title="code" id="Moulon2015">[Moulon2015]</td>
+                                        <td data-title="name"><a target="_blank" href="https://hal.archives-ouvertes.fr/file/index/docid/996935/filename/These_MOULON.pdf">Robust and precise positioning of image networks, Pierre Moulon 2015 (in French)</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Martinec2008">[Martinec2008]</td>
+                                        <td data-title="name">Robust Multiview Reconstruction. Daniel Martinec, 2008</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Hartley2000">[Hartley2000]</td>
+                                        <td data-title="name">Multiple view geometry in computer vision. Richard Hartley and Andrew Zisserman. Cambridge, 2000</td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td data-title="code" id="Ceres">[Ceres]</td>
+                                        <td data-title="name"><a target="_blank" href="http://ceres-solver.org/">Ceres Solver, Sameer Agarwal and Keir Mierle and Others</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="OpenGV">[OpenGV]</td>
+                                        <td data-title="name"><a target="_blank" href="https://github.com/laurentkneip/opengv">The OpenGV library</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
