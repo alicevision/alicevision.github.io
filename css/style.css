@@ -130,7 +130,6 @@ footer a.partner {
     position:absolute;
     height: 40vw;
     width: 100%;
-    background-color: rgba(0,0,0,0.1);
     z-index: 9;
 }
 
@@ -207,17 +206,13 @@ footer a.partner {
     margin-top: 55px;
 }
 
-#pipeline_menu button {
-    margin: 0;
-    padding: 0;
+#pipeline_menu {
+    font-size: 0;
 }
 
-#pipeline_menu button.pmd-tooltip a {
-    display: block;
-    padding: 1em;
-    height: 100%;
-    width: 100%;
+#pipeline_menu a {
     color: #fff;
+    padding: 1em;
 }
 
 #pipeline_view section {
