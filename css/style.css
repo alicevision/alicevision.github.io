@@ -2,6 +2,7 @@
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";
 /* Google Font */
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "https://fonts.googleapis.com/css?family=Barlow+Condensed:300";
 /* Material Design Icon Font */
 @import "https://cdn.materialdesignicons.com/1.9.32/css/materialdesignicons.min.css";
 /* Font Awesome */
@@ -41,6 +42,10 @@ section.gray_panel {
     background-color: #ededed;
 }
 
+section.blue_panel {
+    background-color: #0071bc;
+    color: #fff;
+}
 section.shattered_panel, #view{
     background: #fff url("img/shattered.png") repeat;
 }
@@ -104,20 +109,25 @@ footer a.partner {
 .transition.current {
     background-color: rgba(62, 228, 255, 0.22);
 }
-
-
 .up_margin {
     margin-top: 2rem;
+}
+
+.bottom_margin {
+    margin-bottom: 2rem;
 }
 
 .strong_margin {
     margin: 2rem;
 }
 
-.text-white{
+.text-white {
     color: #fff;
 }
 
+.text-meshroom {
+    font-family: 'Barlow Condensed', sans-serif;
+}
 .text-center img.img-responsive{
     margin: 1rem auto;
 }

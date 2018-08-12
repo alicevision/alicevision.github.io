@@ -82,6 +82,11 @@
         document.title  = "AliceVision | Photogrammetric Computer Vision Framework";
     });
 
+    window.router.add_route('meshroom', function () {
+        $("#view").load("view/meshroom.html");
+        document.title  = "AliceVision | Meshroom - 3D Reconstruction Software";
+    });
+
     window.router.add_route('photogrammetry', function () {
         $("#view").load("view/photogrammetry.html");
         document.title  = "AliceVision | Photogrammetry Pipeline";
