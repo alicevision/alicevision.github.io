@@ -263,6 +263,15 @@ a:active {  color: #208698;  }
     background-color: #208698 !important;
 }
 
+.illustration {
+    display: block;
+    margin: auto;
+    width: 100%;
+    z-index: 0;
+    position: relative;
+    top: -70px;
+}
+
 @media only screen and (max-width :  750px) {
     .carousel_overlay .text h1 {  font-size: 1.5em; }
     .carousel_overlay .text li {  display: none; }
