@@ -263,6 +263,12 @@ a:active {  color: #208698;  }
     background-color: #208698 !important;
 }
 
+.illustration-contributing {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
 .illustration {
     display: block;
     margin: auto;
