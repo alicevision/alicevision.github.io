@@ -136,25 +136,26 @@ footer a.partner {
     background-color: #fff;
 }
 
-.carousel_overlay {
-    position:absolute;
+.home_overlay {
     height: 40vw;
     width: 100%;
     z-index: 9;
+
+    background-image: url("../img/result/home_lion.jpg");
+    background-position: center;
+    background-size: contain;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.carousel_overlay .text {
-    display: block;
-    margin-top: 20vw;
-    transform: translateY(-50%);
-}
-
-.carousel_overlay .text h1 {
+.home_overlay .text h1 {
     display: block;
     font-size: 3em;
 }
 
-.carousel_overlay .text li {
+.home_overlay .text li {
     display: block;
     font-size: 1.2em;
 }
@@ -273,16 +274,14 @@ a:active {  color: #208698;  }
     display: block;
     margin: auto;
     width: 100%;
-    z-index: 0;
     position: relative;
-    top: -70px;
 }
 
 @media only screen and (max-width :  750px) {
-    .carousel_overlay .text h1 {  font-size: 1.5em; }
-    .carousel_overlay .text li {  display: none; }
+    .home_overlay .text h1 {  font-size: 1.5em; }
+    .home_overlay .text li {  display: none; }
 }
 
 @media only screen and (max-width :  450px) {
-    .carousel_overlay .text h1 {  display: none;  }
+    .home_overlay .text h1 {  display: none;  }
 }
