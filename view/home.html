@@ -1,8 +1,8 @@
 <header>
-    <div class="container-fluid">
+    <div class="container-fluid" data-rellax-speed="7">
         <div class="row">
             <div class="home_overlay col-md-12 text-center text-white">
-                <div class="text">
+                <div class="text rellax">
                     <h1>AliceVision</h1>
                     <p class="lead">Photogrammetric Computer Vision Framework</p>
                     <ul class="list-unstyled">
@@ -10,11 +10,12 @@
                         <li>Photomodeling</li>
                         <li>Camera Tracking</li>
                     </ul>
+                    
                 </div>
             </div>
-        </div>
     </div>
 </header>
+
 <section class="white_panel">
     <div class="container">
         <div class="row">
@@ -22,37 +23,146 @@
                 <h1 class="text-center">Photogrammetry Pipeline</h1>
                 <p>Photogrammetry is the science of making measurements from photographs. It infers the geometry of a scene from a set of unordered photographies or videos. Photography is the projection of a 3D scene onto a 2D plane, losing depth information. The goal of photogrammetry is to reverse this process.</p>
                 <p>The dense modeling of the scene is the result yielded by chaining two computer vision-based pipelines:<br/>“Structure-from-Motion” (SfM) and “Multi View Stereo” (MVS).</p>
-                <h3 class="text-center">Learn more about each step of the photogrammetry pipeline:</h3>
-                <div class="text-center strong_margin">
-                    <a class="btn pmd-btn-raised pmd-ripple-effect btn-primary" href="#photogrammetry">Learn more</a>
-                </div>
+                <p>Learn more about each step of the <a href="#photogrammetry">photogrammetry pipeline</a>.</p>
             </div>
         </div>
         <img src="img/product/home_culturalHeritage.png" class="illustration">
     </div>
 </section>
+
+<section class="meshroom_features">
+    <div class="container rellax" data-rellax-speed="5" style="transform: translate3d(0px, 5%, 0px);">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">
+                    <img width="100" src="img/meshroom/logo_meshroom.png" style="margin-right: 1.5em; margin-left: 1.5em;">Meshroom Software
+                </h1>
+            </div>
+        </div>
+
+        <div class="row feature-container">
+            <div class="col-xs-12 col-md-4 feature-text">
+                <h2 class="text-center">Photogrammetry Workflow</h1>
+                <div>
+                    <ul>
+                        <li>High Quality 3D Models</li>
+                        <li>Use GPUs to combine High Quality with Performance</li>
+                        <li>Scalable solution (>1K Images)</li>
+                        <li>Nodal Editor with Caching Mechanism</li>
+                        <li>Augment a solved Structure-From-Motion with new images</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-8 feature-img">
+                <img class="img-responsive" src="img/meshroom/buddha_dataset.png">
+            </div>
+        </div>
+
+        <div class="row feature-container">
+            <div class="col-xs-12 col-md-4 feature-text">
+                <h2 class="text-center">Post-processing and Retexturing</h1>
+                <div>
+                    <ul>
+                        <li>Decimate your mesh</li>
+                        <li>Retexture your mesh in Meshroom after retopology in Blender, ZBrush, Maya, ...</li>
+                        <li>Use Custom UVs or automatically generate them</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-8 feature-img">
+                <img class="img-responsive" src="img/meshroom/retexture_decimate.gif">
+            </div>
+        </div>
+
+        <div class="row feature-container">
+            <div class="col-xs-12 col-md-4 feature-text">
+                <h2 class="text-center">HDRI Workflow (Coming Soon)</h1>
+                <div>
+                    <ul>
+                        <li>Fusion of Multi-bracketing LDR images into HDR</li>
+                        <li>Alignment of panorama images</li>
+                        <li>Support for fisheye images</li>
+                        <li>Automatically estimate fisheye circle or manually edit it</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-8 feature-img">
+                <img class="img-responsive" src="img/meshroom/hdri_fisheye.jpg">
+            </div>
+        </div>
+
+        <div class="row feature-container">
+            
+            <div class="col-xs-12 col-md-4 feature-text">
+                <h2 class="text-center">Render Farm submission</h1>
+                <div>
+                    <ul>
+                        <li>Easy to integrate in your Renderfarm System</li>
+                        <li>Add specific rules to select the most suitable machines regarding CPU, RAM, GPU requirements of each Node</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-8 feature-img">
+                <img class="img-responsive" src="img/meshroom/renderfarm.png">
+            </div>
+        </div>
+
+        <div class="row feature-container">
+            <div class="col-xs-12 col-md-4 feature-text">
+                <h2 class="text-center">Custom Pipelines</h1>
+                <div>
+                    <ul>
+                        <li>You can create custom pipelines and use it as a default template</li>
+                        <li>It is a fully Open Source nodal workflow, so you can enter into the code and customize some steps to specific needs without re-creating a full pipeline</li>
+                        <li>Contact us for specific customizations</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-8 feature-img">
+                <img class="img-responsive" src="img/meshroom/custom_pipeline.png">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="try-meshroom ">
+                <a href="#meshroom" class="btn pmd-btn-raised pmd-ripple-effect btn-primary" type="button">
+                    <img class="img-responsive" src="img/meshroom/logo_meshroom.png">TRY MESHROOM NOW
+                </a>
+            </div>
+
+            <div class="join-us" style="font-size: 1.4em;">
+                <a target="_blank" href="https://github.com/alicevision/meshroom">
+                    <i class="fa fa-github" style="font-size: 3em;"></i><br/>Join us on Github
+                </a>
+            </div>
+            
+        </div>
+
+        
+    </div>
+</section>
+
 <section>
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h1>Software & Libraries</h1>
+                <h1>Software Integrations</h1>
             </div>
             <div class="col-md-4">
                 <div class="pmd-card pmd-card-default pmd-z-depth">
                     <div class="pmd-card-media">
-                        <img class="img-responsive" src="img/product/meshroom.jpg">
+                        <img class="img-responsive" src="img/product/meshroom2blender.jpg">
                     </div>
                     <div class="pmd-card-title">
-                        <h2 class="pmd-card-title-text">Meshroom</h2>
-                        <span class="pmd-card-subtitle-text">3D Reconstruction Software</span>
+                        <h2 class="pmd-card-title-text">Blender Plugins</h2>
+                        <span class="pmd-card-subtitle-text">Setup Blender from your Meshroom scene</span>
                     </div>
                     <div class="pmd-card-body">
-                        <p>Meshroom allows you to run the whole photogrammetric pipeline. Put your images and it will generate a textured mesh automatically.</p>
+                        <p>Import the result of your reconstruction in Blender for retopology and import your optimized model back into Meshroom for Texturing.</p>
                     </div>
-                    <div class="pmd-card-actions">                      
-                        <a target="_blank" href="https://github.com/alicevision/meshroom" class="btn pmd-btn-raised pmd-ripple-effect btn-primary" type="button"><i class="fa fa-github"></i><span>Github</span></a>
-                        <a target="_blank" href="https://youtu.be/v_O6tYKQEBA" class="btn pmd-btn-raised pmd-ripple-effect btn-primary" type="button"><i class="fa fa-youtube fa-lg"></i><span>Demo</span></a>
-                        <a target="_blank" href="https://alicevision.github.io/#meshroom" class="btn pmd-btn-raised pmd-ripple-effect btn-primary"><i class="fa fa-arrow-circle-down"></i><span>Download</span></a>
+                    <div class="pmd-card-actions">
+                        <a target="_blank" href="https://github.com/SBCV/Blender-Addon-Photogrammetry-Importer" class="btn pmd-btn-raised pmd-ripple-effect btn-primary" type="button"><i class="fa fa-github"></i><span>Photog Addon</span></a>
+                        <a target="_blank" href="https://github.com/tibicen/meshroom2blender" class="btn pmd-btn-raised pmd-ripple-effect btn-primary" type="button"><i class="fa fa-github"></i><span>Meshroom2Blender</span></a>
                     </div>
                 </div>
             </div>
@@ -62,7 +172,7 @@
                         <img class="img-responsive" src="img/product/mayamvg.jpg">
                     </div>
                     <div class="pmd-card-title">
-                        <h2 class="pmd-card-title-text">MeshroomMaya</h2>
+                        <h2 class="pmd-card-title-text">Maya Plugin</h2>
                         <span class="pmd-card-subtitle-text">Photomodeling plugin for Autodesk © Maya</span>
                     </div>
                     <div class="pmd-card-body">
@@ -93,6 +203,9 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Libraries</h1>
+            </div>
             <div class="col-md-4">
                 <div class="pmd-card pmd-card-default pmd-z-depth">
                     <div class="pmd-card-media">
@@ -147,6 +260,7 @@
         </div>
     </div>
 </section>
+
 <section class="gray_panel">
     <div class="container">
         <div class="row">
@@ -173,6 +287,7 @@
         </div>
     </div>
 </section>
+
 <section class="white_panel">
     <div class="container">
         <div class="row">
@@ -188,6 +303,9 @@
         </div>
     </div>
 </section>
+
+<script src="js/rellax.min.js"></script>
+
 <script type="text/javascript">
     $(document).ready(function(){
         $("#av-carousel").owlCarousel({
@@ -203,5 +321,20 @@
             autoplayTimeout:4000,
             autoplayHoverPause:false
         });
+
+        //navbar events
+        $('.navbar-collapse li').on('click', function(){
+            $('.navbar-collapse').collapse('hide');
+            });
+
+        $(document).click(function(e) {
+            if (!$(e.target).is('.navbar-collapse')) {
+                $('.navbar-collapse').collapse('hide');        
+            }
+        });
+    });
+
+    var rellax = new Rellax('.rellax', {
+        center: true
     });
 </script>

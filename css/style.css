@@ -17,11 +17,24 @@
 
 body {
     background-color: #ededed;
+    text-align: justify;
+}
+
+h1, h2, h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.6rem;
 }
 
 section {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 section:last-of-type:not(.no_bottom_margin) {
@@ -46,6 +59,67 @@ section.blue_panel {
     background-color: #0071bc;
     color: #fff;
 }
+
+section.meshroom_features{
+    background-image: url(img/building.jpg);
+    background-position: top;
+    background-repeat: repeat-y;
+    color: #fff;
+    background-size: cover;
+}
+
+section.meshroom_features h2 {
+    margin-bottom: 20px;
+}
+
+section.meshroom_features ul {
+    font-size: 1.2em;
+    line-height: 1.8em;
+    font-weight: 300;
+}
+
+section.meshroom_features .join-us a {
+    color: white;
+}
+
+section.meshroom_features .join-us {
+    text-align: center;
+}
+
+section.meshroom_features .row {
+    margin-bottom: 6em;
+}
+
+section.meshroom_features .feature-container {
+    background-color: rgba(0,0,0,0.2);
+    padding: 1em;
+}
+
+section.meshroom_features .try-meshroom {
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+section.meshroom_features .try-meshroom a {
+    color: white;
+    background-color: #0071bc !important;
+    font-size: 1.2em;
+}
+
+section.meshroom_features .try-meshroom a:hover {
+    background-color: #204d74 !important;
+}
+
+section.meshroom_features .try-meshroom a:active {
+    background-color: #3dbff6 !important;
+}
+
+section.meshroom_features .try-meshroom img {
+    width: 70px;
+    margin-right: 10px;
+    display: inherit;
+}
+
 section.shattered_panel, #view{
     background: #fff url("img/shattered.png") repeat;
 }
@@ -152,7 +226,7 @@ footer a.partner {
 
 .home_overlay .text h1 {
     display: block;
-    font-size: 3em;
+    font-size: 4em;
 }
 
 .home_overlay .text li {
@@ -280,6 +354,14 @@ a:active {  color: #208698;  }
 @media only screen and (max-width :  750px) {
     .home_overlay .text h1 {  font-size: 1.5em; }
     .home_overlay .text li {  display: none; }
+}
+
+
+@media only screen and (min-width: 992px) {
+    section.meshroom_features .feature-container:nth-child(2n) {
+    display: flex;
+    flex-direction: row-reverse;
+}
 }
 
 @media only screen and (max-width :  450px) {
