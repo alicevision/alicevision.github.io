@@ -321,6 +321,17 @@
             autoplayTimeout:4000,
             autoplayHoverPause:false
         });
+
+        //navbar events
+        $('.navbar-collapse li').on('click', function(){
+            $('.navbar-collapse').collapse('hide');
+            });
+
+        $(document).click(function(e) {
+            if (!$(e.target).is('.navbar-collapse')) {
+                $('.navbar-collapse').collapse('hide');        
+            }
+        });
     });
 
     var rellax = new Rellax('.rellax', {
