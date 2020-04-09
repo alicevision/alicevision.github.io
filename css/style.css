@@ -60,6 +60,11 @@ section.blue_panel {
     color: #fff;
 }
 
+section.photogrammetry_pipeline {
+    background-color: #fff;
+    position: relative;
+}
+
 section.meshroom_features{
     background-image: url(img/building.jpg);
     background-position: top;
