@@ -125,12 +125,21 @@ section.meshroom_features .try-meshroom img {
     display: inherit;
 }
 
-section.shattered_panel, #view{
+section.results {
+    background: #fff;
+}
+
+section.software_libraries {
     background: #fff url("img/shattered.png") repeat;
 }
 
-section.geometry_panel{
-    background: #fff url("img/geometry.png") repeat;
+section.open_source {
+    background: #fff url("img/shattered_blue.png") repeat;
+    color: white;
+}
+
+section.shattered_panel, #view{
+    background: #fff url("img/shattered.png") repeat;
 }
 
 section h1 {
