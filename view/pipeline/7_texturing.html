@@ -15,8 +15,10 @@
                     The standard UV mapping approach is provided by <a class="ref_link" data-ref="#Levy2002">[Levy2002]</a>.
                 </p>
                 <p>
-                    Then for each triangle, we use the visibility information associated to each vertice to retrieve the texture candidates.
-                    We filter the cameras without a good angle to the surface to favor fronto-parallel cameras and finally average the pixel values.
+                    The 3D texturing is based on a generalization of the multi-band blending described in [Burt1983]. 
+                    For each triangle, we use the visibility information associated to each vertex to retrieve the texture candidates.
+                    We filter the cameras without a good angle to the surface to favor fronto-parallel cameras and finally average the pixel values. 
+                    This approach is in the same spirit than [Baumberg2002] and [Allene2008].
                 </p>
                 <p>
                     More advanced methods can be added to refine the alignment before averaging pixel colors.
@@ -32,6 +34,18 @@
                                     <tr>
                                         <td data-title="code" id="Levy2002">[Levy2002]</td>
                                         <td data-title="name">Least Squares Conformal Maps for Automatic Texture Atlas Generation, Bruno Lévy, Sylvain Petitjean, Nicolas Ray, Jérome Maillot, Siggraph 2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Burt1983">[Burt1983]</td>
+                                        <td data-title="name">A Multiresolution Spline with Application to Image Mosaics, P. J. Burt and E. H. Adelson, ACM Trans. Graph. 1983</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Baumberg2002">[Baumberg2002]</td>
+                                        <td data-title="name">Blending images for texturing 3D models, A. Baumberg, BMVC 2002</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-title="code" id="Allene2008">[Allene2008]</td>
+                                        <td data-title="name">Seamless image-based texture atlases using multi-band blending, C. Allene and J. Pons and R. Keriven, ICPR 2008</td>
                                     </tr>
                                 </tbody>
                             </table>
