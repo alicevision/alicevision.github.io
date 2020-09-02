@@ -89,6 +89,7 @@ section.meshroom_features .join-us a {
 
 section.meshroom_features .join-us {
     text-align: center;
+    font-size: 1.4em;
 }
 
 section.meshroom_features .row {
@@ -370,7 +371,9 @@ a:active {  color: #208698;  }
     .home_overlay .text h2 {  font-size: 1.5em; }
     .home_overlay .text li {  font-size: 1.0em; }
     .home_overlay { background-image: url("../img/result/home_lion_half_dark.jpg"); height: 80vw; background-size: cover }
+    section.meshroom_features ul { font-size: 1.0em; line-height: 1.6em; }
 
+}
 
 @media only screen and (min-width: 992px) {
     section.meshroom_features .feature-container:nth-child(2n) {
@@ -385,6 +388,7 @@ a:active {  color: #208698;  }
     .home_overlay .text h4 {  display: none; }
     .home_overlay .text li {  font-size: 0.8em; }
     .home_overlay { background-image: url("../img/result/home_lion_half_dark.jpg"); height: 80vw; background-size: cover }
+    section.meshroom_features .join-us { font-size: 1.0em; line-height: 1.6em; }
 
 }
 
@@ -394,5 +398,6 @@ a:active {  color: #208698;  }
     .home_overlay .text h4 {  display: none; }
     .home_overlay .text li {  display: none; }
     .home_overlay { background-image: url("../img/result/home_lion_half_dark.jpg"); height: 80vw; background-size: cover }
+    section.meshroom_features .join-us { font-size: 1.0em; line-height: 1.6em; }
 
 }
