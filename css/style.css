@@ -368,9 +368,8 @@ a:active {  color: #208698;  }
 @media only screen and (max-width :  768px) {
     .home_overlay .text h1 {  font-size: 2.0em; }
     .home_overlay .text h2 {  font-size: 1.5em; }
-    .home_overlay { background-image: url("../img/result/home_lion_half.jpg"); height: 80vw; background-size: cover }
-
-}
+    .home_overlay .text li {  font-size: 1.0em; }
+    .home_overlay { background-image: url("../img/result/home_lion_half_dark.jpg"); height: 80vw; background-size: cover }
 
 
 @media only screen and (min-width: 992px) {
@@ -385,7 +384,7 @@ a:active {  color: #208698;  }
     .home_overlay .text h2 {  display: none; }
     .home_overlay .text h4 {  display: none; }
     .home_overlay .text li {  font-size: 0.8em; }
-    .home_overlay { background-image: url("../img/result/home_lion_half.jpg"); height: 80vw; background-size: cover }
+    .home_overlay { background-image: url("../img/result/home_lion_half_dark.jpg"); height: 80vw; background-size: cover }
 
 }
 
@@ -394,6 +393,6 @@ a:active {  color: #208698;  }
     .home_overlay .text h2 {  display: none; }
     .home_overlay .text h4 {  display: none; }
     .home_overlay .text li {  display: none; }
-    .home_overlay { background-image: url("../img/result/home_lion_half.jpg"); height: 80vw; background-size: cover }
+    .home_overlay { background-image: url("../img/result/home_lion_half_dark.jpg"); height: 80vw; background-size: cover }
 
 }
