@@ -178,7 +178,7 @@ footer::before {
     background-color: #000;
 }
 
-footer a {
+footer .links a {
     display: block;
 }
 
