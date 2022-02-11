@@ -47,12 +47,16 @@
                         <a target="_blank" class="btn pmd-btn-raised pmd-ripple-effect btn-primary" href="https://github.com/alicevision/meshroom"><i class="fa fa-github"></i><span>Github</span></a>
                     </div>-->
 
-                    <h3 class="pmd-card-title-text" style="margin-top: 5em;">Requirement</h3>
-                    <span class="pmd-card-subtitle-text">NVIDIA CUDA-enabled GPU (built with cuda-10 compatible with compute capability 3.0 to 7.5)</span>
+                    <h3 class="pmd-card-title-text" style="margin-top: 5em;">Note</h3>
+                    <span class="pmd-card-subtitle-text">To fully utilize Meshroom, a NVIDIA CUDA-enabled GPU is recommended. The binaries are built with CUDA-10 and are compatible with compute capability 3.0 to 7.5. Without a supported NVIDIA GPU, only "Draft Meshing" can be used for 3D reconstruction.</span>
 
                     <h3 class="pmd-card-title-text" style="margin-top: 2em;">Linux</h3>
                     <span class="pmd-card-subtitle-text">On some distributions (e.g Ubuntu), you may have conflicts between native drivers and mesa drivers, resulting in an empty black window. In that case, you need to force usage of native drivers by adding them to the LD_LIBRARY_PATH: <code>LD_LIBRARY_PATH=/usr/lib/nvidia-340 ./Meshroom</code>
                     You may need to adjust the folder /usr/lib/nvidia-340 with the correct driver version.</span>
+                    
+                    <h3 class="pmd-card-title-text" style="margin-top: 5em;">MacOS</h3>
+                    <span class="pmd-card-subtitle-text">Unfortunately there is no official MacOS release. <a target="_blank" href="https://github.com/alicevision/meshroom/wiki/MacOS" style="color:white; text-decoration: underline;">Here you can read more on the topic.</a></span>
+                    
 
 
                 </div> 
