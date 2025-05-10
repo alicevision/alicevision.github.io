@@ -10,3 +10,8 @@ If you use chrome, stop all chrome instances and then run:
 ```bash
 chromium-browser --disable-web-security --user-data-dir
 ```
+Or on windows:
+```
+start chrome.exe --disable-web-security --user-data-dir="C:\temp\chrome_dev"
+```
+
