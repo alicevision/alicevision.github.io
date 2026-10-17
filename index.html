@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AliceVision — 3D Computer Vision Framework</title>
+<meta name="description" content="AliceVision is an open-source 3D Computer Vision framework for 3D reconstruction, camera tracking and HDR panoramas. Meshroom is its node-based desktop app.">
+<meta property="og:title" content="AliceVision — 3D Computer Vision Framework">
+<meta property="og:description" content="AliceVision is an open-source 3D Computer Vision framework for 3D reconstruction, camera tracking and HDR panoramas. Meshroom is its node-based desktop app.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/home_lion.jpg">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div style="background: #FFFFFF; color: #12161C; font-family: 'IBM Plex Sans', sans-serif; min-height: 100vh">
+
+<header style="border-bottom: 1px solid #E1E5EB; background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 24px">
+<a href="#top" style="display: flex; align-items: center; min-height: 44px"><img src="img/logo.png" alt="AliceVision" style="height: 30px; width: auto; display: block"></a>
+<nav class="site-nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px; flex: 1 1 auto">
+<a href="#pipelines" style="color: #3D4653; text-decoration: none; font-size: 15px; padding: 10px 12px">Pipelines</a>
+<a href="#meshroom" style="color: #3D4653; text-decoration: none; font-size: 15px; padding: 10px 12px">Meshroom</a>
+<a href="#usecases" style="color: #3D4653; text-decoration: none; font-size: 15px; padding: 10px 12px">Use cases</a>
+<a href="#ecosystem" style="color: #3D4653; text-decoration: none; font-size: 15px; padding: 10px 12px">Libraries</a>
+<a href="#learn" style="color: #3D4653; text-decoration: none; font-size: 15px; padding: 10px 12px">Learn</a>
+<a href="history.html" style="color: #3D4653; text-decoration: none; font-size: 15px; padding: 10px 12px">History</a>
+<a href="#community" style="color: #3D4653; text-decoration: none; font-size: 15px; padding: 10px 12px">Community</a>
+<a href="#about" style="color: #3D4653; text-decoration: none; font-size: 15px; padding: 10px 12px">About</a>
+</nav>
+<div class="hdr-actions" style="display: flex; gap: 10px; align-items: center">
+<a class="hdr-gh" href="https://github.com/alicevision" style="display: flex; align-items: center; gap: 8px; color: #12161C; text-decoration: none; font-size: 14px; padding: 10px 14px; border: 1px solid #D3D9E1; border-radius: 8px">
+<svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6s-1.2-.3-3.8 1.4a13 13 0 0 0-7 0C6.3 1.3 5.1 1.6 5.1 1.6a4.8 4.8 0 0 0-.1 3.6A5.2 5.2 0 0 0 3.6 8.8c0 5.2 3.1 6.4 6.1 6.7a3.4 3.4 0 0 0-.9 2.6V22"></path></svg>
+GitHub</a>
+<a href="https://meshroom.org/" style="color: #FFFFFF; background: #1F6FD1; text-decoration: none; font-weight: 600; font-size: 14px; padding: 11px 16px; border-radius: 8px">Download</a>
+</div>
+</div>
+</header>
+<main id="main">
+
+<section id="top" style="max-width: 1200px; margin: 0 auto; padding: 80px 24px 64px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #1F6FD1">Open-source 3D Computer Vision</div>
+<h1 style="margin: 0; display: flex; flex-direction: column; gap: 10px; font-family: Archivo, sans-serif; font-weight: 800; letter-spacing: -0.03em"><span style="font-size: 4.75rem; line-height: 0.95">AliceVision</span><span style="font-size: 2.5rem; line-height: 1.05; color: #3D4653">Turn images into 3D.</span></h1>
+<p style="margin: 0; max-width: 34rem; font-size: 1.2rem; line-height: 1.6; color: #3D4653">AliceVision is a 3D Computer Vision framework for 3D reconstruction, camera tracking and HDR panoramas. Meshroom is its node-based desktop app — start from a ready-made pipeline, or wire your own.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
+<a href="https://meshroom.org/" style="color: #FFFFFF; background: #1F6FD1; text-decoration: none; font-weight: 600; font-size: 16px; padding: 15px 22px; border-radius: 10px">Download Meshroom</a>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=DTXKVT89NLZT6&amp;source=url" target="_blank" rel="noopener noreferrer" title="Help Meshroom keep evolving — your support makes a difference!" style="display: inline-flex; align-items: center; gap: 8px; color: #12161C; background: #FFF4F4; text-decoration: none; font-weight: 500; font-size: 16px; padding: 14px 20px; border-radius: 10px; border: 1px solid #F3C9C9"><svg class="heart" width="16" height="16" viewBox="0 0 512 512" aria-hidden="true"><path fill="#E5484D" d="M256 464l-30-27C118 340 48 277 48 196 48 130 100 80 164 80c36 0 71 17 92 44 21-27 56-44 92-44 64 0 116 50 116 116 0 81-70 144-178 241z"></path></svg>Make a Donation</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #5E6876">
+<span>Windows · Linux</span><a href="https://www.mozilla.org/en-US/MPL/2.0/" style="color: #5E6876">License MPL-2.0 ↗</a><a href="https://meshroom.org/" style="color: #5E6876">meshroom.org ↗</a><a href="https://github.com/alicevision" style="display: inline-flex; align-items: center; gap: 6px; color: #5E6876"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>GitHub ↗</a>
+</div>
+</div>
+<div style="flex: 1 1 460px; min-width: 0">
+<img src="img/aliceVision.jpg" alt="A carved head on a table, half of it shown as the reconstructed 3D mesh in blue" style="width: 100%; aspect-ratio: 1075 / 617; object-fit: cover; border-radius: 16px; display: block; box-shadow: 0 1px 2px rgba(18,22,28,0.06), 0 12px 32px rgba(18,22,28,0.10)">
+</div>
+</section>
+
+<section id="capabilities" aria-label="Capabilities" style="border-top: 1px solid #E1E5EB; border-bottom: 1px solid #E1E5EB; background: #F4F6F9">
+<div style="max-width: 1200px; margin: 0 auto; padding: 28px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 18px">3D reconstruction</span><span style="font-size: 14px; color: #5E6876">Images to textured mesh</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 18px">Camera tracking</span><span style="font-size: 14px; color: #5E6876">Solve shots for VFX</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 18px">HDR panorama</span><span style="font-size: 14px; color: #5E6876">Brackets, fisheye, 360°</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 18px">Photometric stereo</span><span style="font-size: 14px; color: #5E6876">Normals from lighting</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 18px">RAW conversion</span><span style="font-size: 14px; color: #5E6876">Color-managed images</span></div>
+</div>
+</section>
+
+<section id="pipelines" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px 40px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 40rem">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #1F6FD1">Ready-made pipelines</div>
+<h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 800; font-size: 2.75rem; line-height: 1.05; letter-spacing: -0.02em">A template for every job.<a class="anchor" href="#pipelines" aria-label="Link to this section">#</a></h2>
+<p style="margin: 0; font-size: 1.1rem; line-height: 1.6; color: #3D4653">Each template is a Meshroom graph built from AliceVision nodes. Open one, drop in your images, press Start — or fork it into your own pipeline.</p>
+</div>
+<a href="https://github.com/alicevision/AliceVision/tree/develop/meshroom" style="font-size: 15px; padding: 12px 0">Browse all templates on GitHub →</a>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px">
+
+<article style="background: #F4F6F9; border: 1px solid #E8EBF0; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px">Photogrammetry</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3D4653">Scenes, single objects, turntables and two-sided captures — from raw photos to a textured mesh.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 12px">
+<span style="padding: 5px 8px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E1E5EB; color: #3D4653">photogrammetry</span><span style="padding: 5px 8px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E1E5EB; color: #3D4653">photogrammetryDraft</span><span style="padding: 5px 8px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E1E5EB; color: #3D4653">photogrammetryObject</span><span style="padding: 5px 8px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E1E5EB; color: #3D4653">photogrammetryObjectTurntable</span>
+</div>
+</article>
+
+<article style="background: #F4F6F9; border: 1px solid #E8EBF0; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px">Camera tracking</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3D4653">Matchmove from plates, with or without lens calibration, nodal shots, depth-assisted variants and LiDAR.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 12px">
+<span style="padding: 5px 8px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E1E5EB; color: #3D4653">cameraTracking</span><span style="padding: 5px 8px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E1E5EB; color: #3D4653">cameraTrackingWithoutCalibration</span><span style="padding: 5px 8px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E1E5EB; color: #3D4653">nodalCameraTracking</span><span style="padding: 5px 8px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E1E5EB; color: #3D4653">cameraTrackingDepth</span>
+</div>
+</article>
+
+<article style="background: #F4F6F9; border: 1px solid #E8EBF0; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px">HDR &amp; panorama</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3D4653">Merge bracketed LDR exposures into HDR, then stitch panoramas from perspective or fisheye images.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 12px">
+<span style="padding: 5px 8px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E1E5EB; color: #3D4653">hdrFusion</span><span style="padding: 5px 8px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E1E5EB; color: #3D4653">panoramaHdr</span><span style="padding: 5px 8px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E1E5EB; color: #3D4653">panoramaFisheyeHdr</span>
+</div>
+</article>
+
+<article style="background: #F4F6F9; border: 1px solid #E8EBF0; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px">Photometric stereo</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3D4653">Recover fine surface normals from a fixed camera and varying light — single view or multi-view.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 12px">
+<span style="padding: 5px 8px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E1E5EB; color: #3D4653">photometricStereo</span><span style="padding: 5px 8px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E1E5EB; color: #3D4653">multi-viewPhotometricStereo</span>
+</div>
+</article>
+
+<article style="background: #F4F6F9; border: 1px solid #E8EBF0; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px">Calibration &amp; utilities</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3D4653">Lens distortion from checkerboards, color charts, RAW development and LiDAR scan meshing.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 12px">
+<span style="padding: 5px 8px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E1E5EB; color: #3D4653">distortionCalibration</span><span style="padding: 5px 8px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E1E5EB; color: #3D4653">colorCalibration</span><span style="padding: 5px 8px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E1E5EB; color: #3D4653">rawImageConversion</span>
+</div>
+</article>
+
+<article style="background: #E8F1FC; border: 1px dashed #A9C6EC; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 14px; justify-content: center">
+<h3 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px">Build your own</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3D4653">Combine AliceVision nodes — from <code style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #12161C">FeatureExtraction</code> to <code style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #12161C">ExportUSD</code> — and save any graph as a default template.</p>
+<a href="https://meshroom-manual.readthedocs.io/en/latest/" style="font-size: 15px">Read the node reference →</a>
+</article>
+
+</div>
+</section>
+
+<section id="photogrammetry" aria-labelledby="h-steps" style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 96px; display: flex; flex-direction: column; gap: 28px">
+<h2 id="h-steps" style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: 1.6rem">Inside the photogrammetry template<a class="anchor" href="#photogrammetry" aria-label="Link to this section">#</a></h2>
+<ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; border: 1px solid #E1E5EB; border-radius: 14px; overflow: hidden">
+<li style="padding: 24px; border-right: 1px solid #E1E5EB; display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #1F6FD1">01 · Input</span><strong style="font-size: 17px">Read cameras</strong><span style="font-size: 14px; line-height: 1.5; color: #3D4653">Image metadata and sensor database.</span><code style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5E6876">CameraInit</code></li>
+<li style="padding: 24px; border-right: 1px solid #E1E5EB; display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #1F6FD1">02 · Features</span><strong style="font-size: 17px">Find &amp; match</strong><span style="font-size: 14px; line-height: 1.5; color: #3D4653">Keypoints shared between images.</span><code style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5E6876">FeatureExtraction · ImageMatching · FeatureMatching</code></li>
+<li style="padding: 24px; border-right: 1px solid #E1E5EB; display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #1F6FD1">03 · SfM</span><strong style="font-size: 17px">Solve cameras</strong><span style="font-size: 14px; line-height: 1.5; color: #3D4653">Poses and a sparse point cloud.</span><code style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5E6876">TracksBuilding · SfMBootStrapping · SfMExpanding</code></li>
+<li style="padding: 24px; border-right: 1px solid #E1E5EB; display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #1F6FD1">04 · MVS</span><strong style="font-size: 17px">Dense depth</strong><span style="font-size: 14px; line-height: 1.5; color: #3D4653">A depth map per view, on the GPU.</span><code style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5E6876">DepthMap · DepthMapFilter</code></li>
+<li style="padding: 24px; display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #1F6FD1">05 · Output</span><strong style="font-size: 17px">Mesh &amp; texture</strong><span style="font-size: 14px; line-height: 1.5; color: #3D4653">Mesh with UV textures.</span><code style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5E6876">Meshing · MeshFiltering · Texturing</code></li>
+</ol>
+<img loading="lazy" decoding="async" src="img/home_lion.jpg" alt="Two renders of a reconstructed carved lion head" style="width: 100%; aspect-ratio: 1400 / 560; object-fit: cover; border-radius: 14px; display: block">
+</section>
+
+<section id="meshroom" style="background: #F4F6F9; border-top: 1px solid #E1E5EB; border-bottom: 1px solid #E1E5EB">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 1 1 560px; min-width: 0">
+<img loading="lazy" decoding="async" src="img/buddha_dataset.jpg" alt="Meshroom showing the image gallery, a source image and the solved cameras around a sparse point cloud" style="width: 100%; aspect-ratio: 1400 / 542; object-fit: cover; border-radius: 12px; display: block; border: 1px solid #D3D9E1">
+</div>
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #1F6FD1">Meshroom</div>
+<h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 800; font-size: 2.5rem; line-height: 1.05; letter-spacing: -0.02em">A node graph you can see into.<a class="anchor" href="#meshroom" aria-label="Link to this section">#</a></h2>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.5; color: #3D4653">
+<li>GPU-accelerated, scales to large image sets</li>
+<li>Every node cached — change a parameter, recompute only what depends on it</li>
+<li>Retexture after retopology in Blender, ZBrush or Maya</li>
+</ul>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="https://meshroom.org/" style="color: #FFFFFF; background: #1F6FD1; text-decoration: none; font-weight: 600; font-size: 15px; padding: 13px 18px; border-radius: 10px">Download Meshroom</a>
+<a href="https://meshroom-manual.readthedocs.io/en/latest/" style="color: #12161C; background: #FFFFFF; text-decoration: none; font-size: 15px; padding: 12px 18px; border-radius: 10px; border: 1px solid #D3D9E1">Read the manual</a>
+</div>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img loading="lazy" decoding="async" src="img/hdri_fisheye.jpg" alt="Meshroom HDR panorama workflow with fisheye images" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; display: block; border: 1px solid #D3D9E1"><figcaption style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 16px">HDR panoramas</strong><span style="font-size: 14px; line-height: 1.5; color: #5E6876">Fuse brackets, estimate the fisheye circle, use motorized-head files.</span></figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img loading="lazy" decoding="async" src="img/renderfarm.jpg" alt="Meshroom submitting a graph to a render farm" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; display: block; border: 1px solid #D3D9E1"><figcaption style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 16px">Render farm submission</strong><span style="font-size: 14px; line-height: 1.5; color: #5E6876">Per-node CPU, RAM and GPU rules pick the right machines.</span></figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img loading="lazy" decoding="async" src="img/custom_pipeline.jpg" alt="A custom Meshroom graph with branching mesh outputs" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; display: block; border: 1px solid #D3D9E1"><figcaption style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 16px">Custom pipelines</strong><span style="font-size: 14px; line-height: 1.5; color: #5E6876">Branch, compare and save your graph as the default template.</span></figcaption></figure>
+</div>
+</div>
+</section>
+
+<section id="usecases" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 44rem">
+<h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 800; font-size: 2.5rem; letter-spacing: -0.02em">Wherever images meet 3D<a class="anchor" href="#usecases" aria-label="Link to this section">#</a></h2>
+<p style="margin: 0; font-size: 1.1rem; line-height: 1.6; color: #3D4653">Film and VFX, games, science, cultural heritage, architecture, engineering, robotics and more — a few examples below.</p>
+</div>
+<a href="https://sketchfab.com/AliceVision" style="font-size: 15px; padding: 12px 0">See results on Sketchfab →</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img loading="lazy" decoding="async" src="img/cinema.jpg" alt="Illustration of a film set scanned with cameras" style="width: 100%; aspect-ratio: 1400 / 756; object-fit: cover; border-radius: 12px; display: block; background: #F4F6F9"><figcaption style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 16px">Cinema &amp; VFX</strong><span style="font-size: 14px; color: #5E6876">Set and prop scanning, matchmove</span></figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img loading="lazy" decoding="async" src="img/entomology.jpg" alt="Illustration of scientists digitizing insect specimens" style="width: 100%; aspect-ratio: 1400 / 756; object-fit: cover; border-radius: 12px; display: block; background: #F4F6F9"><figcaption style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 16px">Science</strong><span style="font-size: 14px; color: #5E6876">Specimen digitization</span></figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img loading="lazy" decoding="async" src="img/culturalHeritage.jpg" alt="Illustration of archaeologists capturing ruins" style="width: 100%; aspect-ratio: 1400 / 756; object-fit: cover; border-radius: 12px; display: block; background: #F4F6F9"><figcaption style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 16px">Cultural heritage</strong><span style="font-size: 14px; color: #5E6876">Monuments and sculpture</span></figcaption></figure>
+</div>
+</section>
+
+<section id="ecosystem" style="max-width: 1200px; margin: 0 auto; padding: 0 24px 96px; display: flex; flex-direction: column; gap: 32px">
+<h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 800; font-size: 2.5rem; letter-spacing: -0.02em">Libraries &amp; integrations<a class="anchor" href="#ecosystem" aria-label="Link to this section">#</a></h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px">
+<a href="https://github.com/alicevision/AliceVision" style="background: #F4F6F9; border: 1px solid #E8EBF0; border-radius: 12px; overflow: hidden; text-decoration: none; color: #12161C; display: flex; flex-direction: column"><img loading="lazy" decoding="async" src="img/aliceVision.jpg" alt="" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block"><span style="padding: 18px; display: flex; flex-direction: column; gap: 6px"><strong style="font-family: Archivo, sans-serif; font-size: 19px">AliceVision</strong><span style="font-size: 14px; line-height: 1.5; color: #3D4653">The C++ 3D Computer Vision framework.</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #1F6FD1">library</span></span></a>
+<a href="https://github.com/alicevision/CCTag" style="background: #F4F6F9; border: 1px solid #E8EBF0; border-radius: 12px; overflow: hidden; text-decoration: none; color: #12161C; display: flex; flex-direction: column"><img loading="lazy" decoding="async" src="img/cctag.jpg" alt="" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block"><span style="padding: 18px; display: flex; flex-direction: column; gap: 6px"><strong style="font-family: Archivo, sans-serif; font-size: 19px">CCTag</strong><span style="font-size: 14px; line-height: 1.5; color: #3D4653">Concentric-circle markers, sub-pixel detection.</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #1F6FD1">library</span></span></a>
+<a href="https://github.com/alicevision/popsift" style="background: #F4F6F9; border: 1px solid #E8EBF0; border-radius: 12px; overflow: hidden; text-decoration: none; color: #12161C; display: flex; flex-direction: column"><img loading="lazy" decoding="async" src="img/popsift.jpg" alt="" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block"><span style="padding: 18px; display: flex; flex-direction: column; gap: 6px"><strong style="font-family: Archivo, sans-serif; font-size: 19px">PopSift</strong><span style="font-size: 14px; line-height: 1.5; color: #3D4653">SIFT features on the GPU.</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #1F6FD1">library</span></span></a>
+<a href="https://github.com/SBCV/Blender-Addon-Photogrammetry-Importer" style="background: #F4F6F9; border: 1px solid #E8EBF0; border-radius: 12px; overflow: hidden; text-decoration: none; color: #12161C; display: flex; flex-direction: column"><img loading="lazy" decoding="async" src="img/meshroom2blender.jpg" alt="" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block"><span style="padding: 18px; display: flex; flex-direction: column; gap: 6px"><strong style="font-family: Archivo, sans-serif; font-size: 19px">Blender</strong><span style="font-size: 14px; line-height: 1.5; color: #3D4653">Import for retopology, send back to texture.</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #9A5200">integration</span></span></a>
+<a href="https://www.sidefx.com/products/sidefx-labs" style="background: #F4F6F9; border: 1px solid #E8EBF0; border-radius: 12px; overflow: hidden; text-decoration: none; color: #12161C; display: flex; flex-direction: column"><img loading="lazy" decoding="async" src="img/houdini.jpg" alt="" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block"><span style="padding: 18px; display: flex; flex-direction: column; gap: 6px"><strong style="font-family: Archivo, sans-serif; font-size: 19px">Houdini</strong><span style="font-size: 14px; line-height: 1.5; color: #3D4653">Reconstruction inside Houdini via SideFX Labs.</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #9A5200">integration</span></span></a>
+</div>
+</section>
+
+<section id="learn" aria-labelledby="h-learn" style="max-width: 1200px; margin: 0 auto; padding: 0 24px 96px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #1F6FD1">Learn</div>
+<h2 id="h-learn" style="margin: 0; font-family: Archivo, sans-serif; font-weight: 800; font-size: 2.5rem; letter-spacing: -0.02em">Watch and learn Meshroom<a class="anchor" href="#learn" aria-label="Link to this section">#</a></h2>
+</div>
+<a href="https://www.youtube.com/@AliceVisionOrg" style="font-size: 15px; padding: 12px 0">All videos on YouTube →</a>
+</div>
+<div class="card-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px">
+<article style="display: flex; flex-direction: column; gap: 12px">
+<div style="position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background: #12161C">
+<iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLCMPS2-eE48BC-rCFuKGesP2ktbSwns-l" title="Quick Introduction — AliceVision YouTube playlist" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0"></iframe>
+</div>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #5E6876">YouTube playlist · start here</span>
+<h3 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px">Quick Introduction</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3D4653">From your first images to a textured model, in a few short videos. <a href="https://www.youtube.com/playlist?list=PLCMPS2-eE48BC-rCFuKGesP2ktbSwns-l">Open on YouTube ↗</a></p>
+</article>
+<article style="display: flex; flex-direction: column; gap: 12px">
+<div style="position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background: #12161C">
+<iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLCMPS2-eE48AQMlW4icKGIvySbUzNc4Dv" title="Tutorials — AliceVision YouTube playlist" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0"></iframe>
+</div>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #5E6876">YouTube playlist</span>
+<h3 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px">Tutorials</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3D4653">Go deeper: specific workflows, nodes and integrations. <a href="https://www.youtube.com/playlist?list=PLCMPS2-eE48AQMlW4icKGIvySbUzNc4Dv">Open on YouTube ↗</a></p>
+</article>
+</div>
+</section>
+
+<section id="history" aria-labelledby="h-history" style="max-width: 1200px; margin: 0 auto; padding: 0 24px 96px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #1F6FD1">History</div>
+<h2 id="h-history" style="margin: 0; font-family: Archivo, sans-serif; font-weight: 800; font-size: 2.5rem; line-height: 1.05; letter-spacing: -0.02em">Two thousand years in the making.<a class="anchor" href="#history" aria-label="Link to this section">#</a></h2>
+<p style="margin: 0; font-size: 1.05rem; line-height: 1.6; color: #3D4653">From the camera obscura to aerial surveys, and from Snellius to the 5-point algorithm: AliceVision stands on a long line of ideas about measuring the world from images.</p>
+<a href="history.html" style="align-self: flex-start; color: #12161C; text-decoration: none; font-size: 15px; font-weight: 600; padding: 12px 18px; border-radius: 10px; border: 1px solid #D3D9E1">Explore the timeline →</a>
+</div>
+<ol class="hist-teaser" style="flex: 1 1 520px; min-width: 0; margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+<li style="display: flex; flex-direction: column; gap: 10px"><img loading="lazy" decoding="async" src="img/camera_obscura.jpg" alt="" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; display: block; background: #F4F6F9"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 22px; color: #1F6FD1">500 BC</span><span style="font-size: 14px; line-height: 1.45; color: #3D4653">Camera obscura</span></li>
+<li style="display: flex; flex-direction: column; gap: 10px"><img loading="lazy" decoding="async" src="img/first_photography_niepce.jpg" alt="" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; display: block"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 22px; color: #1F6FD1">1826</span><span style="font-size: 14px; line-height: 1.45; color: #3D4653">Niépce, the first photograph</span></li>
+<li style="display: flex; flex-direction: column; gap: 10px"><img loading="lazy" decoding="async" src="img/pigeon_photos_ww.jpg" alt="" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; display: block"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 22px; color: #1F6FD1">1911</span><span style="font-size: 14px; line-height: 1.45; color: #3D4653">First aerial photogrammetry</span></li>
+</ol>
+</section>
+
+<section id="community" style="background: #F4F6F9; border-top: 1px solid #E1E5EB">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 56px">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 800; font-size: 2.5rem; line-height: 1.05; letter-spacing: -0.02em">Open source, built between labs and studios.<a class="anchor" href="#community" aria-label="Link to this section">#</a></h2>
+<p style="margin: 0; font-size: 1.05rem; line-height: 1.6; color: #3D4653">State-of-the-art algorithms that can be tested, analyzed and reused — with the robustness production demands.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="https://github.com/alicevision/meshroom" style="color: #FFFFFF; background: #1F6FD1; text-decoration: none; font-weight: 600; font-size: 15px; padding: 13px 18px; border-radius: 10px">Contribute on GitHub</a>
+<a href="https://groups.google.com/forum/#!forum/alicevision" style="color: #12161C; background: #FFFFFF; text-decoration: none; font-size: 15px; padding: 12px 18px; border-radius: 10px; border: 1px solid #D3D9E1">Join the forum</a>
+</div>
+</div>
+<div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5E6876">Sponsors &amp; partners</h3>
+<div class="logos" style="background: #FFFFFF; border: 1px solid #E1E5EB; border-radius: 14px; padding: 24px 28px; display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: 24px">
+<a href="https://www.themill.com/" style="display: flex; align-items: center; justify-content: center; flex: 0 0 auto"><svg role="img" aria-label="The Mill" viewBox="0 0 10.847913 9.2716719" width="84" height="72" style="display: block"><g transform="translate(-7.1815493,-144.06521)"><path fill="#151515" fill-rule="evenodd" d="m 17.897171,144.1975 v 9.00709 h -1.57624 v -9.00709 z m -1.80142,0 v 9.00709 h -1.57624 v -9.00709 z m -7.2056697,2.02659 v 6.9805 h -1.57624 v -6.9805 z m 1.8014197,0 v 6.9805 H 9.1152613 v -6.9805 z m 1.80141,0 v 6.9805 h -1.57624 v -6.9805 z m 1.80142,0 v 6.9805 h -1.57624 v -6.9805 z"></path></g></svg></a>
+<a href="https://www.epicgames.com/" style="display: flex; align-items: center; flex: 0 1 auto; min-width: 0"><img loading="lazy" decoding="async" src="img/epic_games_logo.png" alt="Epic Games" style="height: 44px; width: auto; max-width: 100%; display: block"></a>
+<a href="http://people.ciirc.cvut.cz/~pajdla" style="display: flex; align-items: center; flex: 0 1 auto; min-width: 0"><img loading="lazy" decoding="async" src="img/logo_CTU.png" alt="Czech Technical University" style="height: 44px; width: auto; max-width: 100%; display: block"></a>
+<a href="https://www.simula.no/" style="display: flex; align-items: center; flex: 0 1 auto; min-width: 0"><img loading="lazy" decoding="async" src="img/simula_new-logo.png" alt="Simula" style="height: 28px; width: auto; max-width: 100%; display: block"></a>
+<a href="http://www.inp-toulouse.fr/" style="display: flex; align-items: center; flex: 0 1 auto; min-width: 0"><img loading="lazy" decoding="async" src="img/inp_300x300.png" alt="INP Toulouse" style="height: 44px; width: auto; max-width: 100%; display: block"></a>
+</div>
+<p style="margin: 0; font-size: 15px; color: #3D4653">Using AliceVision or Meshroom at work? <a href="https://alicevision.org/association/#donate">Become a corporate sponsor</a> of the AliceVision Association.</p>
+</div>
+</div>
+</section>
+
+<section id="about" aria-labelledby="h-about" style="background: #FFFFFF; border-top: 1px solid #E1E5EB">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 56px">
+<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #1F6FD1">About</div>
+<h2 id="h-about" style="margin: 0; font-family: Archivo, sans-serif; font-weight: 800; font-size: 2.5rem; line-height: 1.05; letter-spacing: -0.02em">The AliceVision Association<a class="anchor" href="#about" aria-label="Link to this section">#</a></h2>
+<p style="margin: 0; font-size: 1.05rem; line-height: 1.65; color: #3D4653">The AliceVision project is supported by the AliceVision Association, a non-profit organization whose ambition is to democratize 3D digitization technologies from photographs.</p>
+<p style="margin: 0; font-size: 1.05rem; line-height: 1.65; color: #3D4653">The association was created in July 2020 by <a href="https://alicevision.org/association/#members">14 founding members</a> from the European academic and industry sector, who have been collaborating in the field of 3D computer vision for cultural and creative industries <a href="https://alicevision.org/association/#history">since 2010</a>. It considers 3D digitization technologies essential for many applications for the common good, especially for culture and artistic creation.</p>
+<p style="margin: 0; font-size: 1.05rem; line-height: 1.65; color: #3D4653">Computer vision researcher, developer, 3D scanning or photogrammetry expert? <a href="https://alicevision.org/association/#contribute">You can contribute</a> to the association and help expand the community.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px">
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=DTXKVT89NLZT6&amp;source=url" target="_blank" rel="noopener noreferrer" title="Help Meshroom keep evolving — your support makes a difference!" style="display: inline-flex; align-items: center; gap: 8px; color: #FFFFFF; background: #1F6FD1; text-decoration: none; font-weight: 600; font-size: 15px; padding: 13px 18px; border-radius: 10px"><svg class="heart" width="16" height="16" viewBox="0 0 512 512" aria-hidden="true"><path fill="#FFFFFF" d="M256 464l-30-27C118 340 48 277 48 196 48 130 100 80 164 80c36 0 71 17 92 44 21-27 56-44 92-44 64 0 116 50 116 116 0 81-70 144-178 241z"></path></svg>Make a Donation</a>
+<a href="https://alicevision.org/association/#donate" style="color: #12161C; background: #FFFFFF; text-decoration: none; font-size: 15px; padding: 12px 18px; border-radius: 10px; border: 1px solid #D3D9E1">Corporate sponsorship</a>
+<a href="https://alicevision.org/association" style="color: #12161C; background: #FFFFFF; text-decoration: none; font-size: 15px; padding: 12px 18px; border-radius: 10px; border: 1px solid #D3D9E1">Association website ↗</a>
+</div>
+</div>
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<h3 style="margin: 0 0 4px; font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5E6876">Contact us</h3>
+<a href="https://groups.google.com/forum/#!forum/alicevision" style="background: #FFFFFF; border: 1px solid #E1E5EB; border-radius: 12px; padding: 18px 20px; text-decoration: none; color: #12161C; display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 16px">Public mailing list</strong><span style="font-size: 14px; color: #5E6876">Discuss with the community</span><span style="font-size: 14px; color: #1F6FD1">forum@alicevision.org</span></a>
+<a href="mailto:team@alicevision.org" style="background: #FFFFFF; border: 1px solid #E1E5EB; border-radius: 12px; padding: 18px 20px; text-decoration: none; color: #12161C; display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 16px">The team</strong><span style="font-size: 14px; color: #5E6876">Contact us privately</span><span style="font-size: 14px; color: #1F6FD1">team@alicevision.org</span></a>
+<a href="mailto:association@alicevision.org" style="background: #FFFFFF; border: 1px solid #E1E5EB; border-radius: 12px; padding: 18px 20px; text-decoration: none; color: #12161C; display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 16px">Association board</strong><span style="font-size: 14px; color: #5E6876">Contact the board privately</span><span style="font-size: 14px; color: #1F6FD1">association@alicevision.org</span></a>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer style="border-top: 1px solid #E1E5EB; background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 48px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 32px; font-size: 14px">
+<div style="display: flex; flex-direction: column; gap: 12px"><img loading="lazy" decoding="async" src="img/logo.png" alt="AliceVision" style="height: 24px; width: auto; align-self: flex-start"><span style="color: #5E6876; line-height: 1.5">AliceVision® is a registered trademark. Content under CC BY-SA 4.0.</span></div>
+<nav aria-label="Software" style="display: flex; flex-direction: column; gap: 8px"><span style="color: #5E6876">Software</span><a href="https://meshroom.org/" style="color: #12161C; text-decoration: none">Download Meshroom</a><a href="https://meshroom-manual.readthedocs.io/en/latest/" style="color: #12161C; text-decoration: none">Manual</a><a href="https://github.com/alicevision/AliceVision" style="color: #12161C; text-decoration: none">AliceVision source</a></nav>
+<nav aria-label="Project" style="display: flex; flex-direction: column; gap: 8px"><span style="color: #5E6876">Project</span><a href="history.html" style="color: #12161C; text-decoration: none">History</a><a href="#about" style="color: #12161C; text-decoration: none">About</a><a href="https://github.com/alicevision/meshroom" style="color: #12161C; text-decoration: none">Contributing</a><a href="https://groups.google.com/forum/#!forum/alicevision" style="color: #12161C; text-decoration: none">Contact</a></nav>
+<nav aria-label="Follow" style="display: flex; flex-direction: column; gap: 10px"><span style="color: #5E6876">Follow</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<a href="https://github.com/alicevision" aria-label="GitHub" title="GitHub" style="width: 44px; height: 44px; border: 1px solid #D3D9E1; border-radius: 10px; color: #12161C; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg></a>
+<a href="https://www.youtube.com/c/AliceVisionOrg" aria-label="YouTube" title="YouTube" style="width: 44px; height: 44px; border: 1px solid #D3D9E1; border-radius: 10px; color: #12161C; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.930 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg></a>
+<a href="https://www.linkedin.com/company/alicevision" aria-label="LinkedIn" title="LinkedIn" style="width: 44px; height: 44px; border: 1px solid #D3D9E1; border-radius: 10px; color: #12161C; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.850 3.601 0 4.267 2.370 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a>
+<a href="https://sketchfab.com/AliceVision" aria-label="Sketchfab" title="Sketchfab" style="width: 44px; height: 44px; border: 1px solid #D3D9E1; border-radius: 10px; color: #12161C; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M11.3 0A11.983 11.983 0 0 0 .037 11a13.656 13.656 0 0 0 0 2 11.983 11.983 0 0 0 11.29 11h1.346a12.045 12.045 0 0 0 11.3-11.36 13.836 13.836 0 0 0 0-1.7A12.049 12.049 0 0 0 12.674 0zM15 6.51l2.99 1.74s-6.064 3.24-6.084 3.24S5.812 8.27 5.8 8.26l2.994-1.77 2.992-1.76zm-6.476 5.126L11 13v5.92l-2.527-1.4-2.46-1.43v-5.76zm9.461 1.572v2.924L15.5 17.574 13 19.017v-6.024l2.489-1.345 2.5-1.355z"></path></svg></a>
+</div>
+</nav>
+</div>
+</footer>
+
+</div>
+</body>
+</html>
